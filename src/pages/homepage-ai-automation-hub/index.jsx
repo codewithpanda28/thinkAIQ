@@ -1,41 +1,87 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
-import ServiceSelector from './components/ServiceSelector';
-import ProjectShowcase from './components/ProjectShowcase';
-import KnowledgeHub from './components/KnowledgeHub';
-import TrustIndicators from './components/TrustIndicators';
+import JourneySelector from './components/JourneySelector';
+import TestimonialCarousel from './components/TestimonialCarousel';
+import FeaturesShowcase from './components/FeaturesShowcase';
+import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
 const Homepage = () => {
+  useEffect(() => {
+    // Scroll to top on component mount
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Helmet>
-        <title>AI Automation Hub - Intelligent Solutions That Deliver Measurable ROI</title>
-        <meta name="description" content="Transform your business with AI automation solutions. Join 500+ companies saving 40+ hours weekly while boosting revenue by 300%. Calculate your ROI in 2 minutes." />
-        <meta name="keywords" content="AI automation, business process automation, digital transformation, ROI calculator, artificial intelligence, workflow automation, India" />
-        <meta property="og:title" content="AI Automation Hub - Intelligent Solutions That Deliver Measurable ROI" />
-        <meta property="og:description" content="Transform your business with AI automation solutions. Join 500+ companies saving 40+ hours weekly while boosting revenue by 300%." />
+        <title>Authera - Transform Your Business with Intelligent AI Automation</title>
+        <meta name="description" content="Join 300+ businesses that have revolutionized their operations with Authera's AI-powered automation solutions. Get 85% cost reduction and 99.7% accuracy. Book free consultation today." />
+        <meta name="keywords" content="AI automation, business process automation, custom software development, artificial intelligence, business optimization, digital transformation, Authera" />
+        <meta property="og:title" content="Authera - Transform Your Business with Intelligent AI Automation" />
+        <meta property="og:description" content="Join 300+ businesses that have revolutionized their operations with AI-powered automation solutions. Get 85% cost reduction and 99.7% accuracy." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aiautomationhub.com/homepage-ai-automation-hub" />
+        <meta property="og:url" content="https://authera.ai/homepage" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Automation Hub - Intelligent Solutions" />
-        <meta name="twitter:description" content="Transform your business with AI automation solutions that deliver measurable ROI from day one." />
-        <link rel="canonical" href="https://aiautomationhub.com/homepage-ai-automation-hub" />
+        <meta name="twitter:title" content="Authera - Transform Your Business with Intelligent AI Automation" />
+        <meta name="twitter:description" content="Join 300+ businesses that have revolutionized their operations with AI-powered automation solutions." />
+        <link rel="canonical" href="https://authera.ai/homepage" />
+        
+        {/* Structured Data for SEO */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Authera",
+            "description": "AI-First Business Solutions Platform specializing in intelligent automation and custom software development",
+            "url": "https://authera.ai",
+            "logo": "https://authera.ai/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-98765-43210",
+              "contactType": "customer service",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/authera",
+              "https://twitter.com/authera_ai"
+            ],
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Akash Kumar"
+              },
+              {
+                "@type": "Person", 
+                "name": "Aditya"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
-
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-background">
         <Header />
         
-        <main>
+        <main className="pt-16">
+          {/* Hero Section - Primary entry point with immediate impact */}
           <HeroSection />
-          <ServiceSelector />
-          <ProjectShowcase />
-          <KnowledgeHub />
-          <TrustIndicators />
+          
+          {/* Journey Selector - Interactive quiz for personalized user paths */}
+          <JourneySelector />
+          
+          {/* Features Showcase - Core solutions with interactive demos */}
+          <FeaturesShowcase />
+          
+          {/* Testimonial Carousel - Social proof and success metrics */}
+          <TestimonialCarousel />
+          
+          {/* CTA Section - Multiple conversion paths and contact methods */}
+          <CTASection />
         </main>
 
+        {/* Footer */}
         <Footer />
       </div>
     </>

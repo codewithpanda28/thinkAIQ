@@ -1,93 +1,92 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { useLocation } from 'react-router-dom';
 import Header from '../../components/ui/Header';
 import ServiceHero from './components/ServiceHero';
-import AssessmentTool from './components/AssessmentTool';
 import ServiceCategories from './components/ServiceCategories';
-import SolutionConfigurator from './components/SolutionConfigurator';
-import IndustryShowcase from './components/IndustryShowcase';
-import TechnicalArchitecture from './components/TechnicalArchitecture';
-import PricingCalculator from './components/PricingCalculator';
+import ROICalculator from './components/ROICalculator';
+import ServiceComparison from './components/ServiceComparison';
+import ProcessTimeline from './components/ProcessTimeline';
+import ServiceTestimonials from './components/ServiceTestimonials';
+import ServiceFAQ from './components/ServiceFAQ';
 
-const ServicesUniversePage = () => {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const initialActiveCategory = params.get('category') || undefined;
+const ServicesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
       <Helmet>
-        <title>AI Automation Services - Interactive Solutions | AI Automation Hub</title>
-        <meta name="description" content="Experience our AI automation solutions through interactive demos. Custom configurator, ROI calculator, and industry-specific implementations with transparent pricing." />
-        <meta name="keywords" content="AI automation services, interactive demos, solution configurator, ROI calculator, business automation, process optimization" />
-        <meta property="og:title" content="AI Automation Services - Interactive Solutions" />
-        <meta property="og:description" content="Try before you buy with our interactive AI automation demos and custom solution configurator." />
+        <title>AI Automation Services | Custom Development & Process Optimization | Authera</title>
+        <meta 
+          name="description" 
+          content="Transform your business with Authera's AI automation services. Custom software development, process optimization, system integration. Calculate ROI, compare solutions, and see real results from industry leaders." 
+        />
+        <meta name="keywords" content="AI automation, custom software development, process optimization, system integration, business automation, ROI calculator, Authera services" />
+        <meta property="og:title" content="AI Automation Services | Custom Development & Process Optimization | Authera" />
+        <meta property="og:description" content="We don't just automate processes - we reimagine possibilities. Discover intelligent automation solutions that grow with your business." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="/services-universe-interactive-solutions" />
+        <link rel="canonical" href="/services" />
       </Helmet>
-      <div className="min-h-screen bg-white">
+
+      <div className="min-h-screen bg-background">
         <Header />
         
-        <main className="pt-16">
+        <main>
           <ServiceHero />
-          <AssessmentTool />
-          <ServiceCategories initialActiveCategory={initialActiveCategory} />
-          <SolutionConfigurator />
-          <IndustryShowcase />
-          <TechnicalArchitecture />
-          <PricingCalculator />
+          <ServiceCategories />
+          <ROICalculator />
+          <ServiceComparison />
+          <ProcessTimeline />
+          <ServiceTestimonials />
+          <ServiceFAQ />
         </main>
 
-        {/* Footer */}
-        <footer className="bg-slate-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">AI</span>
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold">AI Automation Hub</div>
-                    <div className="text-sm text-gray-400">Intelligent Solutions</div>
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-4 max-w-md">
-                  Transforming businesses with intelligent automation solutions. 
-                  Experience the future of work today.
-                </p>
-                <div className="text-sm text-gray-400">
-                  © {new Date()?.getFullYear()} AI Automation Hub. All rights reserved.
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold mb-4">Services</h4>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li>Process Automation</li>
-                  <li>AI Chatbots</li>
-                  <li>Smart Analytics</li>
-                  <li>System Integration</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold mb-4">Support</h4>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li>Documentation</li>
-                  <li>Technical Support</li>
-                  <li>Training</li>
-                  <li>Community</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
+      {/* Footer CTA */}
+<section className="py-16 bg-gradient-to-r from-primary to-secondary">
+  <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+      Ready to Transform Your Business?
+    </h2>
+    <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      Join hundreds of businesses that have already revolutionized their operations 
+      with our intelligent automation and AI-powered solutions.
+    </p>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+      {/* Get Started Button */}
+      {/* <a
+        href="/contact" 
+        className="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/90 transition-colors duration-200 flex items-center justify-center space-x-2"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9,22 9,12 15,12 15,22"/>
+        </svg>
+        <span>Get Started Today</span>
+      </a> */}
+
+      {/* Call Button */}
+      <a
+        href="tel:+919876543210"
+        className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-colors duration-200 flex items-center justify-center space-x-2"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Call +91 8252472186</span>
+      </a>
+    </div>
+
+    <p className="text-white/70 text-sm mt-6">
+      Free consultation • No obligation • Response within 24 hours
+    </p>
+  </div>
+</section>
+
       </div>
     </>
   );
 };
 
-export default ServicesUniversePage;
+export default ServicesPage;

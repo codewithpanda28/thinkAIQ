@@ -28,8 +28,10 @@
   },
   "dependencies": {
     "@dhiwise/component-tagger": "^1.0.10",
+    "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-slot": "^1.2.3",
     "@reduxjs/toolkit": "^2.6.1",
+    "@supabase/supabase-js": "^2.75.0",
     "@tailwindcss/forms": "^0.5.7",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
@@ -46,6 +48,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.55.0",
+    "react-hot-toast": "^2.6.0",
     "react-router-dom": "6.0.2",
     "react-router-hash-link": "^2.4.3",
     "recharts": "^2.15.2",

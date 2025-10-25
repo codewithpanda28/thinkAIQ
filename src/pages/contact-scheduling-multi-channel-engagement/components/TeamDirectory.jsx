@@ -144,7 +144,28 @@ const TeamDirectory = () => {
   });
 
   const handleContactMember = (member) => {
+    if (member?.phone || member?.email) {
+      // Prioritize WhatsApp if a phone number is available
+      if (member?.phone) {
+        const cleanedPhoneNumber = member.phone.replace(/\D/g, ''); // Remove non-digits for wa.me link
+        const encodedMessage = encodeURIComponent(
+          `Hello ${member.name}, I'm interested in your expertise and would like to connect regarding a potential project.`
+        );
+        window.open(`https://wa.me/${cleanedPhoneNumber}?text=${encodedMessage}`, "_blank");
+        // Assuming 'toast' is available globally or imported elsewhere in the file
+        toast.success(`Redirecting to WhatsApp to contact ${member.name}...`);
+      } else if (member?.email) {
+        // Fallback to email if no phone number is available
+        window.open(`mailto:${member.email}`, "_blank");
+        // Assuming 'toast' is available globally or imported elsewhere in the file
+        toast.success(`Opening email client to contact ${member.name}...`);
+      }
+    } else {
+      // Assuming 'toast' is available globally or imported elsewhere in the file
+      toast.error(`No contact information available for ${member.name}.`);
+    }
     console.log('Contacting member:', member?.name);
+
     // Handle contact action
   };
 
@@ -275,6 +296,7 @@ const TeamDirectory = () => {
                   iconName="Calendar"
                   iconPosition="left"
                   onClick={() => handleContactMember(member)}
+
                 >
                   Schedule Meeting
                 </Button>
@@ -285,6 +307,7 @@ const TeamDirectory = () => {
                     size="sm"
                     className="border-primary text-primary hover:bg-primary hover:text-white"
                     iconName="Mail"
+                    onClick={() => window.open(`mailto:${member?.email}`)}
                   
                   >
                     Email
@@ -294,6 +317,7 @@ const TeamDirectory = () => {
                     size="sm"
                     className="border-success text-success hover:bg-success hover:text-white"
                     iconName="Phone"
+                    onClick={() => window.open(`tel:${member?.phone}`)}
                   >
                     Call
                   </Button>
@@ -302,6 +326,7 @@ const TeamDirectory = () => {
                     size="sm"
                     className="border-secondary text-secondary hover:bg-secondary hover:text-white"
                     iconName="Linkedin"
+                    onClick={() => window.open(member?.linkedin, '_blank')}
                   >
                     LinkedIn
                   </Button>
@@ -352,7 +377,7 @@ const TeamDirectory = () => {
         )}
 
         {/* Contact CTA */}
-        <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-center text-white">
+        {/* <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Can't find the right specialist?</h3>
           <p className="text-white/80 mb-6 max-w-2xl mx-auto">
             Our team coordination specialists will connect you with the perfect expert for your specific requirements.
@@ -366,7 +391,7 @@ const TeamDirectory = () => {
           >
             Request Team Matching
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

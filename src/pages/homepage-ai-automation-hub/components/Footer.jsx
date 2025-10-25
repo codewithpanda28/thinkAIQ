@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
+"use client";
+import React from "react";
+import { Link } from "react-router-dom";
+import Icon from "../../../components/AppIcon";
+import Button from "../../../components/ui/Button";
 
 const Footer = () => {
-  const currentYear = new Date()?.getFullYear();
-  
+  const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
@@ -16,8 +16,8 @@ const Footer = () => {
         { name: "Customer Service AI", href: "/services-universe-interactive-solutions" },
         { name: "Document Processing", href: "/services-universe-interactive-solutions" },
         { name: "Smart Inventory", href: "/services-universe-interactive-solutions" },
-        { name: "Financial Automation", href: "/services-universe-interactive-solutions" }
-      ]
+        { name: "Financial Automation", href: "/services-universe-interactive-solutions" },
+      ],
     },
     {
       title: "Company",
@@ -27,8 +27,8 @@ const Footer = () => {
         { name: "Careers", href: "/about-ecosystem-company-story" },
         { name: "Success Stories", href: "/portfolio-showcase-success-stories" },
         { name: "Case Studies", href: "/portfolio-showcase-success-stories" },
-        { name: "Client Portal", href: "/client-dashboard-project-command-center" }
-      ]
+        { name: "Client Portal", href: "/client-dashboard-project-command-center" },
+      ],
     },
     {
       title: "Resources",
@@ -38,8 +38,8 @@ const Footer = () => {
         { name: "Industry Reports", href: "#resources" },
         { name: "Best Practices", href: "#resources" },
         { name: "Implementation Guides", href: "#resources" },
-        { name: "API Documentation", href: "#resources" }
-      ]
+        { name: "API Documentation", href: "#resources" },
+      ],
     },
     {
       title: "Support",
@@ -47,50 +47,50 @@ const Footer = () => {
         { name: "Contact Us", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Help Center", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Technical Support", href: "/contact-scheduling-multi-channel-engagement" },
-        { name: "Training", href: "/contact-scheduling-multi-channel-engagement" },
+        { name: "Training & Onboarding", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Community Forum", href: "/contact-scheduling-multi-channel-engagement" },
-        { name: "Status Page", href: "/contact-scheduling-multi-channel-engagement" }
-      ]
-    }
+        { name: "Status Page", href: "/contact-scheduling-multi-channel-engagement" },
+      ],
+    },
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", icon: "Linkedin", href: "https://linkedin.com/company/ai-automation-hub" },
-    { name: "Twitter", icon: "Twitter", href: "https://twitter.com/aiautomationhub" },
-    { name: "YouTube", icon: "Youtube", href: "https://youtube.com/@aiautomationhub" },
-    { name: "Instagram", icon: "Instagram", href: "https://instagram.com/aiautomationhub" },
-    { name: "Facebook", icon: "Facebook", href: "https://facebook.com/aiautomationhub" }
+    { name: "LinkedIn", icon: "Linkedin", href: "https://linkedin.com/company/autheraai" },
+    { name: "Twitter", icon: "Twitter", href: "https://twitter.com/autheraai" },
+    { name: "YouTube", icon: "Youtube", href: "https://youtube.com/@autheraai" },
+    { name: "Instagram", icon: "Instagram", href: "https://instagram.com/autheraai" },
+    { name: "Facebook", icon: "Facebook", href: "https://facebook.com/autheraai" },
   ];
 
   const contactInfo = [
-    {
-      icon: "MapPin",
-      title: "Headquarters",
-      details: ["Bandra Kurla Complex", "Mumbai, Maharashtra 400051", "India"]
-    },
+   
     {
       icon: "Phone",
-      title: "Phone",
-      details: ["+91 8252472186", "+91 9508949406"]
+      title: "Call Us",
+      details: ["+91 8252472186", "+91 9508949406"],
     },
     {
       icon: "Mail",
       title: "Email",
-      details: ["akashkumar.webdev@gmail.com", "autheraai225@gmail.com"]
+      details: ["akashkumar.webdev@gmail.com", "autheraai225@gmail.com"],
     },
-    {
-      icon: "Clock",
-      title: "Business Hours",
-      details: ["Mon - Fri: 9:00 AM - 9:00 PM", "Sat: 10:00 AM - 10:00 PM", "24/7 Emergency Support"]
-    }
+    // {
+    //   icon: "Clock",
+    //   title: "Working Hours",
+    //   details: [
+    //     "Mon – Fri: 9:00 AM – 9:00 PM",
+    //     "Sat: 10:00 AM – 10:00 PM",
+    //     "24/7 Emergency Support",
+    //   ],
+    // },
   ];
 
   return (
     <footer className="bg-gradient-to-br from-primary via-primary/95 to-secondary text-white">
-      {/* Main Footer Content */}
+      {/* Main Footer */}
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Company Info - Left Column */}
+          {/* Left: Company Info */}
           <div className="lg:col-span-2 space-y-6">
             {/* Logo */}
             <Link to="/homepage-ai-automation-hub" className="flex items-center space-x-3">
@@ -102,29 +102,38 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white tracking-tight">
-                  AI Automation Hub
+                  Authera AI
                 </span>
                 <span className="text-sm text-white/80 font-medium -mt-1">
-                  Intelligent Solutions
+                  Intelligence that Works
                 </span>
               </div>
             </Link>
 
             {/* Description */}
-            <p className="text-white/80 leading-relaxed max-w-md">
-              Transforming businesses worldwide with intelligent AI automation solutions. 
-              We help companies achieve measurable ROI through cutting-edge technology and expert implementation.
-            </p>
+            {/* <p className="text-white/80 leading-relaxed max-w-md">
+              Authera AI helps organizations modernize their operations through advanced automation, 
+              smart data analytics, and AI-driven insights. We build scalable digital ecosystems that 
+              deliver measurable results and long-term value.
+            </p> */}
 
-            {/* Contact Info */}
+            {/* Contact */}
             <div className="space-y-4">
-              {contactInfo?.map((contact, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <Icon name={contact?.icon} size={18} className="text-accent mt-1 flex-shrink-0" />
+              {contactInfo.map((contact, i) => (
+                <div key={i} className="flex items-start space-x-3">
+                  <Icon
+                    name={contact.icon}
+                    size={18}
+                    className="text-accent mt-1 flex-shrink-0"
+                  />
                   <div>
-                    <div className="font-medium text-white text-sm mb-1">{contact?.title}</div>
-                    {contact?.details?.map((detail, idx) => (
-                      <div key={idx} className="text-white/70 text-sm">{detail}</div>
+                    <div className="font-medium text-white text-sm mb-1">
+                      {contact.title}
+                    </div>
+                    {contact.details.map((d, idx) => (
+                      <div key={idx} className="text-white/70 text-sm">
+                        {d}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -132,37 +141,41 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 pt-2">
               <span className="text-white/80 text-sm font-medium">Follow us:</span>
               <div className="flex space-x-3">
-                {socialLinks?.map((social) => (
+                {socialLinks.map((s) => (
                   <a
-                    key={social?.name}
-                    href={social?.href}
+                    key={s.name}
+                    href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 hover:bg-accent/20 rounded-lg flex items-center justify-center transition-colors duration-300 group"
                   >
-                    <Icon name={social?.icon} size={18} className="text-white/80 group-hover:text-accent transition-colors" />
+                    <Icon
+                      name={s.icon}
+                      size={18}
+                      className="text-white/80 group-hover:text-accent transition-colors"
+                    />
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Footer Links - Right Columns */}
+          {/* Right: Footer Links */}
           <div className="lg:col-span-3 grid md:grid-cols-4 gap-8">
-            {footerSections?.map((section, index) => (
-              <div key={index}>
-                <h3 className="font-bold text-white mb-4">{section?.title}</h3>
+            {footerSections.map((section, i) => (
+              <div key={i}>
+                <h3 className="font-bold text-white mb-4">{section.title}</h3>
                 <ul className="space-y-3">
-                  {section?.links?.map((link, linkIndex) => (
-                    <li key={linkIndex}>
+                  {section.links.map((link, idx) => (
+                    <li key={idx}>
                       <Link
-                        to={link?.href}
+                        to={link.href}
                         className="text-white/70 hover:text-accent transition-colors duration-200 text-sm"
                       >
-                        {link?.name}
+                        {link.name}
                       </Link>
                     </li>
                   ))}
@@ -172,47 +185,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* Newsletter Section */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-6 lg:px-8 py-12">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-                <p className="text-white/80">
-                  Get the latest AI automation insights, industry trends, and exclusive resources delivered to your inbox.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                />
-                <Button
-                  variant="default"
-                  className="bg-accent hover:bg-accent/90 text-primary font-semibold px-6"
-                  iconName="Send"
-                  iconPosition="right"
-                >
-                  Subscribe
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      {/* Newsletter */}
+     
+
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
             <div className="text-white/70 text-sm">
-              © {currentYear} AI Automation Hub. All rights reserved.
+              © {currentYear} Authera AI. All rights reserved.
             </div>
 
-            {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">
               <Link to="#privacy" className="text-white/70 hover:text-accent transition-colors">
                 Privacy Policy
@@ -228,7 +212,6 @@ const Footer = () => {
               </Link>
             </div>
 
-            {/* Certifications */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-3 py-1">
                 <Icon name="Shield" size={16} className="text-success" />

@@ -13,13 +13,14 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', path: '/homepage-ai-automation-hub', icon: 'Home' },
     { name: 'Services', path: '/services-universe-interactive-solutions', icon: 'Zap' },
-    { name: 'Portfolio', path: '/portfolio-showcase-success-stories', icon: 'Trophy' },
-    { name: 'About', path: '/about-ecosystem-company-story', icon: 'Users' }
+    // { name: 'Portfolio', path: '/portfolio-showcase-success-stories', icon: 'Trophy' },
+    { name: 'About', path: '/about-ecosystem-company-story', icon: 'Users' },
+    { name: 'Contact', path: '/contact-scheduling-multi-channel-engagement', icon: 'MessageSquare' },
   ];
 
   const moreItems = [
-    { name: 'Contact', path: '/contact-scheduling-multi-channel-engagement', icon: 'MessageSquare' },
-    { name: 'Dashboard', path: '/client-dashboard-project-command-center', icon: 'BarChart3' }
+     { name: 'Blog', path: '/blog', icon: 'FileText' },
+    { name: 'Trust Center', path: '/trust-center', icon: 'Shield' },
   ];
 
   useEffect(() => {
@@ -103,14 +104,14 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+         <nav className="hidden lg:flex items-center space-x-1">
             {navigationItems?.map((item) => (
               <Link
                 key={item?.path}
                 to={item?.path}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`nav-hint px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-2 ${
                   isActivePath(item?.path)
-                    ? 'bg-accent/10 text-accent border border-accent/20' :'text-text-primary hover:bg-muted hover:text-primary'
+                    ? 'bg-primary/10 text-primary opacity-100 border-l-4 border-primary' :'text-muted-foreground hover:text-foreground hover:bg-muted/50'
                 }`}
               >
                 <Icon name={item?.icon} size={16} />
@@ -120,39 +121,28 @@ const Header = () => {
             
             {/* More Dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-text-primary hover:bg-muted hover:text-primary transition-all duration-200">
+              <button className="nav-hint px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all duration-300 flex items-center space-x-2">
                 <Icon name="MoreHorizontal" size={16} />
                 <span>More</span>
+                <Icon name="ChevronDown" size={14} />
               </button>
               
-              <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                {moreItems?.map((item) => (
-                  item?.name === 'Dashboard' ? (
-                    <button
-                      key={item?.path}
-                      onClick={handleProtectedDashboard}
-                      className={`w-full text-left flex items-center space-x-3 px-4 py-3 text-sm font-medium transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg ${
-                        isActivePath(item?.path)
-                          ? 'bg-accent/10 text-accent' :'text-text-primary hover:bg-muted'
-                      }`}
-                    >
-                      <Icon name={item?.icon} size={16} />
-                      <span>{item?.name}</span>
-                    </button>
-                  ) : (
+              <div className="absolute top-full right-0 mt-2 w-48 bg-popover border border-border rounded-lg shadow-brand-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {moreItems?.map((item) => (
                     <Link
                       key={item?.path}
                       to={item?.path}
-                      className={`flex items-center space-x-3 px-4 py-3 text-sm font-medium transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg ${
+                      className={`flex items-center space-x-3 px-4 py-2 text-sm transition-colors duration-200 ${
                         isActivePath(item?.path)
-                          ? 'bg-accent/10 text-accent' :'text-text-primary hover:bg-muted'
+                          ? 'bg-primary/10 text-primary' :'text-muted-foreground hover:text-foreground hover:bg-muted/50'
                       }`}
                     >
                       <Icon name={item?.icon} size={16} />
                       <span>{item?.name}</span>
                     </Link>
-                  )
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </nav>

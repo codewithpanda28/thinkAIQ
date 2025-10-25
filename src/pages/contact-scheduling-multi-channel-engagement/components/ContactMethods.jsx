@@ -63,7 +63,7 @@ const ContactMethods = ({ onMethodSelect }) => {
       icon: 'MessageSquare',
       color: 'primary',
       features: ['Real-time chat', 'Screen sharing', 'File transfer', 'Chat history'],
-      responseTime: '< 1 minute',
+      responseTime: '< 5 minute',
       bestFor: 'Technical queries',
       action: 'Start Chat'
     },

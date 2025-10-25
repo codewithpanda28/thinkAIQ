@@ -1,132 +1,104 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-
+import Image from '../../../components/AppImage';
+import Button from '../../../components/ui/Button';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-primary via-secondary to-primary overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-accent/5 rounded-full blur-3xl animate-pulse animation-delay-400"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse animation-delay-200"></div>
-      </div>
+    <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 pt-24 pb-16 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 geometric-pattern opacity-30"></div>
 
-      <div className="relative z-10 container mx-auto px-6 lg:px-8 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Content */}
-          <div className="text-white space-y-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                  <Icon name="Building2" size={24} color="white" />
-                </div>
-                <span className="text-accent font-medium text-lg">Our Story</span>
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="hero-reveal">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                <Icon name="Users" size={24} className="text-white" />
               </div>
-              
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Building the
-                <span className="block text-accent">AI Future</span>
-                Together
-              </h1>
-              
-              <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-                From a vision to democratize AI automation to serving 500+ global enterprises, 
-                our journey is defined by innovation, trust, and measurable transformation.
-              </p>
-            </div>
-
-            {/* Key Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent">500+</div>
-                <div className="text-sm text-white/70">Clients Served</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent">98%</div>
-                <div className="text-sm text-white/70">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent">24/7</div>
-                <div className="text-sm text-white/70">Global Support</div>
+              <div className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                Founded by Passionate Developers
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+              Meet <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">Akash Kumar</span> &{' '}
+              <span className="text-transparent bg-gradient-to-r from-secondary to-primary bg-clip-text">Aditya</span>
+            </h1>
+
+            <p className="text-lg text-muted-foreground mb-8 text-balance">
+              We’re two passionate developers who believe in building impactful digital experiences.
+              From frontend innovation to automation systems — we create solutions that make a difference.
+              Every project we take is built with dedication, creativity, and real purpose.
+            </p>
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-accent text-primary font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 cta-morph"
-               onClick={() => {
-                  const el = document.querySelector('#team-section');
-                  if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}>
+              <Button
+                variant="default"
+                size="lg"
+                iconName="Users"
+                iconPosition="left"
+                className="premium-button"
+                onClick={() => window.location.href = '/team'}
+              >
                 Meet Our Team
-              </button>
-              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-               onClick={() => {
-                  const el = document.querySelector('#our-mission');
-                  if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}>
-                Our Mission
-              </button>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                iconName="Award"
+                iconPosition="left"
+                onClick={() => window.location.href = '/achievements'}
+              >
+                View Our Work
+              </Button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex items-center space-x-6 mt-8 pt-8 border-t border-border">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-sm text-muted-foreground">Months of Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">10+</div>
+                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">100%</div>
+                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              </div>
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Right Image Section */}
           <div className="relative">
             <div className="relative z-10">
-              <div className="glassmorphism rounded-2xl p-8 space-y-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold text-lg">Company Timeline</h3>
-                  <Icon name="TrendingUp" size={24} color="white" />
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-accent rounded-full"></div>
-                    <div className="text-white/90">
-                      <div className="font-medium">2019 - Founded</div>
-                      <div className="text-sm text-white/70">Started with AI vision</div>
-                    </div>
+              <Image
+                src="https://images.unsplash.com/photo-1629904853716-f91e66f6b532?w=700&h=500&fit=crop"
+                alt="Akash and Aditya working on frontend project"
+                className="w-full h-96 object-cover rounded-2xl shadow-brand-lg"
+              />
+
+              {/* Floating Stats Card */}
+              <div className="absolute -bottom-6 -left-6 bg-background border border-border rounded-xl p-4 shadow-brand-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-success/10 rounded-lg flex items-center justify-center">
+                    <Icon name="TrendingUp" size={20} className="text-success" />
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-accent rounded-full"></div>
-                    <div className="text-white/90">
-                      <div className="font-medium">2021 - Global Expansion</div>
-                      <div className="text-sm text-white/70">Reached 100+ clients</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-accent rounded-full"></div>
-                    <div className="text-white/90">
-                      <div className="font-medium">2023 - AI Leadership</div>
-                      <div className="text-sm text-white/70">Industry recognition</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-accent/50 rounded-full animate-pulse"></div>
-                    <div className="text-white/90">
-                      <div className="font-medium">2025 - Future Ready</div>
-                      <div className="text-sm text-white/70">500+ enterprises served</div>
-                    </div>
+                  <div>
+                    <div className="text-sm font-medium text-foreground">Client Success Rate</div>
+                    <div className="text-2xl font-bold text-success">98%</div>
                   </div>
                 </div>
               </div>
             </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent/20 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/30 rounded-full blur-xl animate-pulse animation-delay-600"></div>
+
+            {/* Background Glow */}
+            <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl -z-10 blur-xl"></div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-        <Icon name="ChevronDown" size={24} />
       </div>
     </section>
   );
