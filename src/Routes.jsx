@@ -15,6 +15,8 @@ import ArticleDetail from './pages/articles/[id]';
 // import ServiceDetailPage from './pages/services/[slug]';
 import BlogPage from "pages/blog";
 import TrustCenter from "pages/trust-center";
+import Blog from "pages/blog";
+import BlogDetail from "pages/blog-detail";
 
 const Routes = () => {
   return (
@@ -31,8 +33,8 @@ const Routes = () => {
         <Route path="/homepage-ai-automation-hub" element={<Homepage />} />
         <Route path="/services-universe-interactive-solutions" element={<ServicesUniversePage />} />
         {/* <Route path="/services/:slug" element={<ServiceDetailPage />} /> */}
-        <Route path="/articles" element={<ArticlesPage />} />
-        <Route path="/articles/:id" element={<ArticleDetail />} />
+        <Route path="/articles" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>
