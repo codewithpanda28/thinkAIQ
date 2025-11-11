@@ -19,7 +19,7 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <title>thinkAIQ - Transform Your Business with Intelligent AI Automation</title>
+        <title>thinkAIQ</title>
         <meta name="description" content="Join 300+ businesses that have revolutionized their operations with thinkAIQ's AI-powered automation solutions. Get 85% cost reduction and 99.7% accuracy. Book free consultation today." />
         <meta name="keywords" content="AI automation, business process automation, custom software development, artificial intelligence, business optimization, digital transformation, thinkAIQ" />
         <meta property="og:title" content="thinkAIQ - Transform Your Business with Intelligent AI Automation" />
