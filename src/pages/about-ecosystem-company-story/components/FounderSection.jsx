@@ -15,13 +15,13 @@ const FounderSection = () => {
       image: "./../public/assets/images/akash.jpg",
       expertise: ["AI Agents", "Automation", "Full Stack Development", "Web & Graphics Design"],
       experience: "2+ Years",
-      bio: `Akash Kumar is the driving force behind Authera’s vision of making intelligent automation accessible to every business. 
+      bio: `Akash Kumar is the driving force behind thinkAIQ's vision of making intelligent automation accessible to every business. 
 He specializes in AI agent systems and process automation, helping organizations reduce manual workloads and scale efficiently.
 
 With a solid foundation in full-stack development, Akash blends creativity and technology — designing intuitive web interfaces and 
 building systems that truly think for themselves. 
 
-As an MSME-certified entrepreneur, he also leads creative direction for Authera’s design and branding, ensuring technology always 
+As an MSME-certified entrepreneur, he also leads creative direction for thinkAIQ's design and branding, ensuring technology always 
 feels human-centered and visually engaging.`,
       achievements: [
         "Developed 50+ automation workflows for SMEs",
@@ -44,9 +44,9 @@ feels human-centered and visually engaging.`,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       expertise: ["Machine Learning", "System Architecture", "Product Development"],
       experience: "6+ Years",
-      bio: `Aditya is the technical visionary behind Authera's cutting-edge automation solutions. With a deep background in machine learning and system architecture, he ensures that every solution we deliver is not just functional, but future-ready.
+      bio: `Aditya is the technical visionary behind thinkAIQ's cutting-edge automation solutions. With a deep background in machine learning and system architecture, he ensures that every solution we deliver is not just functional, but future-ready.
 
-His approach to technology is rooted in understanding business needs first, then crafting elegant technical solutions that scale. Aditya's leadership in product development has been instrumental in Authera's reputation for delivering robust, scalable automation systems.`,
+His approach to technology is rooted in understanding business needs first, then crafting elegant technical solutions that scale. Aditya's leadership in product development has been instrumental in thinkAIQ's reputation for delivering robust, scalable automation systems.`,
       achievements: [
         "Architected 50+ scalable automation systems",
         "Expert in 10+ programming languages",
@@ -73,11 +73,11 @@ His approach to technology is rooted in understanding business needs first, then
             <Icon name="Star" size={16} />
             <span>Leadership Team</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4">
             Meet Our Founders
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The visionary leaders driving Authera’s mission to transform businesses 
+          <p className="text-base sm:text-lg text-muted-foreground dark:text-muted-foreground max-w-2xl mx-auto">
+            The visionary leaders driving thinkAIQ's mission to transform businesses 
             through intelligent automation and AI-powered innovation.
           </p>
         </div>

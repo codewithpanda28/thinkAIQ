@@ -17,6 +17,10 @@ import BlogPage from "pages/blog";
 import TrustCenter from "pages/trust-center";
 import Blog from "pages/blog";
 import BlogDetail from "pages/blog-detail";
+import ProjectDetails from "pages/project-details/[id]";
+import SaaSProjectDetails from "pages/saas-project/[id]";
+import PrivacyPolicy from "pages/privacy-policy";
+import TermsOfService from "pages/terms-of-service";
 
 const Routes = () => {
   return (
@@ -35,6 +39,10 @@ const Routes = () => {
         {/* <Route path="/services/:slug" element={<ServiceDetailPage />} /> */}
         <Route path="/articles" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
+        <Route path="/project-details/:id" element={<ProjectDetails />} />
+        <Route path="/saas-project/:id" element={<SaaSProjectDetails />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

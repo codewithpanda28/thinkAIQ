@@ -83,6 +83,7 @@ const CTASection = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+      
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main CTA */}
         <div className="text-center mb-16">
@@ -291,7 +292,7 @@ const CTASection = () => {
         </div>
 
         {/* Trust Signals */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
             <div className="flex items-center justify-center space-x-2">
               <Icon name="Shield" size={20} className="text-success" />
@@ -318,7 +319,7 @@ const CTASection = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

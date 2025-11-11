@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import Routes from "./Routes";
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
     fetch('/api/visits/increment', { method: 'POST' }).catch(() => {});
   }, []);
   return (
-    <Routes />
+    <ThemeProvider>
+      <Routes />
+    </ThemeProvider>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
@@ -11,85 +12,121 @@ const FeaturesShowcase = () => {
     {
       id: 'ai-automation',
       title: 'AI-Powered Process Automation',
-      description: 'We help you turn slow, repetitive tasks into self-running systems. From managing data to handling daily operations, automation lets your team focus on what really matters — growth and innovation.',
+      description: 'Transform repetitive tasks into intelligent automated workflows that work 24/7, reducing manual effort by up to 85% and eliminating human errors.',
       icon: 'Bot',
       color: 'from-blue-500 to-indigo-600',
       benefits: [
-        'Cut down processing time by up to 70%',
-        'Fewer human errors and smoother data flow',
-        'Always-on operations, 24/7',
-        'Works perfectly with your existing tools'
+        '85% reduction in manual processing time',
+        '99.7% accuracy with AI-powered validation',
+        '24/7 automated operations',
+        'Seamless integration with existing tools',
+        'Real-time monitoring and alerts',
+        'Scalable to handle growing volumes'
       ],
-      demoData: {
-        title: 'Invoice Processing Automation',
-        metrics: [
-          { label: 'Processing Time', before: '3 hours', after: '5 minutes', improvement: '97%' },
-          { label: 'Accuracy Rate', before: '92%', after: '99.7%', improvement: '8.4%' },
-          { label: 'Cost per Invoice', before: '₹45', after: '₹3', improvement: '93%' }
-        ]
+      useCases: [
+        'Invoice processing and approval workflows',
+        'Customer support ticket routing',
+        'Data entry and validation',
+        'Report generation and distribution',
+        'Email automation and responses',
+        'Document classification and filing'
+      ],
+      technologies: ['OpenAI GPT', 'Custom AI Models', 'RPA', 'Workflow Engine'],
+      results: {
+        timeSaved: '85%',
+        costReduction: '70%',
+        accuracy: '99.7%',
+        scalability: '10x'
       }
     },
     {
       id: 'custom-software',
       title: 'Custom Software Development',
-      description: 'Your business is unique — your software should be too. We design and build solutions that fit your exact workflow and can grow with you as your business scales.',
+      description: 'Build tailored software solutions that perfectly fit your business needs, from web applications to mobile apps and enterprise systems.',
       icon: 'Code',
       color: 'from-purple-500 to-pink-600',
       benefits: [
-        'Tailor-made to your specific requirements',
-        'Built using modern, reliable technologies',
-        'Scalable and secure for long-term use',
-        'Fully tested for performance and stability'
+        '100% customized to your requirements',
+        'Modern tech stack for future-proof solutions',
+        'Scalable architecture for growth',
+        'Enterprise-grade security',
+        'Comprehensive testing and QA',
+        'Ongoing support and maintenance'
       ],
-      demoData: {
-        title: 'CRM Development Project',
-        metrics: [
-          { label: 'Development Time', before: '8 months', after: '4 months', improvement: '50%' },
-          { label: 'User Adoption', before: '60%', after: '95%', improvement: '58%' },
-          { label: 'System Performance', before: '3.2s', after: '0.8s', improvement: '75%' }
-        ]
+      useCases: [
+        'Custom CRM and ERP systems',
+        'E-commerce platforms',
+        'Mobile applications (iOS & Android)',
+        'API development and integration',
+        'Cloud-based solutions',
+        'Legacy system modernization'
+      ],
+      technologies: ['React', 'Node.js', 'Python', 'AWS', 'Docker'],
+      results: {
+        developmentTime: '50% faster',
+        userAdoption: '95%',
+        performance: '75% improvement',
+        satisfaction: '98%'
       }
     },
     {
       id: 'business-optimization',
       title: 'Business Process Optimization',
-      description: 'We take a close look at how your business runs and find smarter ways to get things done. Our goal? To make every step faster, simpler, and more cost-effective.',
+      description: 'Analyze and optimize your business processes to eliminate bottlenecks, reduce costs, and improve efficiency across all operations.',
       icon: 'TrendingUp',
       color: 'from-green-500 to-emerald-600',
       benefits: [
-        'Identify process bottlenecks',
-        'Redesign workflows for better results',
-        'Reduce time and cost per task',
-        'Continuous tracking and improvement'
+        'Identify and eliminate process bottlenecks',
+        'Reduce operational costs by 40-60%',
+        'Improve process efficiency by 80%',
+        'Enhance customer satisfaction',
+        'Data-driven decision making',
+        'Continuous improvement framework'
       ],
-      demoData: {
-        title: 'Supply Chain Optimization',
-        metrics: [
-          { label: 'Inventory Costs', before: '₹25L', after: '₹15L', improvement: '40%' },
-          { label: 'Delivery Time', before: '7 days', after: '3 days', improvement: '57%' },
-          { label: 'Order Accuracy', before: '88%', after: '98%', improvement: '11%' }
-        ]
+      useCases: [
+        'Supply chain optimization',
+        'Inventory management',
+        'Order processing workflows',
+        'Customer onboarding processes',
+        'Quality control procedures',
+        'Resource allocation optimization'
+      ],
+      technologies: ['Process Mining', 'Data Analytics', 'ML Models', 'Dashboard Tools'],
+      results: {
+        costReduction: '50%',
+        efficiency: '80% improvement',
+        deliveryTime: '60% faster',
+        accuracy: '95%'
       }
     },
     {
       id: 'ai-integration',
       title: 'AI Integration & Consulting',
-      description: 'If you’re exploring AI but not sure where to start, we guide you through every step — from planning to full implementation.',
+      description: 'Strategic AI adoption consulting to help you identify opportunities, build roadmaps, and implement AI solutions that drive real business value.',
       icon: 'Brain',
       color: 'from-orange-500 to-red-600',
       benefits: [
-        'Evaluate how ready your business is for AI',
-        'Build a clear roadmap for adoption',
-        'Choose the right tools and platforms',
-        'Support your team during the transition'
+        'AI readiness assessment',
+        'Custom AI strategy development',
+        'Technology selection and evaluation',
+        'Implementation roadmap',
+        'Change management support',
+        'Ongoing AI optimization'
       ],
-      demoData: {
-        title: 'AI Strategy Implementation',
-        metrics: [
-          { label: 'Decision Speed', before: '2 weeks', after: '2 hours', improvement: '99%' },
-          { label: 'Prediction Accuracy', before: '70%', after: '94%', improvement: '34%' },
-          { label: 'Operational Costs', before: '₹50L', after: '₹30L', improvement: '40%' }
-        ]
+      useCases: [
+        'AI strategy development',
+        'Machine learning model deployment',
+        'Natural language processing integration',
+        'Computer vision solutions',
+        'Predictive analytics implementation',
+        'AI-powered decision support systems'
+      ],
+      technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Custom Models'],
+      results: {
+        decisionSpeed: '99% faster',
+        predictionAccuracy: '94%',
+        costSavings: '40%',
+        roi: '300%'
       }
     }
   ];
@@ -111,179 +148,168 @@ const FeaturesShowcase = () => {
     return () => observer?.disconnect();
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % features?.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [features?.length]);
-
   const currentFeature = features?.[activeFeature];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-muted/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-muted/30 dark:from-background dark:to-muted/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center space-x-2 bg-accent/10 dark:bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Icon name="Zap" size={16} />
-            <span>Core Solutions</span>
+            <span>Our Solutions</span>
           </div>
           
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-          Comprehensive{' '}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            AI & Automation
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Comprehensive{' '}
+            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              AI & Automation
             </span>{' '}
-            Solutions for Modern Businesses
+            Solutions
           </h2>
           
-          <p className="text-md text-muted-foreground max-w-3xl mx-auto">
-          We combine intelligent automation, custom software, and process optimization to help businesses save time, reduce errors, and scale efficiently. Every solution is tailored to your needs, not just a one-size-fits-all approach.
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+            We combine intelligent automation, custom software, and process optimization to help businesses save time, 
+            reduce errors, and scale efficiently. Every solution is tailored to your needs.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Feature Navigation */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {features?.map((feature, index) => (
-              <div
+              <motion.div
                 key={feature?.id}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
                 className={`cursor-pointer transition-all duration-300 ${
-                  activeFeature === index ? 'scale-105' : 'hover:scale-102'
+                  activeFeature === index ? 'scale-105' : ''
                 }`}
                 onClick={() => setActiveFeature(index)}
               >
                 <div className={`p-6 rounded-2xl border transition-all duration-300 ${
                   activeFeature === index 
-                    ? 'bg-card border-primary shadow-brand-lg' 
-                    : 'bg-card/50 border-border hover:border-primary/50 shadow-brand-sm'
+                    ? 'bg-card dark:bg-card border-primary dark:border-accent shadow-lg' 
+                    : 'bg-card/50 dark:bg-card/50 border-border hover:border-primary/50 dark:hover:border-accent/50 shadow-sm'
                 }`}>
                   <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${feature?.color} rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    <div className={`w-12 h-12 bg-gradient-to-br ${feature?.color} rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
                       activeFeature === index ? 'scale-110' : ''
-                    } transition-transform duration-300`}>
+                    }`}>
                       <Icon name={feature?.icon} size={24} className="text-white" />
                     </div>
                     
                     <div className="flex-1">
                       <h3 className={`text-lg font-semibold mb-2 transition-colors duration-300 ${
-                        activeFeature === index ? 'text-primary' : 'text-foreground'
+                        activeFeature === index ? 'text-primary dark:text-accent' : 'text-foreground'
                       }`}>
                         {feature?.title}
                       </h3>
-                      <p className="text-muted-foreground mb-4">{feature?.description}</p>
-                      
-                      <div className="grid grid-cols-2 gap-2">
-                        {feature?.benefits?.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center space-x-2 text-sm">
-                            <Icon name="Check" size={14} className="text-success flex-shrink-0" />
-                            <span className="text-muted-foreground">{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{feature?.description}</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          {/* Feature Demo */}
-          <div className={`${isVisible ? 'hero-reveal animate' : 'hero-reveal'}`}>
-            <div className="bg-card border border-border rounded-2xl p-8 shadow-brand-lg authority-spotlight">
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold text-foreground">{currentFeature?.demoData?.title}</h3>
-                  <div className="flex items-center space-x-2 text-success">
-                    <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium">Live Demo</span>
+          {/* Feature Details */}
+          <motion.div
+            key={activeFeature}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-card dark:bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-lg sticky top-8"
+          >
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-2">{currentFeature?.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{currentFeature?.description}</p>
+              </div>
+
+              {/* Results */}
+              <div className="grid grid-cols-2 gap-4">
+                {Object.entries(currentFeature?.results || {}).map(([key, value], idx) => (
+                  <div key={idx} className="p-4 bg-muted/30 dark:bg-muted rounded-lg text-center">
+                    <div className="text-2xl font-bold text-primary dark:text-accent mb-1">{value}</div>
+                    <div className="text-xs text-muted-foreground capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </div>
-                </div>
-                
-                <div className="space-y-4">
-                  {currentFeature?.demoData?.metrics?.map((metric, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-foreground">{metric?.label}</span>
-                        <span className="text-sm text-success font-bold">↑ {metric?.improvement}</span>
-                      </div>
-                      
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-muted/50 p-3 rounded-lg">
-                          <div className="text-xs text-muted-foreground mb-1">Before</div>
-                          <div className="text-lg font-semibold text-foreground">{metric?.before}</div>
-                        </div>
-                        <div className="bg-success/10 p-3 rounded-lg border border-success/20">
-                          <div className="text-xs text-success mb-1">After</div>
-                          <div className="text-lg font-semibold text-success">{metric?.after}</div>
-                        </div>
-                      </div>
+                ))}
+              </div>
+
+              {/* Benefits */}
+              <div>
+                <h4 className="font-semibold text-foreground mb-3 flex items-center">
+                  <Icon name="CheckCircle" size={18} className="text-success mr-2" />
+                  Key Benefits
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {currentFeature?.benefits?.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start space-x-2 text-sm">
+                      <Icon name="Check" size={14} className="text-success flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">{benefit}</span>
                     </div>
                   ))}
                 </div>
-                
-                <div className="pt-4 border-t border-border">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    iconName="Play"
-                    iconPosition="left"
-                    className="w-full"
-                    
-                  >
-                    View Full Demo
-                  </Button>
+              </div>
+
+              {/* Use Cases */}
+              <div>
+                <h4 className="font-semibold text-foreground mb-3 flex items-center">
+                  <Icon name="Lightbulb" size={18} className="text-warning mr-2" />
+                  Use Cases
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {currentFeature?.useCases?.map((useCase, idx) => (
+                    <div key={idx} className="flex items-start space-x-2 text-sm">
+                      <Icon name="ArrowRight" size={14} className="text-primary dark:text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">{useCase}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
 
-            {/* Progress Indicator */}
-            <div className="mt-6 flex justify-center space-x-2">
-              {features?.map((_, index) => (
-                <div
-                  key={index}
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    activeFeature === index 
-                      ? 'w-8 bg-primary' :'w-2 bg-muted-foreground/30'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+              {/* Technologies */}
+              <div>
+                <h4 className="font-semibold text-foreground mb-3 flex items-center">
+                  <Icon name="Code" size={18} className="text-secondary mr-2" />
+                  Technologies
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {currentFeature?.technologies?.map((tech, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-muted dark:bg-muted rounded-full text-xs text-foreground">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
-        {/* CTA Section */}
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-2xl p-8 lg:p-12">
-            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join 300+ businesses that have revolutionized their operations with our AI-powered solutions. Get started with a free consultation today.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="default" 
-                size="lg"
-                iconName="Calendar"
-                iconPosition="left"
-                className="premium-button"
-              >
-                Schedule Free Consultation
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                iconName="Download"
-                iconPosition="left"
-              >
-                Download Case Studies
-              </Button>
+              <div className="pt-4 border-t border-border">
+                <a
+                  href="mailto:akashkumar.webdev@gmail.com?subject=Inquiry about services"
+                  className="block"
+                >
+                  <Button 
+                    variant="default" 
+                    size="lg"
+                    iconName="Calendar"
+                    iconPosition="left"
+                    className="w-full premium-button"
+                  >
+                    Get Started Today
+                  </Button>
+                </a>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

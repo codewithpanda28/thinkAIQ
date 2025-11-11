@@ -198,6 +198,186 @@ const Blog = () => {
       views: 5420,
       featured: false,
       tags: ["Remote Work", "Productivity", "Work-Life Balance", "Tools"]
+    },
+    {
+      id: 11,
+      title: "AI Automation for Small Businesses: A Complete Guide",
+      slug: "ai-automation-small-businesses-guide",
+      excerpt: "Discover how small businesses can leverage AI automation to compete with larger enterprises, reduce costs, and improve efficiency without breaking the bank.",
+      content: `AI automation is no longer exclusive to large corporations. Small businesses can now leverage affordable AI solutions to automate repetitive tasks, improve customer service, and scale operations efficiently. This comprehensive guide explores practical AI automation strategies tailored for small businesses.\n\nWe'll start by identifying automation opportunities in common small business processes like customer support, invoicing, inventory management, and marketing. Each section includes cost-effective tools and implementation strategies that deliver immediate ROI.\n\nCustomer service automation can transform how small businesses interact with customers. We'll explore chatbot solutions, automated email responses, and social media management tools that help small businesses provide 24/7 support without hiring additional staff.\n\nFinancial automation is crucial for small business success. We'll cover automated invoicing, expense tracking, payroll processing, and financial reporting tools that save time and reduce errors.`,
+      category: "Business Tips",
+      author: {
+        name: "Akash Kumar",
+        role: "AI Automation Specialist",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      publishedAt: "2024-11-05T10:00:00Z",
+      views: 11200,
+      featured: false,
+      tags: ["AI Automation", "Small Business", "Productivity", "Business Growth"]
+    },
+    {
+      id: 12,
+      title: "Building RESTful APIs with Node.js and Express: Best Practices",
+      slug: "restful-apis-nodejs-express-best-practices",
+      excerpt: "Learn best practices for building scalable, secure, and maintainable RESTful APIs using Node.js and Express, including authentication, error handling, and documentation.",
+      content: `Building robust RESTful APIs requires careful attention to architecture, security, and maintainability. This guide covers best practices for creating production-ready APIs with Node.js and Express.\n\nAPI design principles form the foundation of great APIs. We'll explore RESTful conventions, resource naming, HTTP methods, status codes, and versioning strategies that make APIs intuitive and easy to use.\n\nSecurity is paramount in API development. We'll cover authentication methods including JWT tokens, OAuth 2.0, API keys, and rate limiting strategies that protect your APIs from abuse and unauthorized access.\n\nError handling and validation ensure robust APIs that provide clear feedback to clients. We'll discuss error response formats, input validation, and error logging strategies that improve debugging and user experience.`,
+      category: "Technical Tutorials",
+      author: {
+        name: "Aditya Sharma",
+        role: "Backend Developer",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
+      publishedAt: "2024-11-01T14:30:00Z",
+      views: 9800,
+      featured: false,
+      tags: ["Node.js", "Express", "API Development", "Backend"]
+    },
+    {
+      id: 13,
+      title: "The Future of E-commerce: AI-Powered Personalization",
+      slug: "future-ecommerce-ai-personalization",
+      excerpt: "Explore how AI-powered personalization is revolutionizing e-commerce, from product recommendations to dynamic pricing and personalized shopping experiences.",
+      content: `AI-powered personalization is transforming e-commerce by creating unique shopping experiences for each customer. This comprehensive guide explores the technologies and strategies behind modern e-commerce personalization.\n\nProduct recommendation engines are the most visible application of AI in e-commerce. We'll explore collaborative filtering, content-based filtering, and hybrid recommendation systems that increase conversion rates and average order values.\n\nDynamic pricing powered by AI allows e-commerce businesses to optimize prices in real-time based on demand, competition, and customer behavior. We'll discuss pricing strategies, implementation challenges, and ethical considerations.\n\nPersonalized content and marketing campaigns deliver relevant messages to each customer. We'll cover email personalization, website customization, and social media targeting strategies that improve engagement and sales.`,
+      category: "Industry Insights",
+      author: {
+        name: "Sneha Reddy",
+        role: "E-commerce Strategist",
+        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-28T11:15:00Z",
+      views: 12400,
+      featured: true,
+      tags: ["E-commerce", "AI", "Personalization", "Marketing"]
+    },
+    {
+      id: 14,
+      title: "Microservices Architecture: When to Use and How to Implement",
+      slug: "microservices-architecture-implementation",
+      excerpt: "Learn when microservices architecture is the right choice, how to design microservices, and strategies for implementing and managing distributed systems effectively.",
+      content: `Microservices architecture offers benefits like scalability, flexibility, and technology diversity, but it also introduces complexity. This guide helps you decide when microservices are appropriate and how to implement them successfully.\n\nUnderstanding when to use microservices is crucial. We'll explore scenarios where microservices provide clear benefits, situations where monoliths are better, and strategies for transitioning between architectures.\n\nMicroservices design requires careful consideration of service boundaries, communication patterns, and data management. We'll discuss domain-driven design, API gateways, service mesh, and event-driven architectures.\n\nImplementation challenges include distributed transactions, service discovery, configuration management, and monitoring. We'll explore solutions and best practices for managing these complexities in production environments.`,
+      category: "Technical Tutorials",
+      author: {
+        name: "Rajesh Kumar",
+        role: "System Architect",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-25T09:00:00Z",
+      views: 10800,
+      featured: false,
+      tags: ["Microservices", "Architecture", "System Design", "Scalability"]
+    },
+    {
+      id: 15,
+      title: "Content Marketing for Tech Companies: Strategies That Work",
+      slug: "content-marketing-tech-companies",
+      excerpt: "Discover proven content marketing strategies specifically designed for tech companies, including technical blog posts, case studies, and thought leadership content.",
+      content: `Content marketing is essential for tech companies to establish authority, generate leads, and build brand awareness. This guide covers content marketing strategies tailored for technology businesses.\n\nTechnical content establishes your company as a thought leader. We'll explore strategies for creating technical blog posts, tutorials, and documentation that attract developers and technical decision-makers.\n\nCase studies and success stories demonstrate real-world value. We'll discuss how to structure compelling case studies, gather client testimonials, and showcase measurable results that resonate with potential customers.\n\nContent distribution and promotion ensure your content reaches the right audience. We'll cover SEO strategies, social media promotion, email marketing, and community engagement tactics that amplify your content's reach.`,
+      category: "Business Tips",
+      author: {
+        name: "Priya Sharma",
+        role: "Marketing Director",
+        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-22T13:45:00Z",
+      views: 8900,
+      featured: false,
+      tags: ["Content Marketing", "Marketing", "Business Growth", "SEO"]
+    },
+    {
+      id: 16,
+      title: "Docker and Kubernetes: Container Orchestration Explained",
+      slug: "docker-kubernetes-container-orchestration",
+      excerpt: "Master containerization with Docker and container orchestration with Kubernetes. Learn how to containerize applications and deploy them at scale.",
+      content: `Containerization has revolutionized application deployment and management. This comprehensive guide covers Docker for containerization and Kubernetes for orchestration.\n\nDocker fundamentals include creating Dockerfiles, building images, managing containers, and working with Docker Compose for multi-container applications. We'll cover best practices for optimizing Docker images and managing container lifecycles.\n\nKubernetes provides powerful orchestration capabilities for containerized applications. We'll explore Kubernetes architecture, pods, services, deployments, and configuration management that enable scalable, resilient applications.\n\nProduction deployment strategies cover CI/CD integration, monitoring, logging, and security best practices. We'll discuss strategies for managing secrets, implementing health checks, and handling rolling updates in production environments.`,
+      category: "Technical Tutorials",
+      author: {
+        name: "Amit Patel",
+        role: "DevOps Engineer",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-18T16:20:00Z",
+      views: 11500,
+      featured: false,
+      tags: ["Docker", "Kubernetes", "DevOps", "Containers"]
+    },
+    {
+      id: 17,
+      title: "Freelance Developer Rates: How to Price Your Services",
+      slug: "freelance-developer-rates-pricing",
+      excerpt: "Learn how to determine fair pricing for freelance development services, including hourly rates, project-based pricing, and value-based pricing strategies.",
+      content: `Pricing freelance development services correctly is crucial for sustainable business growth. This guide covers various pricing models and strategies for freelance developers.\n\nUnderstanding your market value requires research into industry rates, your experience level, and the complexity of projects. We'll explore resources for researching market rates and factors that influence pricing decisions.\n\nPricing models include hourly rates, fixed project pricing, retainer agreements, and value-based pricing. Each model has advantages and we'll discuss when to use each approach based on project characteristics and client relationships.\n\nNegotiation strategies help you secure fair compensation while maintaining positive client relationships. We'll cover techniques for discussing rates, handling objections, and structuring proposals that justify your pricing.`,
+      category: "Business Tips",
+      author: {
+        name: "Vikram Singh",
+        role: "Freelance Consultant",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-15T10:30:00Z",
+      views: 10200,
+      featured: false,
+      tags: ["Freelancing", "Business", "Pricing", "Career"]
+    },
+    {
+      id: 18,
+      title: "GraphQL vs REST: Choosing the Right API Architecture",
+      slug: "graphql-vs-rest-api-architecture",
+      excerpt: "Compare GraphQL and REST API architectures, understand their strengths and weaknesses, and learn when to choose each approach for your projects.",
+      content: `Choosing between GraphQL and REST is a critical architectural decision. This guide compares both approaches to help you make informed decisions for your API design.\n\nREST APIs follow established conventions and are widely understood. We'll explore REST principles, HTTP methods, resource design, and caching strategies that make REST APIs effective for many use cases.\n\nGraphQL provides flexible querying and efficient data fetching. We'll discuss GraphQL schemas, queries, mutations, subscriptions, and resolver patterns that enable powerful API capabilities.\n\nDecision factors include data fetching patterns, client requirements, team expertise, and ecosystem support. We'll provide guidance on when each approach is most appropriate and strategies for combining both in hybrid architectures.`,
+      category: "Technical Tutorials",
+      author: {
+        name: "Ananya Gupta",
+        role: "API Architect",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-12T14:00:00Z",
+      views: 13200,
+      featured: true,
+      tags: ["GraphQL", "REST", "API Design", "Architecture"]
+    },
+    {
+      id: 19,
+      title: "Startup Funding Guide: From Bootstrap to Series A",
+      slug: "startup-funding-guide-bootstrap-series-a",
+      excerpt: "Navigate the startup funding landscape from bootstrapping to Series A, including funding sources, investor relations, and equity management strategies.",
+      content: `Understanding startup funding is essential for entrepreneurs. This comprehensive guide covers funding stages from bootstrapping through Series A and beyond.\n\nBootstrapping allows founders to maintain control while building their business. We'll explore bootstrapping strategies, cost management, and when to consider external funding.\n\nEarly-stage funding includes angel investors, seed funding, and accelerators. We'll discuss how to find investors, pitch effectively, and negotiate terms that protect founder interests.\n\nSeries A funding requires demonstrating traction and growth potential. We'll cover preparation strategies, valuation considerations, and how to build relationships with venture capital firms that align with your startup's goals.`,
+      category: "Business Tips",
+      author: {
+        name: "Kavya Nair",
+        role: "Startup Advisor",
+        avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-08T11:30:00Z",
+      views: 9600,
+      featured: false,
+      tags: ["Startups", "Funding", "Business", "Entrepreneurship"]
+    },
+    {
+      id: 20,
+      title: "TypeScript Best Practices for Large-Scale Applications",
+      slug: "typescript-best-practices-large-scale",
+      excerpt: "Learn TypeScript best practices for building maintainable large-scale applications, including type safety, project structure, and advanced patterns.",
+      content: `TypeScript provides powerful type safety for JavaScript applications, but using it effectively in large-scale projects requires discipline and best practices. This guide covers essential TypeScript patterns and strategies.\n\nType system design is fundamental to TypeScript success. We'll explore interface vs type aliases, generics, utility types, and conditional types that create flexible yet type-safe code.\n\nProject organization strategies help maintain code quality as projects grow. We'll discuss module structure, barrel exports, path aliases, and configuration management that keep large codebases manageable.\n\nAdvanced patterns include discriminated unions, mapped types, and template literal types that enable sophisticated type-level programming. We'll explore practical applications of these patterns in real-world scenarios.`,
+      category: "Technical Tutorials",
+      author: {
+        name: "Rohit Mehta",
+        role: "TypeScript Expert",
+        avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+      },
+      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
+      publishedAt: "2024-10-05T09:15:00Z",
+      views: 11800,
+      featured: false,
+      tags: ["TypeScript", "JavaScript", "Web Development", "Best Practices"]
     }
   ];
 
@@ -276,6 +456,16 @@ const Blog = () => {
         
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+          {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 dark:bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 dark:bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '600ms' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/10 dark:bg-accent/5 rounded-full blur-3xl"></div>
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5 dark:opacity-10" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -372,99 +562,7 @@ const Blog = () => {
           <NewsletterSignup />
         </section>
 
-        {/* Footer */}
-        <footer className="bg-surface border-t border-border mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <Icon name="BookOpen" size={16} color="white" />
-                  </div>
-                  <span className="text-lg font-bold text-text-primary">PortfolioPro Blog</span>
-                </div>
-                <p className="text-text-secondary mb-4">
-                  Your source for technical insights, industry trends, and professional development in web development and technology.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast">
-                    <Icon name="Twitter" size={20} />
-                  </a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast">
-                    <Icon name="Linkedin" size={20} />
-                  </a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast">
-                    <Icon name="Github" size={20} />
-                  </a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast">
-                    <Icon name="Rss" size={20} />
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-text-primary mb-4">Categories</h3>
-                <ul className="space-y-2">
-                  {categories?.slice(1)?.map((category) => (
-                    <li key={category?.name}>
-                      <button
-                        onClick={() => handleCategoryChange(category?.name)}
-                        className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm"
-                      >
-                        {category?.name} ({category?.count})
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-text-primary mb-4">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/homepage" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/portfolio" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                      Portfolio
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/services" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/contact" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t border-border pt-8 mt-8">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <p className="text-text-secondary text-sm">
-                  © {new Date()?.getFullYear()} PortfolioPro. All rights reserved.
-                </p>
-                <div className="flex items-center space-x-6 mt-4 md:mt-0">
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                    Privacy Policy
-                  </a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                    Terms of Service
-                  </a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition-colors duration-fast text-sm">
-                    RSS Feed
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+        {/* Footer removed - only show on home page */}
       </div>
     </>
   );

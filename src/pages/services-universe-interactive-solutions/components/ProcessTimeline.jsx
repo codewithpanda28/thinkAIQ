@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
+import Button from '../../../components/ui/Button';
 
-const ProcessTimeline = ({ roiData }) => {
+const ProcessTimeline = () => {
   const [activePhase, setActivePhase] = useState(0);
 
   const phases = [
@@ -9,8 +11,8 @@ const ProcessTimeline = ({ roiData }) => {
       title: 'Discovery & Analysis',
       duration: '1-2 weeks',
       icon: 'Search',
-      description:
-        'We dive deep into your current processes to uncover opportunities where AI can save time, reduce errors, and enhance productivity.',
+      color: 'from-blue-500 to-indigo-600',
+      description: 'We dive deep into your current processes to uncover opportunities where AI can save time, reduce errors, and enhance productivity.',
       activities: [
         'Map current business workflows and identify pain points',
         'Interview key stakeholders for insights',
@@ -29,8 +31,8 @@ const ProcessTimeline = ({ roiData }) => {
       title: 'Solution Design',
       duration: '1-2 weeks',
       icon: 'PenTool',
-      description:
-        'Crafting a tailored solution architecture that aligns perfectly with your business goals and operational needs.',
+      color: 'from-purple-500 to-pink-600',
+      description: 'Crafting a tailored solution architecture that aligns perfectly with your business goals and operational needs.',
       activities: [
         'Design system architecture and workflows',
         'Create intuitive UI/UX mockups',
@@ -49,8 +51,8 @@ const ProcessTimeline = ({ roiData }) => {
       title: 'Development & Testing',
       duration: '3-8 weeks',
       icon: 'Code',
-      description:
-        'Agile, iterative development ensuring high-quality, reliable automation that fits seamlessly into your operations.',
+      color: 'from-green-500 to-emerald-600',
+      description: 'Agile, iterative development ensuring high-quality, reliable automation that fits seamlessly into your operations.',
       activities: [
         'Sprint-based software development',
         'Automated and manual testing cycles',
@@ -69,8 +71,8 @@ const ProcessTimeline = ({ roiData }) => {
       title: 'Deployment & Training',
       duration: '1-2 weeks',
       icon: 'Rocket',
-      description:
-        'Seamless deployment with thorough team training, ensuring your staff can fully leverage the new system.',
+      color: 'from-orange-500 to-red-600',
+      description: 'Seamless deployment with thorough team training, ensuring your staff can fully leverage the new system.',
       activities: [
         'Production environment deployment',
         'Data migration and integrity checks',
@@ -89,8 +91,8 @@ const ProcessTimeline = ({ roiData }) => {
       title: 'Support & Optimization',
       duration: 'Ongoing',
       icon: 'Settings',
-      description:
-        'Continuous improvement and monitoring to keep your processes efficient and future-ready.',
+      color: 'from-cyan-500 to-blue-600',
+      description: 'Continuous improvement and monitoring to keep your processes efficient and future-ready.',
       activities: [
         '24/7 system monitoring',
         'Performance and efficiency optimization',
@@ -108,59 +110,77 @@ const ProcessTimeline = ({ roiData }) => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50/70 to-gray-100/70 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Our Implementation Process
+    <section className="py-20 bg-gradient-to-br from-background to-muted/30 dark:from-background dark:to-muted/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center space-x-2 bg-primary/10 dark:bg-accent/20 text-primary dark:text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Icon name="Workflow" size={16} />
+            <span>Our Process</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Our{' '}
+            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              Implementation Process
+            </span>
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             A step-by-step methodology designed to deliver real results, minimize risks, and keep you informed at every stage.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Timeline Navigation */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             {phases.map((phase, idx) => (
-              <div
+              <motion.div
                 key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                whileHover={{ scale: 1.02 }}
                 onClick={() => setActivePhase(idx)}
-                className={`cursor-pointer transition-transform duration-300 ${
-                  activePhase === idx ? 'scale-105' : 'hover:scale-102'
+                className={`cursor-pointer transition-all duration-300 ${
+                  activePhase === idx ? 'scale-105' : ''
                 }`}
               >
                 <div
                   className={`p-6 rounded-2xl border transition-all duration-300 ${
                     activePhase === idx
-                      ? 'bg-primary text-white border-primary shadow-lg'
-                      : 'bg-white border-gray-200 hover:border-primary/30 hover:shadow-md'
+                      ? 'bg-primary dark:bg-accent text-white border-primary dark:border-accent shadow-lg'
+                      : 'bg-card dark:bg-card border-border hover:border-primary/50 dark:hover:border-accent/50 hover:shadow-md'
                   }`}
                 >
                   <div className="flex items-center space-x-4">
                     <div
-                      className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        activePhase === idx ? 'bg-white/20' : 'bg-primary/10'
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                        activePhase === idx ? 'bg-white/20' : `bg-gradient-to-br ${phase.color}`
                       }`}
                     >
                       <Icon
                         name={phase.icon}
                         size={24}
-                        className={activePhase === idx ? 'text-white' : 'text-primary'}
+                        className={activePhase === idx ? 'text-white' : 'text-white'}
                       />
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-center mb-1">
                         <h3
-                          className={`font-semibold text-sm lg:text-base ${
-                            activePhase === idx ? 'text-white' : 'text-gray-900'
+                          className={`font-semibold text-base lg:text-lg ${
+                            activePhase === idx ? 'text-white' : 'text-foreground'
                           }`}
                         >
                           Phase {idx + 1}: {phase.title}
                         </h3>
                         <span
                           className={`text-xs px-2 py-1 rounded ${
-                            activePhase === idx ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'
+                            activePhase === idx ? 'bg-white/20 text-white' : 'bg-muted dark:bg-muted text-muted-foreground'
                           }`}
                         >
                           {phase.duration}
@@ -168,7 +188,7 @@ const ProcessTimeline = ({ roiData }) => {
                       </div>
                       <p
                         className={`text-sm ${
-                          activePhase === idx ? 'text-white/80' : 'text-gray-600'
+                          activePhase === idx ? 'text-white/80' : 'text-muted-foreground'
                         }`}
                       >
                         {phase.description}
@@ -176,41 +196,47 @@ const ProcessTimeline = ({ roiData }) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Phase Details */}
-          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md sticky top-8">
+          <motion.div
+            key={activePhase}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-card dark:bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-lg sticky top-8"
+          >
             <div className="mb-6">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className={`w-12 h-12 bg-gradient-to-br ${phases[activePhase].color} rounded-xl flex items-center justify-center`}>
                   <Icon
                     name={phases[activePhase].icon}
                     size={24}
-                    className="text-primary"
+                    className="text-white"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-foreground">
                     {phases[activePhase].title}
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-muted-foreground">
                     Duration: {phases[activePhase].duration}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-6">{phases[activePhase].description}</p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{phases[activePhase].description}</p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                    <Icon name="CheckSquare" size={16} className="mr-2 text-primary" /> Key Activities
+                  <h4 className="font-semibold text-foreground mb-3 flex items-center">
+                    <Icon name="CheckSquare" size={16} className="mr-2 text-primary dark:text-accent" /> Key Activities
                   </h4>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2">
                     {phases[activePhase].activities.map((act, i) => (
-                      <li key={i} className="flex items-start space-x-2">
-                        <Icon name="ArrowRight" size={14} className="mt-0.5 text-primary flex-shrink-0" />
+                      <li key={i} className="flex items-start space-x-2 text-sm text-muted-foreground">
+                        <Icon name="ArrowRight" size={14} className="mt-0.5 text-primary dark:text-accent flex-shrink-0" />
                         <span>{act}</span>
                       </li>
                     ))}
@@ -218,12 +244,12 @@ const ProcessTimeline = ({ roiData }) => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                  <h4 className="font-semibold text-foreground mb-3 flex items-center">
                     <Icon name="Package" size={16} className="mr-2 text-success" /> Deliverables
                   </h4>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2">
                     {phases[activePhase].deliverables.map((del, i) => (
-                      <li key={i} className="flex items-start space-x-2">
+                      <li key={i} className="flex items-start space-x-2 text-sm text-muted-foreground">
                         <Icon name="Check" size={14} className="mt-0.5 text-success flex-shrink-0" />
                         <span>{del}</span>
                       </li>
@@ -231,46 +257,34 @@ const ProcessTimeline = ({ roiData }) => {
                   </ul>
                 </div>
               </div>
-
-              {/* Premium ROI Card */}
-              {roiData && (
-                <div className="mt-8 p-6 bg-primary/10 rounded-xl shadow-md transition-all duration-500">
-                  <h4 className="font-semibold text-gray-900 mb-3">Projected ROI</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-3 bg-white rounded-lg shadow-sm">
-                      <div className="text-lg font-bold text-primary">{roiData.monthlySavings}</div>
-                      <div className="text-sm text-gray-500">Monthly Savings</div>
-                    </div>
-                    <div className="text-center p-3 bg-white rounded-lg shadow-sm">
-                      <div className="text-lg font-bold text-success">{roiData.efficiencyGain}%</div>
-                      <div className="text-sm text-gray-500">Efficiency Gain</div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
             </div>
 
             {/* Progress Bar */}
-            <div className="mt-8 pt-6 border-t border-gray-200">
+            <div className="mt-8 pt-6 border-t border-border">
               <div className="flex justify-between mb-2">
-                <span className="text-sm text-gray-500">Progress</span>
-                <span className="text-sm font-medium text-gray-900">
+                <span className="text-sm text-muted-foreground">Progress</span>
+                <span className="text-sm font-medium text-foreground">
                   Phase {activePhase + 1} of {phases.length}
                 </span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-muted dark:bg-muted rounded-full h-2">
                 <div
-                  className="bg-primary h-2 rounded-full transition-all duration-500"
+                  className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full transition-all duration-500"
                   style={{ width: `${((activePhase + 1) / phases.length) * 100}%` }}
                 ></div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Process Benefits */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 grid md:grid-cols-3 gap-6"
+        >
           {[
             {
               icon: 'Shield',
@@ -288,15 +302,23 @@ const ProcessTimeline = ({ roiData }) => {
               description: 'Agile methodology and proven processes accelerate time-to-market.',
             },
           ].map((benefit, index) => (
-            <div key={index} className="text-center p-6 bg-white border border-gray-200 rounded-2xl shadow-md">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name={benefit.icon} size={24} className="text-primary" />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="text-center p-6 bg-card dark:bg-card border border-border rounded-2xl shadow-lg"
+            >
+              <div className="w-16 h-16 bg-primary/10 dark:bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name={benefit.icon} size={24} className="text-primary dark:text-accent" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-              <p className="text-sm text-gray-600">{benefit.description}</p>
-            </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{benefit.title}</h3>
+              <p className="text-sm text-muted-foreground">{benefit.description}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

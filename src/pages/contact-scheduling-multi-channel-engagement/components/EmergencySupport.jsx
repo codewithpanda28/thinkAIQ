@@ -138,7 +138,7 @@ const EmergencySupport = () => {
         {/* Support Channels */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {supportChannels?.map((channel) => (
-            <div key={channel?.id} className="bg-white rounded-xl p-8 border-2 border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div key={channel?.id} className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 dark:from-primary/10 dark:via-background dark:to-secondary/10 rounded-xl p-8  hover:shadow-lg transition-all duration-300">
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
                   channel?.color === 'destructive' ? 'bg-destructive/10' :
@@ -251,7 +251,7 @@ const EmergencySupport = () => {
         </div>
 
         {/* SLA Information */}
-        <div className="bg-white rounded-xl p-8 border border-gray-100">
+        <div className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 dark:from-primary/10 dark:via-background dark:to-secondary/10 rounded-xl p-8 border ">
           <h3 className="text-2xl font-bold text-primary mb-6 text-center">Emergency Support SLA</h3>
           
           <div className="grid md:grid-cols-4 gap-6">
@@ -320,7 +320,7 @@ const EmergencySupport = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 ">
                   <Input
                     label="Client ID"
                     type="text"

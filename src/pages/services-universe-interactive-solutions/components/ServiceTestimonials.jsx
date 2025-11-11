@@ -16,7 +16,7 @@ const ServiceTestimonials = () => {
       service: 'AI Automation',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
       rating: 5,
-      content: `Authera transformed our entire customer service operation with their AI automation solution. We've seen a 70% reduction in response time and 95% customer satisfaction. The ROI was evident within just 3 months of implementation.`,
+      content: `thinkAIQ transformed our entire customer service operation with their AI automation solution. We've seen a 70% reduction in response time and 95% customer satisfaction. The ROI was evident within just 3 months of implementation.`,
       results: [
         { metric: '70%', label: 'Faster Response Time' },
         { metric: '95%', label: 'Customer Satisfaction' },
@@ -58,7 +58,7 @@ const ServiceTestimonials = () => {
       service: 'System Integration',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
       rating: 5,
-      content: `Authera seamlessly integrated our 5 different systems into one unified platform. Order processing time reduced from 2 hours to 15 minutes, and our team can now focus on strategic work instead of manual data entry.`,
+      content: `thinkAIQ seamlessly integrated our 5 different systems into one unified platform. Order processing time reduced from 2 hours to 15 minutes, and our team can now focus on strategic work instead of manual data entry.`,
       results: [
         { metric: '87%', label: 'Time Reduction' },
         { metric: '5 systems', label: 'Successfully Integrated' },
@@ -111,10 +111,10 @@ const ServiceTestimonials = () => {
             <Icon name="MessageSquare" size={16} />
             <span>Client Success Stories</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground dark:text-muted-foreground max-w-3xl mx-auto">
             Real results from real businesses. See how our solutions have transformed 
             operations and delivered measurable ROI across various industries.
           </p>

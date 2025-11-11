@@ -1,185 +1,226 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
-
 import Button from '../../../components/ui/Button';
 
 const HeroSection = () => {
-  const [currentMetric, setCurrentMetric] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
-  const successMetrics = [
-    { value: "300+", label: "Businesses Automated", icon: "Building2" },
-    { value: "85%", label: "Average Cost Reduction", icon: "TrendingDown" },
-    { value: "24/7", label: "AI-Powered Support", icon: "Clock" },
-    { value: "99.9%", label: "System Uptime", icon: "Shield" }
-  ];
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % successMetrics?.length);
-    }, 3000);
-    return () => clearInterval(interval);
   }, []);
 
+  const projects = [
+    {
+      id: 1,
+      name: "AI Customer Support Agent",
+      description: "24/7 intelligent customer support automation",
+      icon: "MessageSquare",
+      metrics: { clients: "50+", satisfaction: "98%", response: "<2min" },
+      color: "from-blue-500 to-indigo-600"
+    },
+    {
+      id: 2,
+      name: "Invoice Processing System",
+      description: "Automated invoice processing with 99.7% accuracy",
+      icon: "FileText",
+      metrics: { clients: "75+", accuracy: "99.7%", time: "30min" },
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      id: 3,
+      name: "Lead Generation Bot",
+      description: "AI-powered lead qualification and nurturing",
+      icon: "Target",
+      metrics: { clients: "60+", conversion: "245%", leads: "10K+" },
+      color: "from-green-500 to-emerald-600"
+    },
+    // {
+    //   id: 4,
+    //   name: "Inventory Management AI",
+    //   description: "Smart inventory prediction and optimization",
+    //   icon: "Package",
+    //   metrics: { clients: "40+", savings: "40%", accuracy: "95%" },
+    //   color: "from-orange-500 to-red-600"
+    // }
+  ];
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
-      {/* Geometric Pattern Background */}
-      <div className="absolute inset-0 geometric-pattern opacity-30"></div>
-      {/* Video Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95"></div>
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-secondary/5 dark:from-background dark:via-primary/10 dark:to-secondary/10">
+      {/* Animated Background Elements */}
+      
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className={`space-y-8 ${isVisible ? 'hero-reveal animate' : 'hero-reveal'}`}>
-            <div className="space-y-4 ">
-              <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                <Icon name="Sparkles" size={16} />
-                <span>AI-First Business Solutions</span>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center space-x-2 bg-primary/10 dark:bg-accent/20 text-primary dark:text-accent px-4 py-2 rounded-full text-sm font-medium mb-6"
+            >
+              <Icon name="Sparkles" size={16} />
+              <span>AI-First Automation Solutions</span>
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground dark:text-foreground leading-tight mb-6"
+            >
+              Transform Your Business with{' '}
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent dark:from-accent dark:via-secondary dark:to-primary animate-gradient">
+                Intelligent AI Automation
+              </span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-muted-foreground dark:text-muted-foreground leading-relaxed max-w-2xl mb-8"
+            >
+              We build AI-powered automation solutions that streamline operations, reduce costs by up to 85%, and scale with your business. 
+              Trusted by <span className="font-semibold text-primary dark:text-accent">300+ businesses</span> worldwide.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 mb-12"
+            >
+              <a
+                href="mailto:akashkumar.webdev@gmail.com?subject=Free%20Consultation&body=Hi,%20I%27m%20interested%20in%20your%20AI%20Automation%20services."
+                aria-label="Book a free consultation via email"
+              >
+                <Button
+                  variant="default"
+                  size="lg"
+                  iconName="Calendar"
+                  iconPosition="left"
+                  iconSize={20}
+                  className="premium-button transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Book Free Consultation
+                </Button>
+              </a>
+              <a
+                href="https://wa.me/918252472186?text=Hi,%20I%27m%20interested%20in%20watching%20the%20AI%20Automation%20demo."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch demo on WhatsApp"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  iconName="Play"
+                  iconPosition="left"
+                  iconSize={20}
+                  className="transform hover:scale-105 transition-transform duration-200 border-2"
+                >
+                  Watch Demo
+                </Button>
+              </a>
+            </motion.div>
+
+            {/* Trust Indicators */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isVisible ? 1 : 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12"
+            >
+              <div className="text-center lg:text-left">
+                <div className="text-3xl font-bold text-primary dark:text-accent mb-1">300+</div>
+                <div className="text-sm text-muted-foreground dark:text-muted-foreground">Businesses</div>
               </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-              Transform how {' '} you work
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                with intelligent automation
-                </span>{' '}
-                built for growth.
-              </h1>
-              
-              <p className="text-md text-muted-foreground leading-relaxed max-w-2xl">
-              We combine AI, automation and human-centered design to streamline operations, reduce costs and free your team for high-impact work. Trusted by growing teams across industries — from finance to logistics.
-              </p>
+              <div className="text-center lg:text-left">
+                <div className="text-3xl font-bold text-primary dark:text-accent mb-1">85%</div>
+                <div className="text-sm text-muted-foreground dark:text-muted-foreground">Cost Reduction</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-3xl font-bold text-primary dark:text-accent mb-1">99.7%</div>
+                <div className="text-sm text-muted-foreground dark:text-muted-foreground">Accuracy</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-3xl font-bold text-primary dark:text-accent mb-1">24/7</div>
+                <div className="text-sm text-muted-foreground dark:text-muted-foreground">Support</div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Content - Visual Showcase */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative"
+          >
+            {/* Projects Showcase - Modern Card Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {projects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className={`bg-card dark:bg-card border-2 border-border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer relative overflow-hidden ${
+                    index === 0 ? 'col-span-2' : ''
+                  }`}
+                >
+                  {/* Background Gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-5 dark:opacity-10 group-hover:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-300`}></div>
+                  
+                  <div className="relative z-10">
+                    <div className={`w-14 h-14 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon name={project.icon} size={28} className="text-white" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-foreground dark:text-foreground mb-2">{project.name}</h3>
+                    <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">{project.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-2 pt-4 border-t border-border">
+                      {Object.entries(project.metrics).slice(0, 2).map(([key, value]) => (
+                        <div key={key} className="text-center p-2 bg-muted/50 dark:bg-muted rounded-lg">
+                          <div className="text-xs font-bold text-foreground dark:text-foreground">{value}</div>
+                          <div className="text-xs text-muted-foreground dark:text-muted-foreground capitalize">{key}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
-          {/* CTA Buttons */}
-<div className="flex flex-col sm:flex-row gap-4">
-  {/* Book Free Consultation Button */}
-  <a
-    href="mailto:akashkumar.webdev@gmail.com?subject=Free%20Consultation&body=Hi,%20I%27m%20interested%20in%20your%20AI%20Automation%20services.%20Please%20share%20more%20details."
-    aria-label="Book a free consultation via email"
-  >
-    <Button
-      variant="default"
-      size="lg"
-      iconName="Calendar"
-      iconPosition="left"
-      iconSize={20}
-      className="premium-button"
-    >
-      Book Free Consultation
-    </Button>
-  </a>
-
-  {/* Watch Demo Button */}
-  <a
-    href="https://wa.me/918252472186?text=Hi,%20I%27m%20interested%20in%20watching%20the%20AI%20Automation%20demo.%20Can%20you%20share%20the%20link?"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Watch demo on WhatsApp"
-  >
-    <Button
-      variant="outline"
-      size="lg"
-      iconName="Play"
-      iconPosition="left"
-      iconSize={20}
-    >
-      Watch Demo
-    </Button>
-  </a>
-</div>
-
-
-            {/* Success Metrics */}
-            {/* <div className="pt-8">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                {successMetrics?.map((metric, index) => (
-                  <div 
-                    key={index}
-                    className={`text-center transition-all duration-500 ${
-                      currentMetric === index ? 'scale-105 opacity-100' : 'opacity-70'
-                    }`}
-                  >
-                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-2">
-                      <Icon name={metric?.icon} size={24} className="text-primary" />
-                    </div>
-                    <div className="text-2xl font-bold text-foreground">{metric?.value}</div>
-                    <div className="text-sm text-muted-foreground">{metric?.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-          </div>
-
-          {/* Right Content - Interactive Demo Preview */}
-          <div className={`relative ${isVisible ? 'hero-reveal animate animation-delay-300' : 'hero-reveal'}`}>
-            <div className="relative">
-              {/* Main Demo Card */}
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-brand-lg authority-spotlight">
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-foreground">AI Automation Dashboard</h3>
-                    <div className="flex items-center space-x-2 text-success">
-                      <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                      <span className="text-sm font-medium">Live</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <Icon name="Bot" size={20} className="text-primary" />
-                        <span className="text-sm font-medium">Invoice Processing</span>
-                      </div>
-                      <div className="text-sm text-success font-medium">Faster processing with automated checks</div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <Icon name="Zap" size={20} className="text-secondary" />
-                        <span className="text-sm font-medium">Customer Support</span>
-                      </div>
-                      <div className="text-sm text-success font-medium">Faster response and triage with AI routing</div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <Icon name="Target" size={20} className="text-accent" />
-                        <span className="text-sm font-medium">Lead Generation</span>
-                      </div>
-                      <div className="text-sm text-success font-medium">Improved lead qualification and follow-up</div>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-4 border-t border-border">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">Monthly Savings</span>
-                      <span className="text-lg font-bold text-success">Reduced operational costs (varies by client)</span>
-                    </div>
-                  </div>
+            {/* Floating Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              className="absolute -bottom-16 -right-14 bg-gradient-to-r from-primary to-secondary dark:from-accent dark:to-primary text-white rounded-2xl p-6 shadow-2xl border-4 border-background dark:border-background"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                  <Icon name="Award" size={24} className="text-white" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">98%</div>
+                  <div className="text-xs text-white/80">Client Satisfaction</div>
                 </div>
               </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-brand-lg">
-                <Icon name="TrendingUp" size={24} className="text-white" /> 
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-accent to-success rounded-full flex items-center justify-center shadow-brand-lg">
-                <Icon name="Sparkles" size={24} className="text-white" />
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-      {/* Scroll Indicator */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="flex flex-col items-center space-y-2 text-muted-foreground">
-          <span className="text-sm">Discover More</span>
-          <Icon name="ChevronDown" size={20} className="animate-bounce" />
-        </div>
-      </div> */}
     </section>
   );
 };

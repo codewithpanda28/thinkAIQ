@@ -24,23 +24,33 @@ const ContactHero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 pt-24 pb-16">
-      <div className="absolute inset-0 geometric-pattern opacity-30"></div>
+    <section className="relative bg-gradient-to-br from-primary/5 dark:from-primary/10 via-background dark:via-background to-secondary/5 dark:to-secondary/10 pt-24 pb-16">
+       {/* Animated Background Elements */}
+       <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 dark:bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 dark:bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '600ms' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/10 dark:bg-accent/5 rounded-full blur-3xl"></div>
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5 dark:opacity-10" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
+      <div className="absolute inset-0 geometric-pattern opacity-30 dark:opacity-20"></div>
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <div className="text-center max-w-4xl mx-auto">
           <div className="hero-reveal animate">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 dark:bg-accent/20 text-primary dark:text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Icon name="MessageCircle" size={16} />
               <span>24/7 Support Available</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground dark:text-foreground mb-6 text-balance">
               Let's Build Your
-              <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> AI Future </span>
+              <span className="text-transparent bg-gradient-to-r from-primary to-secondary dark:from-accent dark:to-primary bg-clip-text"> AI Future </span>
               Together
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
+            <p className="text-xl text-muted-foreground dark:text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
               Ready to transform your business with intelligent automation? Our experts are standing by to discuss your unique requirements and create a custom solution that drives real results.
             </p>
             
@@ -113,26 +123,26 @@ const ContactHero = () => {
               { icon: "Globe", value: "24/7", label: "Support Available" }
             ]?.map((stat, index) => (
               <div key={index} className="text-center hero-reveal animate" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Icon name={stat?.icon} size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-primary/10 dark:bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Icon name={stat?.icon} size={24} className="text-primary dark:text-accent" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">{stat?.value}</div>
-                <div className="text-sm text-muted-foreground">{stat?.label}</div>
+                <div className="text-2xl font-bold text-foreground dark:text-foreground">{stat?.value}</div>
+                <div className="text-sm text-muted-foreground dark:text-muted-foreground">{stat?.label}</div>
               </div>
             ))}
           </div>
 
           {/* Modal Form */}
           {isModalOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-fadeIn">
-              <div className="bg-white rounded-xl max-w-md w-full p-6 relative shadow-xl">
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 dark:bg-black/70 backdrop-blur-sm animate-fadeIn">
+              <div className="bg-card dark:bg-card border border-border rounded-xl max-w-md w-full p-6 relative shadow-xl">
                 <button 
-                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 font-bold text-xl"
+                  className="absolute top-4 right-4 text-muted-foreground dark:text-muted-foreground hover:text-foreground dark:hover:text-foreground font-bold text-xl"
                   onClick={closeModal}
                 >
                   &times;
                 </button>
-                <h2 className="text-2xl font-bold mb-4 text-center text-foreground">
+                <h2 className="text-2xl font-bold mb-4 text-center text-foreground dark:text-foreground">
                   Book Free Consultation
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -140,24 +150,24 @@ const ContactHero = () => {
                     type="text"
                     placeholder="Your Name"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border border-border dark:border-border bg-background dark:bg-background text-foreground dark:text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-accent transition"
                   />
                   <input
                     type="email"
                     placeholder="Your Email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border border-border dark:border-border bg-background dark:bg-background text-foreground dark:text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-accent transition"
                   />
                   <input
                     type="tel"
                     placeholder="Your Phone"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border border-border dark:border-border bg-background dark:bg-background text-foreground dark:text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-accent transition"
                   />
                   <textarea
                     placeholder="Tell us about your project"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition"
+                    className="w-full px-4 py-3 border border-border dark:border-border bg-background dark:bg-background text-foreground dark:text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-accent transition"
                   />
 
                   <div className="flex justify-between mt-2 space-x-2">

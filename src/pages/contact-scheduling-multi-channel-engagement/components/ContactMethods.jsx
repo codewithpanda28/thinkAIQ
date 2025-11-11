@@ -135,22 +135,22 @@ const ContactMethods = ({ onMethodSelect }) => {
   };
 
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted dark:bg-muted/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-              <Icon name="Zap" size={20} className="text-accent" />
+            <div className="w-10 h-10 bg-accent/10 dark:bg-accent/20 rounded-lg flex items-center justify-center">
+              <Icon name="Zap" size={20} className="text-accent dark:text-accent" />
             </div>
-            <span className="text-accent font-medium">Choose Your Preferred Channel</span>
+            <span className="text-accent dark:text-accent font-medium">Choose Your Preferred Channel</span>
           </div>
           
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-foreground mb-6">
             Multiple Ways to Connect
           </h2>
           
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground dark:text-muted-foreground max-w-3xl mx-auto">
             Select the communication method that works best for you. Our team is ready to assist through multiple channels with guaranteed response times.
           </p>
         </div>
@@ -160,10 +160,10 @@ const ContactMethods = ({ onMethodSelect }) => {
           {contactMethods?.map((method) => (
             <div
               key={method?.id}
-              className={`bg-white rounded-xl p-8 border-2 transition-all duration-300 hover:shadow-lg cursor-pointer ${
+              className={`bg-card dark:bg-card rounded-xl p-8 border-2 transition-all duration-300 hover:shadow-lg cursor-pointer ${
                 selectedMethod === method?.id 
-                  ? getColorClasses(method?.color) 
-                  : 'border-gray-100 hover:border-gray-200'
+                  ? getColorClasses(method?.color) + ' dark:border-accent/30 dark:bg-accent/10' 
+                  : 'border-border dark:border-border hover:border-primary/30 dark:hover:border-accent/30'
               }`}
               onClick={() => handleMethodClick(method)}
             >
@@ -196,11 +196,11 @@ const ContactMethods = ({ onMethodSelect }) => {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-primary mb-3">
+              <h3 className="text-xl font-semibold text-foreground dark:text-foreground mb-3">
                 {method?.title}
               </h3>
               
-              <p className="text-text-secondary mb-6">
+              <p className="text-muted-foreground dark:text-muted-foreground mb-6">
                 {method?.description}
               </p>
 
@@ -209,36 +209,36 @@ const ContactMethods = ({ onMethodSelect }) => {
                 {method?.features?.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <Icon name="Check" size={16} className="text-success" />
-                    <span className="text-sm text-text-secondary">{feature}</span>
+                    <span className="text-sm text-muted-foreground dark:text-muted-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-muted rounded-lg">
+              <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-muted/50 dark:bg-muted rounded-lg">
                 <div>
-                  <div className="text-sm text-text-secondary mb-1">Response Time</div>
-                  <div className="font-semibold text-primary">{method?.responseTime}</div>
+                  <div className="text-sm text-muted-foreground dark:text-muted-foreground mb-1">Response Time</div>
+                  <div className="font-semibold text-foreground dark:text-foreground">{method?.responseTime}</div>
                 </div>
                 <div>
-                  <div className="text-sm text-text-secondary mb-1">Best For</div>
-                  <div className="font-semibold text-primary">{method?.bestFor}</div>
+                  <div className="text-sm text-muted-foreground dark:text-muted-foreground mb-1">Best For</div>
+                  <div className="font-semibold text-foreground dark:text-foreground">{method?.bestFor}</div>
                 </div>
               </div>
 
               {/* Contact Info */}
               {(method?.phone || method?.email) && (
-                <div className="mb-6 p-3 bg-gray-50 rounded-lg">
+                <div className="mb-6 p-3 bg-muted/50 dark:bg-muted rounded-lg">
                   {method?.phone && (
                     <div className="flex items-center space-x-2 mb-2">
-                      <Icon name="Phone" size={16} className="text-text-secondary" />
-                      <span className="text-sm font-medium">{method?.phone}</span>
+                      <Icon name="Phone" size={16} className="text-muted-foreground dark:text-muted-foreground" />
+                      <span className="text-sm font-medium text-foreground dark:text-foreground">{method?.phone}</span>
                     </div>
                   )}
                   {method?.email && (
                     <div className="flex items-center space-x-2">
-                      <Icon name="Mail" size={16} className="text-text-secondary" />
-                      <span className="text-sm font-medium">{method?.email}</span>
+                      <Icon name="Mail" size={16} className="text-muted-foreground dark:text-muted-foreground" />
+                      <span className="text-sm font-medium text-foreground dark:text-foreground">{method?.email}</span>
                     </div>
                   )}
                 </div>
@@ -262,38 +262,38 @@ const ContactMethods = ({ onMethodSelect }) => {
         </div>
 
         {/* Business Hours */}
-        <div className="mt-16 bg-white rounded-xl p-8 border border-gray-100">
+        <div className="mt-16 bg-card dark:bg-card rounded-xl p-8 border border-border">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-primary mb-4">Business Hours & Availability</h3>
-            <p className="text-text-secondary">We're available across multiple time zones to serve our global clients</p>
+            <h3 className="text-2xl font-bold text-foreground dark:text-foreground mb-4">Business Hours & Availability</h3>
+            <p className="text-muted-foreground dark:text-muted-foreground">We're available across multiple time zones to serve our global clients</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Clock" size={24} className="text-accent" />
+              <div className="w-16 h-16 bg-accent/10 dark:bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Clock" size={24} className="text-accent dark:text-accent" />
               </div>
-              <h4 className="font-semibold text-primary mb-2">India (IST)</h4>
-              <p className="text-text-secondary">Mon-Fri: 9:00 AM - 7:00 PM</p>
-              <p className="text-text-secondary">Sat: 10:00 AM - 4:00 PM</p>
+              <h4 className="font-semibold text-foreground dark:text-foreground mb-2">India (IST)</h4>
+              <p className="text-muted-foreground dark:text-muted-foreground">Mon-Fri: 9:00 AM - 7:00 PM</p>
+              <p className="text-muted-foreground dark:text-muted-foreground">Sat: 10:00 AM - 4:00 PM</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Globe" size={24} className="text-secondary" />
+              <div className="w-16 h-16 bg-secondary/10 dark:bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Globe" size={24} className="text-secondary dark:text-secondary" />
               </div>
-              <h4 className="font-semibold text-primary mb-2">International</h4>
-              <p className="text-text-secondary">24/7 Emergency Support</p>
-              <p className="text-text-secondary">Scheduled consultations</p>
+              <h4 className="font-semibold text-foreground dark:text-foreground mb-2">International</h4>
+              <p className="text-muted-foreground dark:text-muted-foreground">24/7 Emergency Support</p>
+              <p className="text-muted-foreground dark:text-muted-foreground">Scheduled consultations</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-success/10 dark:bg-success/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Headphones" size={24} className="text-success" />
               </div>
-              <h4 className="font-semibold text-primary mb-2">Support</h4>
-              <p className="text-text-secondary">WhatsApp: 24/7</p>
-              <p className="text-text-secondary">Email: &lt; 4 hours</p>
+              <h4 className="font-semibold text-foreground dark:text-foreground mb-2">Support</h4>
+              <p className="text-muted-foreground dark:text-muted-foreground">WhatsApp: 24/7</p>
+              <p className="text-muted-foreground dark:text-muted-foreground">Email: &lt; 4 hours</p>
             </div>
           </div>
         </div>

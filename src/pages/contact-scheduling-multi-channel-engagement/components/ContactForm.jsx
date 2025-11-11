@@ -102,26 +102,26 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-blue-100">
+    <section className="py-20 bg-gradient-to-br from-background dark:from-background via-muted/30 dark:via-muted/20 to-background dark:to-background">
       <Toaster position="top-right" />
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold text-blue-800 mb-3"
+            className="text-4xl font-bold text-foreground dark:text-foreground mb-3"
           >
-            Let’s Build Your Next Big Idea 🚀
+            Let's Build Your Next Big Idea 🚀
           </motion.h2>
-          <p className="text-gray-600 text-lg">
-            Fill out the form and choose how you’d like to send your details — Email or WhatsApp.
+          <p className="text-muted-foreground dark:text-muted-foreground text-lg">
+            Fill out the form and choose how you'd like to send your details — Email or WhatsApp.
           </p>
         </div>
 
         <motion.form
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="bg-white shadow-lg rounded-2xl p-8 space-y-6 border border-blue-100"
+          className="bg-card dark:bg-card shadow-lg rounded-2xl p-8 space-y-6 border border-border"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input
@@ -186,12 +186,12 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-blue-800 mb-2">
-              Project Details / Message <span className="text-red-500">*</span>
+            <label className="block text-sm font-medium text-foreground dark:text-foreground mb-2">
+              Project Details / Message <span className="text-destructive">*</span>
             </label>
             <textarea
               rows="6"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
+              className="w-full px-4 py-3 border border-border dark:border-border bg-background dark:bg-background text-foreground dark:text-foreground rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-accent resize-none"
               placeholder="Describe your project or inquiry..."
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
@@ -204,14 +204,14 @@ const ContactForm = () => {
             <Button
               onClick={(e) => handleSubmit(e, "email")}
               disabled={isSubmitting}
-              className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-10 py-3 font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
+              className="bg-primary dark:bg-primary hover:bg-primary/90 dark:hover:bg-primary/90 text-white rounded-xl px-10 py-3 font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
             >
               {isSubmitting ? "Sending..." : "Send via Email"}
             </Button>
 
             <Button
               onClick={(e) => handleSubmit(e, "whatsapp")}
-              className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-10 py-3 font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
+              className="bg-green-500 dark:bg-green-600 hover:bg-green-600 dark:hover:bg-green-700 text-white rounded-xl px-10 py-3 font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
             >
               Send via WhatsApp 💬
             </Button>

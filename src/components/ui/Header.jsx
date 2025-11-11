@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import { useTheme } from '../../contexts/ThemeContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,7 @@ const Header = () => {
   const location = useLocation();
   const [visitCount, setVisitCount] = useState(0);
   const navigate = useNavigate();
+  const { theme, toggleTheme } = useTheme();
 
   const navigationItems = [
     { name: 'Home', path: '/homepage-ai-automation-hub', icon: 'Home' },
@@ -71,8 +73,8 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-gray-100' 
-          : 'bg-white/80 backdrop-blur-sm'
+          ? 'bg-background/95 dark:bg-background/95 backdrop-blur-lg shadow-md border-b border-border' 
+          : 'bg-background/80 dark:bg-background/80 backdrop-blur-sm'
       }`}
     >
       <div className="w-full">
@@ -90,16 +92,16 @@ const Header = () => {
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary tracking-tight">
-                AI Automation Hub
+              <span className="text-xl font-bold text-primary dark:text-accent tracking-tight">
+                thinkAIQ
               </span>
               <span className="text-xs text-text-secondary font-medium -mt-1">
-                Intelligent Solutions
+                AI Automation Experts
               </span>
             </div>
-            {/* Mobile visits indicator */}
-            <div className="ml-3 text-[10px] text-text-secondary lg:hidden">
-              Visits: <span className="font-semibold text-primary">{visitCount}</span>
+            {/* Mobile visits indicator - Hidden on very small screens */}
+            <div className="ml-2 text-[9px] sm:text-[10px] text-text-secondary lg:hidden hidden sm:block">
+              <span className="font-semibold text-primary dark:text-accent">{visitCount}</span>
             </div>
           </Link>
 
@@ -150,18 +152,16 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="text-xs text-text-secondary mr-2">
-              Visits: <span className="font-semibold text-primary">{visitCount}</span>
+              Visits: <span className="font-semibold text-primary dark:text-accent">{visitCount}</span>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              className="border-accent text-accent hover:bg-accent hover:text-white"
-            
-              onClick={() => navigate('/services-universe-interactive-solutions')}
-             
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg border border-border hover:bg-muted transition-colors duration-200"
+              aria-label="Toggle theme"
             >
-              Calculate ROI
-            </Button>
+              <Icon name={theme === 'dark' ? 'Sun' : 'Moon'} size={20} className="text-foreground" />
+            </button>
             <Button
               variant="default"
               size="sm"
@@ -187,7 +187,7 @@ const Header = () => {
           isMenuOpen 
             ? 'max-h-screen opacity-100 visible' :'max-h-0 opacity-0 invisible overflow-hidden'
         }`}>
-          <div className="px-6 py-4 bg-white/95 backdrop-blur-lg border-t border-gray-100">
+          <div className="px-6 py-4 bg-background/95 dark:bg-background/95 backdrop-blur-lg border-t border-border">
             <nav className="space-y-2">
               {[...navigationItems, ...moreItems]?.map((item) => (
                 item?.name === 'Dashboard' ? (
@@ -219,15 +219,14 @@ const Header = () => {
               ))}
             </nav>
             
-            <div className="mt-6 pt-4 border-t border-gray-100 space-y-3">
-              <Button
-                variant="outline"
-                fullWidth
-                className="border-accent text-accent hover:bg-accent hover:text-white"
-                onClick={() => { closeMenu(); navigate('/services-universe-interactive-solutions'); }}
+            <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700 space-y-3">
+              <button
+                onClick={() => { toggleTheme(); }}
+                className="w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-lg border border-border hover:bg-muted transition-colors duration-200"
               >
-                Calculate ROI
-              </Button>
+                <Icon name={theme === 'dark' ? 'Sun' : 'Moon'} size={18} />
+                <span className="text-sm font-medium">Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode</span>
+              </button>
               <Button
                 variant="default"
                 fullWidth

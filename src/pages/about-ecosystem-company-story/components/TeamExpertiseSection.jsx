@@ -22,9 +22,9 @@ const TeamExpertiseSection = () => {
         image: "./../public/assets/images/akash.jpg",
         expertise: ["AI Agent Automation", "Full-Stack Development", "MSME Digital Transformation"],
         experience: "2+ Years",
-        description: "Started career with full-stack development projects, later focused on AI Agent Automation to transform business processes. Co-founded Authera with a vision to help MSMEs automate and scale effectively.",
+        description: "Started career with full-stack development projects, later focused on AI Agent Automation to transform business processes. Co-founded thinkAIQ with a vision to help MSMEs automate and scale effectively.",
         achievements: [
-          "Led 100+ AI Automation Projects",
+          "+ AI Automation Projects",
           "Onboarded 50+ MSME clients",
           "Speaker at 5+ Automation & Tech Conferences",
           "MSME Certified & Industry Recognized"
@@ -141,6 +141,7 @@ const TeamExpertiseSection = () => {
 
   return (
     <section className="py-20 bg-muted/30">
+      
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -148,10 +149,10 @@ const TeamExpertiseSection = () => {
             <Icon name="Users" size={16} />
             <span>Our Team</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4">
             Expert Team Driving Innovation
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground dark:text-muted-foreground max-w-2xl mx-auto">
             Meet the professionals combining AI, full-stack expertise, and MSME-focused solutions
             to create transformative experiences for businesses worldwide.
           </p>
@@ -194,15 +195,15 @@ const TeamExpertiseSection = () => {
               </div>
 
               <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
-                <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground dark:text-foreground mb-1">{member.name}</h3>
+                <p className="text-primary dark:text-accent font-medium text-sm mb-2">{member.role}</p>
                 <div className="inline-flex items-center space-x-1 bg-accent/10 text-accent px-2 py-1 rounded-full text-xs font-medium">
                   <Icon name="Clock" size={12} />
                   <span>{member.experience}</span>
                 </div>
               </div>
 
-              <p className="text-muted-foreground text-sm text-center mb-4 line-clamp-3">{member.description}</p>
+              <p className="text-muted-foreground dark:text-muted-foreground text-sm text-center mb-4 line-clamp-3">{member.description}</p>
 
               <div className="flex flex-wrap gap-1 justify-center mb-4">
                 {member.expertise.slice(0, 3).map((skill, index) => (

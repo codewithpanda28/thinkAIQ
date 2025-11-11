@@ -17,8 +17,8 @@ const ServiceFAQ = () => {
   const faqs = {
     general: [
       {
-        question: 'What makes Authera unique?',
-        answer: `Authera doesn’t just automate tasks — we rethink how businesses operate. We combine deep industry knowledge with advanced AI solutions, delivering custom workflows that grow with your business and maximize ROI.`
+        question: 'What makes thinkAIQ unique?',
+        answer: `thinkAIQ doesn't just automate tasks — we rethink how businesses operate. We combine deep industry knowledge with advanced AI solutions, delivering custom workflows that grow with your business and maximize ROI.`
       },
       {
         question: 'How secure is our data?',
@@ -113,10 +113,10 @@ const ServiceFAQ = () => {
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground dark:text-muted-foreground max-w-3xl mx-auto">
             Get answers to common questions about our services, processes, and support. 
             Can't find what you're looking for? Contact us directly.
           </p>
@@ -155,7 +155,7 @@ const ServiceFAQ = () => {
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-muted/30 transition-colors duration-200"
                 >
-                  <h3 className="text-lg font-semibold text-foreground pr-4">{faq.question}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground dark:text-foreground pr-4">{faq.question}</h3>
                   <Icon
                     name={openFAQ === index ? "ChevronUp" : "ChevronDown"}
                     size={20}
@@ -168,7 +168,7 @@ const ServiceFAQ = () => {
                     : 'max-h-0 opacity-0 overflow-hidden'
                 }`}>
                   <div className="px-6 pb-4 border-t border-border">
-                    <p className="text-muted-foreground leading-relaxed pt-4">{faq.answer}</p>
+                    <p className="text-muted-foreground dark:text-muted-foreground leading-relaxed pt-4">{faq.answer}</p>
                   </div>
                 </div>
               </div>
@@ -192,7 +192,7 @@ const ServiceFAQ = () => {
                   iconPosition="left"
                   onClick={() => window.open('tel:+918252472186')}
                 >
-                  Call +91 98765 43210
+                  Call +91 8252472186
                 </Button>
                 <Button 
                   variant="outline"

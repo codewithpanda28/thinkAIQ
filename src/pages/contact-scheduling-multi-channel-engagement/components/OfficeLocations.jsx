@@ -73,8 +73,8 @@ const OfficeLocations = () => {
                   key={location.id}
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                     selectedLocation === location.id
-                      ? "bg-white border-2 border-accent shadow-lg"
-                      : "bg-white border border-gray-100 hover:border-gray-200 hover:shadow-md"
+                      ? "bg-gradient-to-br from-primary/5 via-background to-secondary/5 dark:from-primary/10 dark:via-background dark:to-secondary/10 border-2 border-accent shadow-lg"
+                      : "bg-gradient-to-br from-primary/5 via-background to-secondary/5 dark:from-primary/10 dark:via-background dark:to-secondary/10 border border-gray-100 hover:border-gray-200 hover:shadow-md"
                   }`}
                   onClick={() => setSelectedLocation(location.id)}
                 >
@@ -131,7 +131,7 @@ const OfficeLocations = () => {
                   <Button
                     variant="default"
                     size="sm"
-                    className="bg-white/90 text-primary hover:bg-white"
+                    className="bg-white/90 text-black hover:bg-white"
                     iconName="Video"
                     iconPosition="left"
                     onClick={() =>
