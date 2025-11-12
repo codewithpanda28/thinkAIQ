@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
 import { useTheme } from '../../contexts/ThemeContext';
+import bglogo from './../../../public/assets/images/logo/logoicon.png'
+import logoName from './../../../public/assets/images/logo/logoName.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,18 +88,21 @@ const Header = () => {
             onClick={closeMenu}
           >
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-lg">
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-lg">
                 <Icon name="Zap" size={24} color="white" strokeWidth={2.5} />
-              </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+              </div> */}
+             < img src={bglogo} alt="thinkAIQ Logo" className="w-12 h-12 object-contain rounded-lg " />
+              {/* <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse"></div> */}
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary dark:text-accent tracking-tight">
+              {/* <span className="text-xl font-bold text-primary dark:text-accent tracking-tight">
                 thinkAIQ
               </span>
               <span className="text-xs text-text-secondary font-medium -mt-1">
                 AI Automation Experts
-              </span>
+              </span> */}
+              < img src={logoName} alt="thinkAIQ Logo Name" className=" h-6 sm:h-7 object-contain" />
+              {/* <span className="text-xs text-text-secondary font-medium "> AI Automation Experts</span> */}
             </div>
             {/* Mobile visits indicator - Hidden on very small screens */}
             <div className="ml-2 text-[9px] sm:text-[10px] text-text-secondary lg:hidden hidden sm:block">

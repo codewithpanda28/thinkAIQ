@@ -12,7 +12,7 @@ const FounderSection = () => {
       name: "Akash Kumar",
       role: "Co-Founder & CEO",
       email: "akashkumar.webdev@gmail.com",
-      image: "./../public/assets/images/akash.jpg",
+      image: "./../public/assets/images/akashbgremove1.png",
       expertise: ["AI Agents", "Automation", "Full Stack Development", "Web & Graphics Design"],
       experience: "2+ Years",
       bio: `Akash Kumar is the driving force behind thinkAIQ's vision of making intelligent automation accessible to every business. 
@@ -110,7 +110,7 @@ His approach to technology is rooted in understanding business needs first, then
                 <Image
                   src={currentFounder?.image}
                   alt={currentFounder?.name}
-                  className="w-48 h-48 object-cover rounded-2xl shadow-brand-lg mx-auto lg:mx-0"
+                  className="w-48 h-48 object-contain rounded-2xl shadow-brand-lg mx-auto lg:mx-0"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center shadow-brand-md">
                   <Icon name="Award" size={20} />

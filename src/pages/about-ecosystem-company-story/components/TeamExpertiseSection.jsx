@@ -19,13 +19,13 @@ const TeamExpertiseSection = () => {
         id: 1,
         name: "Akash Kumar",
         role: "Co-Founder & CEO",
-        image: "./../public/assets/images/akash.jpg",
+        image: "./../public/assets/images/akashbgremove1.png",
         expertise: ["AI Agent Automation", "Full-Stack Development", "MSME Digital Transformation"],
         experience: "2+ Years",
         description: "Started career with full-stack development projects, later focused on AI Agent Automation to transform business processes. Co-founded thinkAIQ with a vision to help MSMEs automate and scale effectively.",
         achievements: [
           "+ AI Automation Projects",
-          "Onboarded 50+ MSME clients",
+          "Onboarded 5+ MSME clients",
           "Speaker at 5+ Automation & Tech Conferences",
           "MSME Certified & Industry Recognized"
         ],

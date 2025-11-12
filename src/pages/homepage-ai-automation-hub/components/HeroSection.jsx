@@ -30,9 +30,9 @@ const HeroSection = () => {
     {
       id: 3,
       name: "Lead Generation Bot",
-      description: "AI-powered lead qualification and nurturing",
+      description: "AI-powered automation for lead scoring, routing, and follow-up",
       icon: "Target",
-      metrics: { clients: "60+", conversion: "245%", leads: "10K+" },
+      metrics: { "leads automated": "80+", "conversion boost": "300%", leads: "10K+" },
       color: "from-green-500 to-emerald-600"
     },
     // {

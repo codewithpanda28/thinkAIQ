@@ -193,7 +193,7 @@ const ServiceModal = ({ serviceKey, services, onClose }) => {
           {/* Close Button - Fixed position */}
           <button
             onClick={onClose}
-            className="fixed top-6 right-6 z-[60] bg-background dark:bg-background border-2 border-border hover:border-destructive dark:hover:border-destructive rounded-full p-3 text-foreground hover:text-destructive dark:hover:text-destructive shadow-lg hover:shadow-xl transition-all duration-200"
+            className="fixed sm:top-9 lg:top-[75px] right-6 z-[60] bg-background dark:bg-background border-2 border-border hover:border-destructive dark:hover:border-destructive rounded-full p-3 text-foreground hover:text-destructive dark:hover:text-destructive shadow-lg hover:shadow-xl transition-all duration-200"
             aria-label="Close modal"
           >
             <Icon name="X" size={24} />

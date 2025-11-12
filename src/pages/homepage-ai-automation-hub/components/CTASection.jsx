@@ -84,7 +84,7 @@ const CTASection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main CTA */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">

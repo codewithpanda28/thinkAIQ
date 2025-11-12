@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Icon from "../../../components/AppIcon";
 import Button from "../../../components/ui/Button";
+import bglogo from './../../../../public/assets/images/logo/logoicon.png'
+import logoName from './../../../../public/assets/images/logo/logoName.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -106,18 +108,20 @@ const Footer = () => {
             {/* Logo */}
             <Link to="/homepage-ai-automation-hub" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                {/* <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Icon name="Zap" size={28} color="white" strokeWidth={2.5} />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-pulse"></div>
+                </div> */}
+                 < img src={bglogo} alt="thinkAIQ Logo" className="bg-white w-12 h-12 object-contain rounded-lg shadow-lg" />
+                {/* <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-pulse"></div> */}
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-white tracking-tight">
+                {/* <span className="text-2xl font-bold text-white tracking-tight">
                   thinkAIQ
                 </span>
                 <span className="text-sm text-white/80 font-medium -mt-1">
                   Intelligence that Works
-                </span>
+                </span> */}
+                 < img src={logoName} alt="thinkAIQ Logo Name" className="h-6 sm:h-7 bg-white object-contain" />
               </div>
             </Link>
 
