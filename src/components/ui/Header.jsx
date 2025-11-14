@@ -160,13 +160,13 @@ const Header = () => {
               Visits: <span className="font-semibold text-primary dark:text-accent">{visitCount}</span>
             </div>
             {/* Theme Toggle */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg border border-border hover:bg-muted transition-colors duration-200"
               aria-label="Toggle theme"
             >
               <Icon name={theme === 'dark' ? 'Sun' : 'Moon'} size={20} className="text-foreground" />
-            </button>
+            </button> */}
             <Button
               variant="default"
               size="sm"
@@ -225,13 +225,13 @@ const Header = () => {
             </nav>
             
             <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700 space-y-3">
-              <button
+              {/* <button
                 onClick={() => { toggleTheme(); }}
                 className="w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-lg border border-border hover:bg-muted transition-colors duration-200"
               >
                 <Icon name={theme === 'dark' ? 'Sun' : 'Moon'} size={18} />
                 <span className="text-sm font-medium">Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode</span>
-              </button>
+              </button> */}
               <Button
                 variant="default"
                 fullWidth

@@ -93,7 +93,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-primary via-primary/10 to-secondary text-white dark:border-t dark:border-white/10 dark:from-secondary dark:via-secondary/85 dark:to-primary/85">
+    <footer className="bg-gradient-to-br from-secondary via-primary/10 to-primary text-white dark:border-t dark:border-white/10 dark:from-secondary dark:via-secondary/85 dark:to-primary/85">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -111,7 +111,7 @@ const Footer = () => {
                 {/* <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Icon name="Zap" size={28} color="white" strokeWidth={2.5} />
                 </div> */}
-                 < img src={bglogo} alt="thinkAIQ Logo" className="bg-white w-12 h-12 object-contain rounded-lg shadow-lg" />
+                 < img src={bglogo} alt="thinkAIQ Logo" className=" w-12 h-12 object-contain rounded-lg shadow-lg" />
                 {/* <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-pulse"></div> */}
               </div>
               <div className="flex flex-col">
@@ -121,16 +121,16 @@ const Footer = () => {
                 <span className="text-sm text-white/80 font-medium -mt-1">
                   Intelligence that Works
                 </span> */}
-                 < img src={logoName} alt="thinkAIQ Logo Name" className="h-6 sm:h-7 bg-white object-contain" />
+                 < img src={logoName} alt="thinkAIQ Logo Name" className="h-6 sm:h-7  object-contain" />
               </div>
             </Link>
 
             {/* Description */}
-            <p className="text-white/80 leading-relaxed max-w-md text-sm sm:text-base">
+            {/* <p className="text-white/80 leading-relaxed max-w-md text-sm sm:text-base">
               thinkAIQ helps organizations modernize their operations through advanced AI automation, 
               smart data analytics, and intelligent solutions. We build scalable digital ecosystems that 
               deliver measurable results and long-term value.
-            </p>
+            </p> */}
 
             {/* Contact */}
             <div className="space-y-4">

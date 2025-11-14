@@ -30,9 +30,9 @@ const HeroSection = () => {
     {
       id: 3,
       name: "Lead Generation Bot",
-      description: "AI-powered automation for lead scoring, routing, and follow-up",
+      description: "AI-powered lead qualification and nurturing",
       icon: "Target",
-      metrics: { "leads automated": "80+", "conversion boost": "300%", leads: "10K+" },
+      metrics: { clients: "60+", conversion: "245%", leads: "10K+" },
       color: "from-green-500 to-emerald-600"
     },
     // {
@@ -165,7 +165,7 @@ const HeroSection = () => {
             className="relative"
           >
             {/* Projects Showcase - Modern Card Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               {projects.map((project, index) => (
                 <motion.div
                   key={project.id}
@@ -174,7 +174,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
                   className={`bg-card dark:bg-card border-2 border-border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer relative overflow-hidden ${
-                    index === 0 ? 'col-span-2' : ''
+                    index === 0 ? 'lg:col-span-2' : ''
                   }`}
                 >
                   {/* Background Gradient */}
@@ -206,10 +206,10 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="absolute -bottom-16 -right-14 bg-gradient-to-r from-primary to-secondary dark:from-accent dark:to-primary text-white rounded-2xl p-6 shadow-2xl border-4 border-background dark:border-background"
+              className="absolute lg:-bottom-16 lg:-right-12 -right-0 -bottom-20 bg-gradient-to-r from-primary to-secondary dark:from-accent dark:to-primary text-white rounded-2xl p-6 shadow-2xl border-4 border-background dark:border-background"
             >
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+              <div className="flex items-center space-x-3 ">
+                <div className="w-8 h-8x bg-white/20 rounded-xl flex items-center justify-center">
                   <Icon name="Award" size={24} className="text-white" />
                 </div>
                 <div>
