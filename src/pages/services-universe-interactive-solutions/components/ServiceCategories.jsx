@@ -283,18 +283,7 @@ const ServiceCategories = () => {
                 )}
 
                 {/* Pricing */}
-                <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-primary/10 dark:bg-accent/20 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">Setup Fee</span>
-                    <span className="text-base sm:text-lg font-bold text-foreground dark:text-foreground">{formatPrice(service.pricing.setup)}</span>
-                  </div>
-                  {service.pricing.monthly > 0 && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">Monthly</span>
-                      <span className="text-base sm:text-lg font-bold text-foreground dark:text-foreground">{formatPrice(service.pricing.monthly)}</span>
-                    </div>
-                  )}
-                </div>
+               
 
       {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">

@@ -120,9 +120,9 @@ const CTASection = () => {
                   href={method.action}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-card border border-border rounded-xl lg:p-6 p-2 hover:border-primary hover:shadow-brand-lg transition-all duration-300 cursor-pointer"
+                  className="group bg-card border border-border rounded-xl lg:p-6 p-0  hover:border-primary hover:shadow-brand-lg transition-all duration-300 cursor-pointer"
                 >
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 ">
                     <div
                       className={`w-10 h-10 bg-gradient-to-br ${method.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
                     >
