@@ -98,7 +98,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
               <a
-                href="mailto:akashkumar.webdev@gmail.com?subject=Free%20Consultation&body=Hi,%20I%27m%20interested%20in%20your%20AI%20Automation%20services."
+                href="https://cal.com/akash-kumar-x8dx1t/thinkaiq"
                 aria-label="Book a free consultation via email"
               >
                 <Button
@@ -113,7 +113,7 @@ const HeroSection = () => {
                 </Button>
               </a>
               <a
-                href="https://wa.me/918252472186?text=Hi,%20I%27m%20interested%20in%20watching%20the%20AI%20Automation%20demo."
+                href="https://youtu.be/zUL_7mhIqzU?si=g9TTO9bxRUkl-qfR"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Watch demo on WhatsApp"

@@ -16,9 +16,9 @@ const Footer = () => {
       links: [
         { name: "AI Process Automation", href: "/services-universe-interactive-solutions" },
         { name: "Custom Software Development", href: "/services-universe-interactive-solutions" },
-        { name: "AI Consulting", href: "/services-universe-interactive-solutions" },
+        // { name: "AI Consulting", href: "/services-universe-interactive-solutions" },
         { name: "SaaS Products", href: "/homepage-ai-automation-hub" },
-        { name: "Training & Workshops", href: "/services-universe-interactive-solutions" },
+        // { name: "Training & Workshops", href: "/services-universe-interactive-solutions" },
       ],
     },
     {
@@ -26,9 +26,9 @@ const Footer = () => {
       links: [
         { name: "About Us", href: "/about-ecosystem-company-story" },
         { name: "Our Team", href: "/about-ecosystem-company-story" },
-        { name: "Success Stories", href: "/homepage-ai-automation-hub" },
-        { name: "Case Studies", href: "/homepage-ai-automation-hub" },
-        { name: "Careers", href: "/contact-scheduling-multi-channel-engagement" },
+        // { name: "Success Stories", href: "/homepage-ai-automation-hub" },
+        // { name: "Case Studies", href: "/homepage-ai-automation-hub" },
+        // { name: "Careers", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Blog", href: "/blog" },
       ],
     },
@@ -37,9 +37,9 @@ const Footer = () => {
       links: [
         { name: "Knowledge Hub", href: "/blog" },
         { name: "Industry Reports", href: "/blog" },
-        { name: "Best Practices", href: "/blog" },
-        { name: "Implementation Guides", href: "/blog" },
-        { name: "API Documentation", href: "/contact-scheduling-multi-channel-engagement" },
+        // { name: "Best Practices", href: "/blog" },
+        // { name: "Implementation Guides", href: "/blog" },
+        // { name: "API Documentation", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Support Center", href: "/contact-scheduling-multi-channel-engagement" },
       ],
     },
@@ -49,9 +49,9 @@ const Footer = () => {
         { name: "Contact Us", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Help Center", href: "/contact-scheduling-multi-channel-engagement" },
         { name: "Technical Support", href: "/contact-scheduling-multi-channel-engagement" },
-        { name: "Training & Onboarding", href: "/contact-scheduling-multi-channel-engagement" },
-        { name: "Community Forum", href: "/contact-scheduling-multi-channel-engagement" },
-        { name: "Status Page", href: "/contact-scheduling-multi-channel-engagement" },
+        // { name: "Training & Onboarding", href: "/contact-scheduling-multi-channel-engagement" },
+        // { name: "Community Forum", href: "/contact-scheduling-multi-channel-engagement" },
+        // { name: "Status Page", href: "/contact-scheduling-multi-channel-engagement" },
       ],
     },
   ];
@@ -61,7 +61,7 @@ const Footer = () => {
     { name: "Twitter", icon: "Twitter", href: "https://twitter.com/thinkaiq" },
     { name: "YouTube", icon: "Youtube", href: "https://youtube.com/@thinkaiq" },
     { name: "Instagram", icon: "Instagram", href: "https://instagram.com/thinkaiq" },
-    { name: "Facebook", icon: "Facebook", href: "https://facebook.com/thinkaiq" },
+    // { name: "Facebook", icon: "Facebook", href: "https://facebook.com/thinkaiq" },
   ];
 
   const contactInfo = [
@@ -106,24 +106,7 @@ const Footer = () => {
             className="lg:col-span-2 space-y-6"
           >
             {/* Logo */}
-            <Link to="/homepage-ai-automation-hub" className="flex items-center space-x-3 group">
-              <div className="relative">
-                {/* <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Icon name="Zap" size={28} color="white" strokeWidth={2.5} />
-                </div> */}
-                 < img src={bglogo} alt="thinkAIQ Logo" className=" w-12 h-12 object-contain rounded-lg shadow-lg" />
-                {/* <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-pulse"></div> */}
-              </div>
-              <div className="flex flex-col">
-                {/* <span className="text-2xl font-bold text-white tracking-tight">
-                  thinkAIQ
-                </span>
-                <span className="text-sm text-white/80 font-medium -mt-1">
-                  Intelligence that Works
-                </span> */}
-                 < img src={logoName} alt="thinkAIQ Logo Name" className="h-6 sm:h-7  object-contain" />
-              </div>
-            </Link>
+            
 
             {/* Description */}
             {/* <p className="text-white/80 leading-relaxed max-w-md text-sm sm:text-base">

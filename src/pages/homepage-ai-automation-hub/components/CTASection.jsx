@@ -51,7 +51,7 @@ const CTASection = () => {
       icon: "Calendar",
       title: "Book Meeting",
       description: "Schedule a consultation",
-      action: "https://cal.com/akashkumar-webdev", // ✅ Replace with your real link
+      action: "https://cal.com/akash-kumar-x8dx1t/thinkaiq", // ✅ Replace with your real link
       display: "Choose Time Slot",
       color: "from-orange-500 to-red-600",
     },

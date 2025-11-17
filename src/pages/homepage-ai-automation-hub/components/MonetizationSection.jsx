@@ -11,7 +11,7 @@ const MonetizationSection = () => {
       icon: "Bot",
       color: "from-blue-500 to-indigo-600",
       features: ["Workflow automation", "Process optimization", "Custom integrations"],
-      revenue: "₹25,000 - ₹5,00,000/month"
+      // revenue: "₹25,000 - ₹5,00,000/month"
     },
     {
       id: 2,
@@ -20,26 +20,26 @@ const MonetizationSection = () => {
       icon: "Code",
       color: "from-purple-500 to-pink-600",
       features: ["Web applications", "Mobile apps", "Enterprise solutions"],
-      revenue: "₹1,00,000 - ₹50,00,000/project"
+      // revenue: "₹1,00,000 - ₹50,00,000/project"
     },
-    {
-      id: 3,
-      name: "AI Consulting & Strategy",
-      description: "Strategic guidance for AI adoption",
-      icon: "Brain",
-      color: "from-green-500 to-emerald-600",
-      features: ["AI readiness assessment", "Roadmap development", "Implementation guidance"],
-      revenue: "₹50,000 - ₹10,00,000/project"
-    },
-    {
-      id: 4,
-      name: "Training & Workshops",
-      description: "AI and automation training programs",
-      icon: "GraduationCap",
-      color: "from-orange-500 to-red-600",
-      features: ["Team training", "Workshops", "Certification programs"],
-      revenue: "₹25,000 - ₹2,00,000/session"
-    },
+    // {
+    //   id: 3,
+    //   name: "AI Consulting & Strategy",
+    //   description: "Strategic guidance for AI adoption",
+    //   icon: "Brain",
+    //   color: "from-green-500 to-emerald-600",
+    //   features: ["AI readiness assessment", "Roadmap development", "Implementation guidance"],
+    //   revenue: "₹50,000 - ₹10,00,000/project"
+    // },
+    // {
+    //   id: 4,
+    //   name: "Training & Workshops",
+    //   description: "AI and automation training programs",
+    //   icon: "GraduationCap",
+    //   color: "from-orange-500 to-red-600",
+    //   features: ["Team training", "Workshops", "Certification programs"],
+    //   revenue: "₹25,000 - ₹2,00,000/session"
+    // },
     {
       id: 5,
       name: "SaaS Products",
@@ -47,17 +47,17 @@ const MonetizationSection = () => {
       icon: "Cloud",
       color: "from-cyan-500 to-blue-600",
       features: ["Subscription-based", "Scalable platform", "Multi-tenant architecture"],
-      revenue: "₹5,000 - ₹50,000/month per client"
+      // revenue: "₹5,000 - ₹50,000/month per client"
     },
-    {
-      id: 6,
-      name: "API Services",
-      description: "RESTful and GraphQL API development",
-      icon: "Zap",
-      color: "from-yellow-500 to-orange-600",
-      features: ["API development", "Integration services", "API maintenance"],
-      revenue: "₹15,000 - ₹1,00,000/month"
-    },
+    // {
+    //   id: 6,
+    //   name: "API Services",
+    //   description: "RESTful and GraphQL API development",
+    //   icon: "Zap",
+    //   color: "from-yellow-500 to-orange-600",
+    //   features: ["API development", "Integration services", "API maintenance"],
+    //   revenue: "₹15,000 - ₹1,00,000/month"
+    // },
     {
       id: 7,
       name: "Maintenance & Support",
@@ -65,17 +65,17 @@ const MonetizationSection = () => {
       icon: "Settings",
       color: "from-indigo-500 to-purple-600",
       features: ["24/7 support", "System updates", "Performance optimization"],
-      revenue: "₹10,000 - ₹2,00,000/month"
+      // revenue: "₹10,000 - ₹2,00,000/month"
     },
-    {
-      id: 8,
-      name: "Data Analytics & Insights",
-      description: "Business intelligence and analytics solutions",
-      icon: "BarChart",
-      color: "from-pink-500 to-rose-600",
-      features: ["Data visualization", "Predictive analytics", "Business insights"],
-      revenue: "₹30,000 - ₹3,00,000/month"
-    },
+    // {
+    //   id: 8,
+    //   name: "Data Analytics & Insights",
+    //   description: "Business intelligence and analytics solutions",
+    //   icon: "BarChart",
+    //   color: "from-pink-500 to-rose-600",
+    //   features: ["Data visualization", "Predictive analytics", "Business insights"],
+    //   revenue: "₹30,000 - ₹3,00,000/month"
+    // },
     {
       id: 9,
       name: "Affiliate Marketing",
@@ -83,7 +83,7 @@ const MonetizationSection = () => {
       icon: "Users",
       color: "from-teal-500 to-cyan-600",
       features: ["Referral programs", "Partner commissions", "Lead generation"],
-      revenue: "10-30% commission per referral"
+      // revenue: "10-30% commission per referral"
     },
     {
       id: 10,
@@ -92,26 +92,26 @@ const MonetizationSection = () => {
       icon: "DollarSign",
       color: "from-emerald-500 to-green-600",
       features: ["Display ads", "Video ads", "Native advertising"],
-      revenue: "₹500 - ₹50,000/month (based on traffic)"
+      // revenue: "₹500 - ₹50,000/month (based on traffic)"
     },
-    {
-      id: 11,
-      name: "Sponsored Content",
-      description: "Partner with brands for sponsored posts",
-      icon: "FileText",
-      color: "from-violet-500 to-purple-600",
-      features: ["Blog posts", "Case studies", "Product reviews"],
-      revenue: "₹10,000 - ₹1,00,000/post"
-    },
-    {
-      id: 12,
-      name: "Premium Content",
-      description: "Sell premium content and resources",
-      icon: "Lock",
-      color: "from-amber-500 to-yellow-600",
-      features: ["E-books", "Templates", "Video courses"],
-      revenue: "₹500 - ₹10,000 per item"
-    }
+    // {
+    //   id: 11,
+    //   name: "Sponsored Content",
+    //   description: "Partner with brands for sponsored posts",
+    //   icon: "FileText",
+    //   color: "from-violet-500 to-purple-600",
+    //   features: ["Blog posts", "Case studies", "Product reviews"],
+    //   revenue: "₹10,000 - ₹1,00,000/post"
+    // },
+    // {
+    //   id: 12,
+    //   name: "Premium Content",
+    //   description: "Sell premium content and resources",
+    //   icon: "Lock",
+    //   color: "from-amber-500 to-yellow-600",
+    //   features: ["E-books", "Templates", "Video courses"],
+    //   revenue: "₹500 - ₹10,000 per item"
+    // }
   ];
 
   return (

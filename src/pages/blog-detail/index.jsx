@@ -410,18 +410,18 @@ The trajectory suggests continued growth in digital adoption, with emerging tech
             </div>
 
             {/* Share */}
-            <div className="mt-8 pt-8 border-t border-border">
+            <div className="mt-6 pt-6 border-t border-border mb-4">
               <h3 className="text-lg font-semibold text-text-primary mb-4">Share this article</h3>
               <div className="flex items-center space-x-4">
-                <button className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <button className="flex items-center space-x-2 px-2 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   <Icon name="Share" size={16} />
                   <span>Twitter</span>
                 </button>
-                <button className="flex items-center space-x-2 px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition-colors">
+                <button className="flex items-center space-x-2 px-2 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition-colors">
                   <Icon name="Share" size={16} />
                   <span>LinkedIn</span>
                 </button>
-                <button className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                <button className="flex items-center space-x-2 px-2 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                   <Icon name="Share" size={16} />
                   <span>WhatsApp</span>
                 </button>
