@@ -11,14 +11,15 @@ const HeroSection = () => {
   }, []);
 
   const projects = [
-    {
-      id: 1,
-      name: "AI Customer Support Agent",
-      description: "24/7 intelligent customer support automation",
-      icon: "MessageSquare",
-      metrics: { clients: "50+", satisfaction: "98%", response: "<2min" },
-      color: "from-blue-500 to-indigo-600"
-    },
+ {
+  id: 1,
+  name: "WhatsApp Automation Catalog",
+  description: "Industry-wise core & advanced WhatsApp automations",
+  icon: "Bot",
+  metrics: { industries: "15+ industries", automations: "50+ flows", roi: "High ROI" },
+  color: "from-green-500 to-emerald-600"
+}
+,
     {
       id: 2,
       name: "Invoice Processing System",

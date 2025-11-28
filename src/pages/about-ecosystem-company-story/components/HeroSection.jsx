@@ -31,7 +31,7 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-6 text-balance">
-              Meet <span className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent dark:from-accent dark:via-secondary dark:to-primary bg-clip-text">Akash Kumar</span> &{' '}
+              Meet <span className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent dark:from-accent dark:via-secondary dark:to-primary bg-clip-text">Akash</span> &{' '}
               <span className="text-transparent bg-gradient-to-r from-secondary via-primary to-accent dark:from-secondary dark:via-accent dark:to-primary bg-clip-text">Aditya</span>
             </h1>
 

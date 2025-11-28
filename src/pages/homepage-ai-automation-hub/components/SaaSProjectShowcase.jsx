@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import Icon from "../../../components/AppIcon";
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
 
 const SaaSProjectShowcase = () => {
   const navigate = useNavigate();
@@ -12,187 +12,259 @@ const SaaSProjectShowcase = () => {
   const saasProjects = [
     {
       id: 1,
-      name: "AI Customer Support Agent",
-      tagline: "24/7 Intelligent Customer Support",
-      description: "An AI-powered customer support system that handles inquiries, resolves issues, and provides instant responses 24/7.",
+      name: "WhatsApp Automation Catalog",
+      tagline: "Industry‑Wise (Expanded + High‑ROI Pitch Automations)",
+      description:
+        "A comprehensive WhatsApp automation catalog with industry-specific workflows, AI-led customer engagement, smart follow-ups, lead qualification, booking bots, and high-ROI sales automations across multiple business niches.",
       icon: "MessageSquare",
-      color: "from-blue-500 to-indigo-600",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-      metrics: { 
-        users: "50+", 
-        satisfaction: "98%", 
-        response: "<2min",
-        uptime: "99.9%"
-      },
-      features: [
-        "Natural Language Processing",
-        "Multi-language Support",
-        "CRM Integration",
-        "Analytics Dashboard",
-        "Custom AI Training",
-        "API Access"
-      ],
-      techStack: ["React", "Node.js", "OpenAI", "MongoDB", "AWS"],
-      liveDemo: "https://demo.thinkaiq.com/customer-support",
-      caseStudy: "/project-details/1",
-      pricing: "Starting at ₹25,000/month",
-      category: "AI Automation"
-    },
-    {
-      id: 2,
-      name: "Invoice Processing System",
-      tagline: "Automated Invoice Management",
-      description: "Intelligent invoice processing system with OCR, data extraction, and automated approval workflows.",
-      icon: "FileText",
-      color: "from-purple-500 to-pink-600",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-      metrics: { 
-        accuracy: "99.7%", 
-        time: "30min", 
-        cost: "85% reduction",
-        processed: "10K+/month"
-      },
-      features: [
-        "Advanced OCR Technology",
-        "Automated Data Extraction",
-        "Approval Workflows",
-        "Multi-format Support",
-        "Cloud Storage",
-        "Real-time Tracking"
-      ],
-      techStack: ["Python", "Tesseract OCR", "FastAPI", "PostgreSQL", "Docker"],
-      liveDemo: "https://demo.thinkaiq.com/invoice-processing",
-      caseStudy: "/project-details/2",
-      pricing: "Starting at ₹35,000/month",
-      category: "Document Processing"
-    },
-    {
-      id: 3,
-      name: "Lead Generation Bot",
-      tagline: "AI-Powered Lead Qualification",
-      description: "Intelligent lead generation and qualification system that nurtures prospects and increases conversion rates.",
-      icon: "Target",
       color: "from-green-500 to-emerald-600",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800",
-      metrics: { 
-        conversion: "245%", 
-        leads: "10K+", 
-        qualification: "95%",
-        roi: "300%"
+      image:
+        "https://cdn.botpenguin.com/assets/website/whatsapp_bot_improves_customer_support_and_service_01_df56e82e62.webp",
+      metrics: {
+        businesses: "300+",
+        satisfaction: "98%",
+        response: "Instant Automation",
+        uptime: "99.9%",
       },
-      features: [
-        "Lead Scoring AI",
-        "Automated Nurturing",
-        "CRM Integration",
-        "Email Campaigns",
-        "Analytics & Reporting",
-        "A/B Testing"
+      industries: [
+        {
+          name: "E-Commerce & D2C",
+          coreAutomations: [
+            "COD order confirmation & fraud prevention",
+            "RTO prediction + smart NDR flows",
+            "Upsell/cross-sell after purchase",
+            "Abandoned cart auto recovery",
+            "Order tracking automation",
+            "Delivery feedback & rating",
+            "Replacement/return bot",
+            "Payment link recovery bot",
+          ],
+          advancedAutomations: [
+            "AI product recommendation (behavior-based)",
+            "AI size assistant for fashion stores",
+            "Price-drop alerts automation",
+            "VIP customer loyalty workflow",
+            "Smart COD→Prepaid conversion bot",
+            "Automated influencer follow-up bot",
+            "WhatsApp affiliate tracking automation",
+          ],
+        },
+        {
+          name: "Healthcare, Clinics, Hospitals",
+          coreAutomations: [
+            "Appointment booking bot",
+            "Automated reminders (visit, tests)",
+            "E-prescription delivery",
+            "Lab reports auto-share bot",
+            "Doctor availability updates",
+          ],
+          advancedAutomations: [
+            "AI medical triage bot (symptom → department)",
+            "Follow-up medication reminders",
+            "Health package cross-sell",
+            "Missed call → instant WhatsApp triage bot",
+            "Patient feedback & NPS system",
+            "Automated discharge instruction delivery",
+          ],
+        },
+        {
+          name: "Real Estate",
+          coreAutomations: [
+            "Property catalog bot",
+            "Site visit booking automation",
+            "Lead qualification bot (budget, location, timeline)",
+            "Auto-agent assignment",
+          ],
+          advancedAutomations: [
+            "Personalized property recommendations",
+            "Real-time project update broadcast",
+            "Price sheet delivery automation",
+            "Investor segment nurturing",
+            "Payment plan reminders for booked buyers",
+          ],
+        },
+        {
+          name: "Education, Coaching, EdTech",
+          coreAutomations: [
+            "Lead capture + pre-qualification bot",
+            "Course catalog automation",
+            "Demo class reminders",
+            "Payment link automation",
+            "Admission workflow bot",
+          ],
+          advancedAutomations: [
+            "AI career counseling bot",
+            "Parent-engagement updates",
+            "Automated lead reactivation",
+            "Test result delivery",
+            "EMI follow-up bot",
+            "Auto-certified completion bot",
+          ],
+        },
+        {
+          name: "Salon, Spa, Beauty Clinics",
+          coreAutomations: ["Appointment booking bot", "Reminder & re-engagement", "Service catalog"],
+          advancedAutomations: [
+            "Membership expiry alerts",
+            "Service recommendation bot (hair/skin type)",
+            "Review booster automation",
+            "Prepaid voucher selling automation",
+          ],
+        },
+        {
+          name: "Restaurants, Cloud Kitchens, Cafes",
+          coreAutomations: ["Menu bot", "Order taking automation", "Delivery partner tracking", "Feedback collection"],
+          advancedAutomations: [
+            "Loyalty points bot",
+            "AI dish recommendation",
+            "Automated upsell (add dessert/drink)",
+            "Re-order reminder every 7 days",
+            "Festival combo broadcast bot",
+          ],
+        },
+        {
+          name: "Finance, Insurance, Loans",
+          coreAutomations: ["Loan eligibility bot", "Document collection bot", "EMI reminder automation"],
+          advancedAutomations: [
+            "AI investment advisor bot",
+            "Insurance renewal bot",
+            "Drop-off lead recovery bot",
+            "KYC automation",
+            "Policy comparison automation",
+          ],
+        },
+        {
+          name: "Agencies, SaaS, Service Providers",
+          coreAutomations: ["Lead capture & routing", "Proposal sending", "Invoicing", "Support ticket creation"],
+          advancedAutomations: [
+            "Client onboarding workflow",
+            "Contract renewal reminders",
+            "Subscription renewal automation",
+            "AI support agent with knowledge base",
+            "Failed payment recovery bot",
+          ],
+        },
+        {
+          name: "Retail Stores",
+          coreAutomations: ["Product catalog bot", "Order taking bot"],
+          advancedAutomations: [
+            "Loyalty program bot",
+            "Festival sales automations",
+            "Geo-targeted store offers",
+            "Warranty registration bot",
+          ],
+        },
+        {
+          name: "Automobile, Car/Bike Showrooms",
+          coreAutomations: ["Vehicle inquiry bot", "Test drive booking", "Service reminders"],
+          advancedAutomations: [
+            "Finance options wizard",
+            "Exchange value estimation bot",
+            "Insurance renewal reminders",
+            "Post-service feedback & upsell automation",
+          ],
+        },
       ],
-      techStack: ["Vue.js", "Python", "Machine Learning", "Redis", "SendGrid"],
-      liveDemo: "https://demo.thinkaiq.com/lead-generation",
-      caseStudy: "/project-details/3",
-      pricing: "Starting at ₹30,000/month",
-      category: "Marketing Automation"
+      topAutomations: [
+        {
+          industry: "Real Estate",
+          automations: [
+            "Auto Project Brochure sender (PDF instantly)",
+            "Site-visit auto scheduling + reminders",
+            "Lead budget detection via AI",
+            "Auto follow-up every 48 hours",
+            "Missed-call → WhatsApp auto-response",
+            "Property comparison generator",
+            "EMI calculator chatbot",
+            "Hot/Warm/Cold lead auto tagging",
+            "Sales team auto assignment",
+            "Price-drop alert automation",
+          ],
+        },
+        {
+          industry: "E-Commerce",
+          automations: [
+            "Abandoned cart recovery (3-step)",
+            "Order tracking bot",
+            "Product recommendation AI",
+            "COD confirmation automation",
+            "Return/refund automation",
+            "Broadcast sales campaigns",
+            "Customer segmentation (new/repeat/whale)",
+            "WhatsApp upsell flows",
+            "Warranty registration bot",
+            "Auto review collection",
+          ],
+        },
+        {
+          industry: "Healthcare/Clinics",
+          automations: [
+            "Appointment booking bot",
+            "Auto reminders (appointment + medicine)",
+            "Pre-consultation form filling",
+            "Report sharing (PDF)",
+            "Doctor availability alerts",
+            "Queue status updates",
+            "Payment collection automation",
+            "Post-consultation follow-up",
+            "Insurance documentation bot",
+            "Lab-report notification",
+          ],
+        },
+      ],
+      additionalAdvancedAutomations: [
+        "AI Emotional Tone Detection (customer mood → auto response)",
+        "Smart Lead Conversion Predictor (AI probability score)",
+        "Auto Sales Script Generator (agent ke liye)",
+        "Multi-agent Routing (finance → sales → support)",
+        "Auto Keyword Intent Detection (buying intent)",
+        "Real-time Dashboard Summary via WhatsApp",
+        "Custom PDF generator (agreement/invoice/certificate)",
+        "WhatsApp-based CRM inside WhatsApp itself",
+        "Voice-to-order automation",
+        "AI Product Recommender based on chat behavior",
+      ],
+      realLifeAutomations: [
+        "Missed-call → WhatsApp auto-reply + lead capture",
+        "QR Scan → WhatsApp automation (offline stores)",
+        "WhatsApp Ticketing System (support teams)",
+        "Team performance tracking automation",
+        "Internal task assignment bot",
+        "Auto cold lead recovery bot",
+        "Re-engagement bot (inactive 30 days)",
+        "Birthday/anniversary campaigns",
+        "High-value leads escalation automation",
+        "Geo-based hyperlocal automation",
+        "Inventory stock alerts",
+        "Order delay apology bot",
+        "Instant warranty PDF generator",
+      ],
+      features: [
+        "Industry-wise automation workflows (17 niches)",
+        "Lead capture + qualification bots",
+        "Smart follow-ups & re-engagement",
+        "AI recommendations & personalization",
+        "Booking, reminders & notification bots",
+        "Payment links, invoices & document automation",
+        "High-ROI workflows for marketing & sales",
+        "Customizable automation for every business",
+      ],
+      techStack: ["React", "Node.js", "WhatsApp API", "OpenAI", "n8n"],
+      liveDemo: "",
+      caseStudy: "/project-details/1",
+      pricing: "Custom Pricing Based on Automations",
+      category: "WhatsApp Automation",
     },
-    {
-      id: 4,
-      name: "Inventory Management AI",
-      tagline: "Smart Inventory Prediction",
-      description: "Predictive inventory management system that optimizes stock levels and reduces waste using AI.",
-      icon: "Package",
-      color: "from-orange-500 to-red-600",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-      metrics: { 
-        savings: "40%", 
-        accuracy: "95%", 
-        waste: "60% reduction",
-        efficiency: "80%"
-      },
-      features: [
-        "Demand Forecasting",
-        "Automated Reordering",
-        "Multi-warehouse Support",
-        "Real-time Tracking",
-        "Analytics Dashboard",
-        "Mobile App"
-      ],
-      techStack: ["React Native", "Python", "TensorFlow", "PostgreSQL", "Kubernetes"],
-      liveDemo: "https://demo.thinkaiq.com/inventory",
-      caseStudy: "/project-details/4",
-      pricing: "Starting at ₹40,000/month",
-      category: "Supply Chain"
-    },
-    {
-      id: 5,
-      name: "HR Automation Platform",
-      tagline: "Complete HR Management",
-      description: "Comprehensive HR automation platform for recruitment, onboarding, payroll, and employee management.",
-      icon: "Users",
-      color: "from-cyan-500 to-blue-600",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-      metrics: { 
-        efficiency: "70%", 
-        time: "50% reduction", 
-        satisfaction: "92%",
-        clients: "75+"
-      },
-      features: [
-        "AI Resume Screening",
-        "Automated Onboarding",
-        "Payroll Management",
-        "Performance Reviews",
-        "Leave Management",
-        "Employee Portal"
-      ],
-      techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      liveDemo: "https://demo.thinkaiq.com/hr-platform",
-      caseStudy: "/project-details/5",
-      pricing: "Starting at ₹45,000/month",
-      category: "HR Tech"
-    },
-    {
-      id: 6,
-      name: "Document AI Analyzer",
-      tagline: "Intelligent Document Analysis",
-      description: "AI-powered document analysis system that extracts insights, summarizes content, and identifies key information.",
-      icon: "FileSearch",
-      color: "from-pink-500 to-rose-600",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800",
-      metrics: { 
-        speed: "10x faster", 
-        accuracy: "98%", 
-        documents: "1M+ processed",
-        languages: "50+"
-      },
-      features: [
-        "Document Summarization",
-        "Key Information Extraction",
-        "Multi-language Support",
-        "Custom AI Models",
-        "API Integration",
-        "Batch Processing"
-      ],
-      techStack: ["Python", "Transformers", "FastAPI", "Elasticsearch", "Docker"],
-      liveDemo: "https://demo.thinkaiq.com/document-ai",
-      caseStudy: "/project-details/6",
-      pricing: "Starting at ₹50,000/month",
-      category: "AI Analytics"
-    }
   ];
 
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleViewDetails = (project) => {
+  const handleProjectClick = (project) => setSelectedProject(project);
+  const handleViewDetails = (project) =>
     navigate(`/saas-project/${project.id}`, { state: { project } });
-  };
 
   return (
-    
     <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background dark:from-background dark:via-muted/20 dark:to-background">
-       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -204,46 +276,42 @@ const SaaSProjectShowcase = () => {
             <Icon name="Cloud" size={16} />
             <span>Our SaaS Products</span>
           </div>
-          
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Explore Our{' '}
+            Explore Our{" "}
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Live SaaS Projects
             </span>
           </h2>
-          
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Try our live SaaS products, see real-time demos, and discover how we've helped businesses automate and scale.
           </p>
         </motion.div>
 
-        {/* Projects Grid - Show only first 3 as samples */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {saasProjects.slice(0, 3).map((project, index) => (
+          {saasProjects.map((project, idx) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
               className="bg-card dark:bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
               onClick={() => handleProjectClick(project)}
             >
-              {/* Project Image - Make sure image is visible */}
+              {/* Project Image */}
               <div className="relative h-56 overflow-hidden bg-muted dark:bg-muted">
                 <Image
                   src={project.image}
                   alt={project.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  onError={(e) => {
-                    // Fallback if image fails to load
-                    e.target.src = `https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop`;
-                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute top-4 left-4 z-10">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center shadow-lg backdrop-blur-sm`}>
+                  <div
+                    className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center shadow-lg backdrop-blur-sm`}
+                  >
                     <Icon name={project.icon} size={24} className="text-white" />
                   </div>
                 </div>
@@ -253,21 +321,17 @@ const SaaSProjectShowcase = () => {
                 </div>
               </div>
 
-              {/* Project Content */}
+              {/* Content */}
               <div className="p-6">
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-muted dark:bg-muted rounded-full text-xs font-medium text-muted-foreground">
                     {project.category}
                   </span>
                 </div>
-                
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                  {project.description}
-                </p>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
 
-                {/* Metrics */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
-                  {Object.entries(project.metrics).slice(0, 4).map(([key, value], idx) => (
+                  {Object.entries(project.metrics).map(([key, value], idx) => (
                     <div key={idx} className="text-center p-2 bg-muted/30 dark:bg-muted rounded-lg">
                       <div className="text-sm font-bold text-foreground">{value}</div>
                       <div className="text-xs text-muted-foreground capitalize">{key}</div>
@@ -275,7 +339,6 @@ const SaaSProjectShowcase = () => {
                   ))}
                 </div>
 
-                {/* Action Button - Single button to redirect to services page */}
                 <Button
                   variant="default"
                   size="sm"
@@ -283,7 +346,6 @@ const SaaSProjectShowcase = () => {
                   className="text-xs bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
                   onClick={(e) => {
                     e.stopPropagation();
-                    // Navigate to services page with project ID to highlight specific project
                     navigate(`/services-universe-interactive-solutions?project=${project.id}`);
                   }}
                 >
@@ -295,7 +357,7 @@ const SaaSProjectShowcase = () => {
           ))}
         </div>
 
-        {/* Project Detail Modal */}
+        {/* Modal */}
         <AnimatePresence>
           {selectedProject && (
             <motion.div
@@ -310,19 +372,20 @@ const SaaSProjectShowcase = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-card dark:bg-card border border-border rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+                className="bg-card dark:bg-card border border-border rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
               >
                 <div className="p-6 lg:p-8">
+                  {/* Header */}
                   <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <div className="flex items-center space-x-3 mb-2">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${selectedProject.color} rounded-xl flex items-center justify-center`}>
-                          <Icon name={selectedProject.icon} size={24} className="text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-foreground">{selectedProject.name}</h3>
-                          <p className="text-muted-foreground">{selectedProject.tagline}</p>
-                        </div>
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-br ${selectedProject.color} rounded-xl flex items-center justify-center`}
+                      >
+                        <Icon name={selectedProject.icon} size={24} className="text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground">{selectedProject.name}</h3>
+                        <p className="text-muted-foreground">{selectedProject.tagline}</p>
                       </div>
                     </div>
                     <button
@@ -333,68 +396,135 @@ const SaaSProjectShowcase = () => {
                     </button>
                   </div>
 
+                  {/* Description & Features */}
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Description</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{selectedProject.description}</p>
+                      <h4 className="font-semibold text-foreground mb-2">Description</h4>
+                      <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Key Features</h4>
-                      <ul className="space-y-2">
-                        {selectedProject.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center space-x-2 text-sm text-muted-foreground">
+                      <h4 className="font-semibold text-foreground mb-2">Key Features</h4>
+                      <ul className="space-y-1">
+                        {selectedProject.features.map((f, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-center space-x-2 text-sm text-muted-foreground"
+                          >
                             <Icon name="Check" size={14} className="text-success flex-shrink-0" />
-                            <span>{feature}</span>
+                            <span>{f}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3">Tech Stack</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedProject.techStack.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-muted dark:bg-muted rounded-full text-xs text-foreground">
-                            {tech}
-                          </span>
-                        ))}
+                  {/* Industries */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-foreground mb-2">Industries & Automations</h4>
+                    {selectedProject.industries.map((ind, idx) => (
+                      <div key={idx} className="mb-4 p-4 bg-muted/20 rounded-lg">
+                        <h5 className="font-semibold text-foreground mb-2">{ind.name}</h5>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div>
+                            <h6 className="text-sm font-medium text-foreground mb-1">Core Automations:</h6>
+                            <ul className="list-disc list-inside text-sm text-muted-foreground">
+                              {ind.coreAutomations.map((c, i) => (
+                                <li key={i}>{c}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h6 className="text-sm font-medium text-foreground mb-1">Advanced Automations:</h6>
+                            <ul className="list-disc list-inside text-sm text-muted-foreground">
+                              {ind.advancedAutomations.map((a, i) => (
+                                <li key={i}>{a}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3">Pricing</h4>
-                      <p className="text-lg font-bold text-primary dark:text-accent">{selectedProject.pricing}</p>
+                    ))}
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-foreground mb-2">Tech Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.techStack.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-muted/30 dark:bg-muted rounded-full text-xs font-medium text-foreground"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="flex gap-4">
-                    <Button
-                      variant="default"
-                      className="flex-1"
-                      onClick={() => {
-                        window.open(selectedProject.liveDemo, '_blank');
-                      }}
-                    >
-                      <Icon name="ExternalLink" size={18} className="mr-2" />
-                      Try Live Demo
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="flex-1"
-                      onClick={() => handleViewDetails(selectedProject)}
-                    >
-                      <Icon name="FileText" size={18} className="mr-2" />
-                      View Full Details
-                    </Button>
-                  </div>
+                {/* Contact Section */}
+<div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4">
+  <h4 className="font-medium text-gray-900 dark:text-white mb-3">
+    Contact Me
+  </h4>
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+    {/* Phone */}
+    <a
+      href="tel:+918252472186"
+      className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path d="M2.003 5.884l2-3A1 1 0 015 3h3a1 1 0 011 1v3a1 1 0 01-.293.707l-2 2a11.037 11.037 0 005.586 5.586l2-2A1 1 0 0114 12h3a1 1 0 011 1v3a1 1 0 01-1.116.993l-3-.5a16 16 0 01-14.881-14.881z" />
+      </svg>
+      +91 82524 72186
+    </a>
+
+    {/* Email */}
+    <a
+      href="mailto:akashkumar.webdev@gmail.com"
+      className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path d="M2.94 5.94A1 1 0 013 5h14a1 1 0 01.993.883L18 6v8a1 1 0 01-.883.993L17 15H3a1 1 0 01-.993-.883L2 14V6a1 1 0 01.94-.94zM3 6v.511l7 4.5 7-4.5V6H3z" />
+      </svg>
+      akashkumar.webdev@gmail.com
+    </a>
+
+    {/* Calendar / Booking */}
+    <a
+      href="https://cal.com/akash-kumar-x8dx1t/thinkaiq"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H8V3a1 1 0 00-1-1zM2 11v5a2 2 0 002 2h12a2 2 0 002-2v-5H2z" />
+      </svg>
+      Book a Meeting
+    </a>
+  </div>
+</div>
+
                 </div>
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-      
     </section>
   );
 };

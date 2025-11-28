@@ -21,7 +21,7 @@ const ServiceCategories = () => {
     if (projectId) {
       // Map project IDs to service keys
       const projectMap = {
-        '1': 'customer-support',
+        '1': 'whatsapp-automation-catalog',
         '2': 'document-processing',
         '3': 'workflow-automation',
         '4': 'workflow-automation',
@@ -76,93 +76,34 @@ const ServiceCategories = () => {
     }
   ];
 
-  const services = {
-    automation: [
-      {
-        key: "workflow-automation",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-        name: "Workflow Automation",
-        description: "Automate repetitive tasks and business processes with AI-powered workflows that adapt to your needs.",
-        features: ["Custom workflow design", "AI decision making", "Real-time monitoring", "Error handling", "Scalable architecture"],
-        pricing: { setup: 25000, monthly: 5000 },
-        timeline: "2-4 weeks",
-        video: "https://www.youtube.com/embed/tgbNymZ7vqY",
-        benefits: ["70% time reduction", "95% accuracy", "24/7 operation", "Cost savings"]
-      },
-      {
-        key: "document-processing",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-        name: "Document Processing",
-        description: "Intelligent document extraction, processing, and management using advanced OCR and NLP.",
-        features: ["OCR technology", "Data extraction", "Automated filing", "Compliance tracking", "Multi-format support"],
-        pricing: { setup: 35000, monthly: 8000 },
-        timeline: "3-5 weeks",
-        video: "https://www.youtube.com/embed/ysz5S6PUM-U",
-        benefits: ["99.7% accuracy", "30min processing", "Auto-classification", "Cost reduction"]
-      },
-      {
-        key: "customer-support",
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800",
-        name: "AI Customer Support",
-        description: "24/7 intelligent customer support automation with seamless human handoff capabilities.",
-        features: ["Chatbot integration", "Sentiment analysis", "Multi-language support", "CRM integration", "Analytics dashboard"],
-        pricing: { setup: 40000, monthly: 10000 },
-        timeline: "4-6 weeks",
-        video: "https://www.youtube.com/embed/tgbNymZ7vqY",
-        benefits: ["80% response time", "98% satisfaction", "24/7 availability", "Cost efficient"]
-      }
-    ],
-    development: [
-      {
-        key: "custom-software",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-        name: "Custom Software Development",
-        description: "Tailored software solutions built specifically for your business requirements and workflows.",
-        features: ["Custom architecture", "Scalable design", "Modern tech stack", "API integration", "Cloud deployment"],
-        pricing: { setup: 100000, monthly: 15000 },
-        timeline: "8-12 weeks",
-        video: "https://www.youtube.com/embed/tgbNymZ7vqY",
-        benefits: ["100% customization", "Scalable solution", "Modern tech", "Long-term support"]
-      },
-      {
-        key: "ai-integration",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-        name: "AI System Integration",
-        description: "Seamlessly integrate AI capabilities into your existing systems and workflows.",
-        features: ["API development", "Legacy system integration", "Data migration", "Testing & QA", "Documentation"],
-        pricing: { setup: 75000, monthly: 12000 },
-        timeline: "6-10 weeks",
-        video: "https://www.youtube.com/embed/ysz5S6PUM-U",
-        benefits: ["Seamless integration", "No disruption", "Enhanced capabilities", "Future-ready"]
-      }
-    ],
-    consulting: [
-      {
-        key: "ai-strategy",
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800",
-        name: "AI Strategy Consulting",
-        description: "Strategic guidance for AI adoption, implementation, and optimization across your organization.",
-        features: ["AI readiness assessment", "Roadmap development", "Technology selection", "ROI analysis", "Change management"],
-        pricing: { setup: 50000, monthly: 0 },
-        timeline: "2-4 weeks",
-        video: "https://www.youtube.com/embed/tgbNymZ7vqY",
-        benefits: ["Clear strategy", "Risk mitigation", "Optimal ROI", "Expert guidance"]
-      }
-    ],
-    integration: [
-      {
-        key: "system-integration",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-        name: "Enterprise System Integration",
-        description: "Connect and integrate multiple systems for seamless data flow and operations.",
-        features: ["API integration", "Data synchronization", "Real-time updates", "Error handling", "Monitoring"],
-        pricing: { setup: 60000, monthly: 10000 },
-        timeline: "6-8 weeks",
-        video: "https://www.youtube.com/embed/ysz5S6PUM-U",
-        benefits: ["Unified systems", "Data consistency", "Efficiency gain", "Reduced errors"]
-      }
-    ]
-  };
+const services = {
+  automation: [
+    {
+      key: "whatsapp-automation-catalog",
+      image: "https://cdn.botpenguin.com/assets/website/whatsapp_bot_improves_customer_support_and_service_01_df56e82e62.webp",
+      name: "WhatsApp Automation Catalog – Industry‑Wise",
+      description: "Expanded WhatsApp automation catalog with industry-specific core & advanced automations for multiple industries including E-commerce, Healthcare, Real Estate, Education, and more.",
+      features: [
+        "E-commerce & D2C",
+        "Healthcare, Clinics, Hospitals",
+        "Real Estate",
+        "Education, Coaching, EdTech",
+        "Salon, Spa, Beauty Clinics",
+        "Restaurants, Cloud Kitchens, Cafes",
+      ],
+      
+     
+      benefits: [
+        "Saves time with automation",
+        "Improves customer engagement",
+        "Boosts conversion & ROI",
+        "Supports multiple industries",
+        "Easy integration with existing workflows"
+      ]
+    }
+  ]
+};
+
 
   const formatPrice = (price) =>
     new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 0 }).format(price);
@@ -227,7 +168,7 @@ const ServiceCategories = () => {
                 id={`service-${service.key}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: isHighlighted ? 1.05 : 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className={`relative bg-card dark:bg-card border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group ${
                   isHighlighted 
@@ -257,7 +198,7 @@ const ServiceCategories = () => {
 
       {/* Features List */}
                 <ul className="space-y-2 mb-4 sm:mb-6">
-                  {service.features.slice(0, 3).map((f, idx) => (
+                  {service.features.slice(0, 6).map((f, idx) => (
           <li
             key={idx}
                       className="flex items-center gap-2 text-muted-foreground dark:text-muted-foreground font-medium text-xs sm:text-sm"
@@ -290,7 +231,7 @@ const ServiceCategories = () => {
         <Button
           variant="outline"
           onClick={() => setSelectedServiceKey(service.key)}
-                    className="flex-1 border-primary dark:border-accent text-primary dark:text-accent hover:bg-primary dark:hover:bg-accent hover:text-white transition-all duration-300 text-xs sm:text-sm"
+                    className="flex-1  bg-accent hover:from-primary/90 hover:to-secondary/90 text-white transition-all duration-300 text-xs sm:text-sm"
         >
           Learn More
         </Button>
