@@ -21,6 +21,7 @@ import ProjectDetails from "pages/project-details/[id]";
 import SaaSProjectDetails from "pages/saas-project/[id]";
 import PrivacyPolicy from "pages/privacy-policy";
 import TermsOfService from "pages/terms-of-service";
+import ProductsByNiche from "pages/products-by-niche";
 
 const Routes = () => {
   return (
@@ -43,6 +44,7 @@ const Routes = () => {
         <Route path="/saas-project/:id" element={<SaaSProjectDetails />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/products-by-niche" element={<ProductsByNiche />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

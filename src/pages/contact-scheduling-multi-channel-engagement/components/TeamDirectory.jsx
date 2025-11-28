@@ -45,7 +45,24 @@ const TeamDirectory = () => {
       availability: 'Available for AI automation consultations',
       certifications: ['GroqCloud API Certified', 'OpenAI API Experience']
     },
-    // {
+     {
+       id: 2,
+      name: 'Aditya Raj',
+      title: 'Management and business development',
+      department: 'Management and business development',
+      expertise: ['Management and business development'],
+      location: 'Jharkhand, India',
+      experience: '2+ years',
+      email: 'adityaraj03042005@gmail.com',
+      phone: '+91 9508949406',
+      linkedin: 'https://www.linkedin.com/in/adityaraj',
+      avatar: '/assets/images/aditya.jpg',
+      bio: 'Management and business development visionary behind thinkAIQ\'s cutting-edge automation solutions. With a deep background in management and business development, he ensures that every solution we deliver is not just functional, but future-ready.',
+      specialties: ['Management Development', 'Business Development', 'Business Strategy', ],
+      languages: ['English', 'Hindi'],
+      availability: 'Available for management and business development consultations',
+      certifications: ['Management and business development Certified']
+    },
     //   id: 2,
     //   name: 'Priya Sharma',
     //   title: 'Head of AI Development',

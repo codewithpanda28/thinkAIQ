@@ -17,6 +17,7 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', path: '/homepage-ai-automation-hub', icon: 'Home' },
     { name: 'Services', path: '/services-universe-interactive-solutions', icon: 'Zap' },
+    { name: 'Products', path: '/products-by-niche', icon: 'Grid3x3' },
     // { name: 'Portfolio', path: '/portfolio-showcase-success-stories', icon: 'Trophy' },
     { name: 'About', path: '/about-ecosystem-company-story', icon: 'Users' },
     { name: 'Contact', path: '/contact-scheduling-multi-channel-engagement', icon: 'MessageSquare' },

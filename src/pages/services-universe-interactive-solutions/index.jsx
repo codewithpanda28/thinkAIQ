@@ -35,8 +35,8 @@ const ServicesPage = () => {
         <main>
           <ServiceHero />
           <ServiceCategories />
-          <ServiceComparison />
-          <ProcessTimeline />
+          {/* <ServiceComparison /> */}
+          {/* <ProcessTimeline /> */}
           <ServiceTestimonials />
           <ServiceFAQ />
         </main>

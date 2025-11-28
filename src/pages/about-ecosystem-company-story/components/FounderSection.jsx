@@ -38,26 +38,25 @@ feels human-centered and visually engaging.`,
     },
     {
       id: 2,
-      name: "Aditya Sharma",
-      role: "Co-Founder & CTO",
+      name: "Aditya Raj",
+      role: "Management and business development",
       email: "aditya@authera.com",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      expertise: ["Machine Learning", "System Architecture", "Product Development"],
-      experience: "6+ Years",
-      bio: `Aditya is the technical visionary behind thinkAIQ's cutting-edge automation solutions. With a deep background in machine learning and system architecture, he ensures that every solution we deliver is not just functional, but future-ready.
+      expertise: ["Management and business development"],
+      experience: "2+ Years",
+      bio: `Aditya Raj is the management and business development visionary behind thinkAIQ's cutting-edge automation solutions. With a deep background in management and business development, he ensures that every solution we deliver is not just functional, but future-ready.
 
-His approach to technology is rooted in understanding business needs first, then crafting elegant technical solutions that scale. Aditya's leadership in product development has been instrumental in thinkAIQ's reputation for delivering robust, scalable automation systems.`,
+His approach to management and business development is rooted in understanding business needs first, then crafting elegant technical solutions that scale. Aditya's leadership in management and business development has been instrumental in thinkAIQ's reputation for delivering robust, scalable automation systems.`,
       achievements: [
-        "Architected 50+ scalable automation systems",
+        "Managed 50+ scalable automation systems",
         "Expert in 10+ programming languages",
         "Holds 3 technology patents",
         "Mentored 20+ junior developers"
       ],
-      quote: "Great technology should be invisible to the user but transformative to the business. That’s the standard we hold ourselves to.",
       socialLinks: {
-        linkedin: "https://linkedin.com/in/adityasharma",
-        twitter: "https://twitter.com/adityasharma",
-        github: "https://github.com/adityasharma"
+        linkedin: "https://linkedin.com/in/adityaraj",
+        twitter: "https://twitter.com/adityaraj",
+        github: "https://github.com/adityaraj"
       }
     }
   ];

@@ -30,13 +30,13 @@ const About = () => {
       {/* Founder Section */}
       <FounderSection />
       {/* Company Timeline */}
-      <CompanyTimelineSection />
+      {/* <CompanyTimelineSection /> */}
       {/* Team Expertise */}
       <TeamExpertiseSection />
       {/* Certifications & Awards */}
       <CertificationsSection />
       {/* Call to Action */}
-      <CallToActionSection />
+      {/* <CallToActionSection /> */}
       {/* Footer removed - only show on home page */}
     </div>
   );

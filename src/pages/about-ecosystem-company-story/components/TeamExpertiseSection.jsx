@@ -34,15 +34,15 @@ const TeamExpertiseSection = () => {
       },
       {
         id: 2,
-        name: "Aditya Sharma",
-        role: "Co-Founder & CTO",
+        name: "Aditya Raj",
+        role: "Management and business development",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-        expertise: ["System Architecture", "AI/ML Solutions", "Product Development"],
-        experience: "5+ Years",
+        expertise: ["Management and business development"],
+        experience: "2+ Years",
         description: "Ensures technical excellence and builds scalable AI-driven solutions for MSMEs and startups.",
         achievements: ["50+ Automation Systems Built", "3 Patents in AI", "Mentored Technical Teams"],
-        phone: "919876543210",
-        message: "Hi Aditya, I am interested in your AI/ML & Full-Stack services."
+        phone: "919508949406",
+        message: "Hi Aditya, I am interested in your Management and business development services."
       }
     ],
     technical: [

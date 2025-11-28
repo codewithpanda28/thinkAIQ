@@ -78,13 +78,13 @@ const Homepage = () => {
           <SaaSProjectShowcase />
           
           {/* Features Showcase - Core solutions with interactive demos */}
-          <FeaturesShowcase />
+          {/* <FeaturesShowcase /> */}
           
           {/* Testimonial Carousel - Social proof and success metrics */}
           <TestimonialCarousel />
           
           {/* Monetization Section - How we earn */}
-          <MonetizationSection />
+          {/* <MonetizationSection /> */}
           
           {/* CTA Section - Multiple conversion paths and contact methods */}
           <CTASection />
