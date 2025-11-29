@@ -19,7 +19,7 @@ const TeamExpertiseSection = () => {
         id: 1,
         name: "Akash Kumar",
         role: "Co-Founder & CEO",
-        image: "./../public/assets/images/akashbgremove1.png",
+        image: "/assets/images/akashbgremove1.png",
         expertise: [
           "AI Agent Automation",
           "Full-Stack Development",
@@ -42,7 +42,7 @@ const TeamExpertiseSection = () => {
         id: 2,
         name: "Aditya Raj",
         role: "Co-Founder & Business Development",
-        image: "./../public/assets/teamMembers/aditya1.jpg",
+        image: "/assets/teamMembers/aditya1.jpg",
 
         expertise: [
           "AI Automation & Workflow Planning",
@@ -71,7 +71,7 @@ const TeamExpertiseSection = () => {
         id: 3,
         name: "Akash Kumar",
         role: "Co-Founder & CEO",
-        image: "./../public/assets/images/akashbgremove1.png",
+        image: "/assets/images/akashbgremove1.png",
         expertise: ["AI Agent Automation", "Full-Stack Development", "MSME Digital Transformation"],
         experience: "2+ Years",
         description: "Started career with full-stack development projects, later focused on AI Agent Automation to transform business processes. Co-founded thinkAIQ with a vision to help MSMEs automate and scale effectively.",
@@ -90,7 +90,7 @@ const TeamExpertiseSection = () => {
         id: 4,
         name: "Aditya Raj",
         role: "Co-Founder & Business Development",
-        image: "./../public/assets/teamMembers/aditya1.jpg",
+        image: "/assets/teamMembers/aditya1.jpg",
 
         expertise: [
           "AI Automation & Workflow Planning",
@@ -117,7 +117,7 @@ const TeamExpertiseSection = () => {
   id: 4,
   name: "Md Kaif",
   role: "AI & Video Content Specialist",
-  image: "./../public/assets/teamMembers/Md Kaif(ai content).jpg",
+  image: "/assets/teamMembers/Md Kaif(ai content).jpg",
   expertise: [
     "Gen-AI Content Creation",
     "Video Editing & Creative Direction",
