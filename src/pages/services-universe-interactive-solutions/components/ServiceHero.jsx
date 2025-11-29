@@ -14,7 +14,7 @@ const ServiceHero = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse animation-delay-600"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const ServiceHero = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
         >
           {[
-            { value: "300+", label: "Businesses Automated", icon: "Building2" },
+            { value: "10+", label: "Businesses Automated", icon: "Building2" },
             { value: "85%", label: "Average Cost Reduction", icon: "TrendingDown" },
             { value: "99.7%", label: "Accuracy Rate", icon: "Target" },
             { value: "24/7", label: "AI-Powered Support", icon: "Clock" }

@@ -95,7 +95,7 @@ const ContactMethods = ({ onMethodSelect }) => {
     
     switch (method?.id) {
       case 'consultation':
-        navigate('/contact-scheduling-multi-channel-engagement');
+       window.open('https://cal.com/akash-kumar-x8dx1t/thinkaiq', '_blank');
         break;
       case 'whatsapp':
         window.open(`https://wa.me/918252472186`, '_blank');

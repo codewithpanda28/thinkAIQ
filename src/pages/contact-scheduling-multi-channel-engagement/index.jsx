@@ -23,7 +23,7 @@ const ContactSchedulingMultiChannelEngagement = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+919876543210';
+    const phoneNumber = '+918252472186';
     const message = encodeURIComponent('Hi! I\'m interested in learning more about your AI automation services. Can we schedule a consultation?');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -104,10 +104,10 @@ const ContactSchedulingMultiChannelEngagement = () => {
         </div>
 
         {/* Consultation Booking Modal */}
-        <ConsultationBooking 
+        {/* <ConsultationBooking 
           isVisible={isBookingVisible}
           onClose={handleCloseBooking}
-        />
+        /> */}
 
         {/* Footer removed - only show on home page */}
       </div>

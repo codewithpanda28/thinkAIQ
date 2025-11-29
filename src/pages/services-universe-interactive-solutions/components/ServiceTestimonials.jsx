@@ -34,54 +34,54 @@ const ServiceTestimonials = () => {
       ],
       industry: 'Retail & E-commerce'
     },
-    {
-      id: 3,
-      name: 'Dr. Amit Patel',
-      position: 'Hospital Administrator',
-      company: 'HealthCare Plus',
-      service: 'Custom Development',
-      avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face',
-      rating: 5,
-      content: `The custom patient management system has revolutionized our operations. Patient wait times reduced by 60%, staff productivity increased by 40%, and we can now serve 200+ more patients daily. Outstanding technical expertise.`,
-      results: [
-        { metric: '60%', label: 'Reduced Wait Time' },
-        { metric: '40%', label: 'Staff Productivity' },
-        { metric: '200+', label: 'More Patients Daily' }
-      ],
-      industry: 'Healthcare'
-    },
-    {
-      id: 4,
-      name: 'Vikash Singh',
-      position: 'Founder',
-      company: 'LogiTech Enterprises',
-      service: 'System Integration',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      rating: 5,
-      content: `thinkAIQ seamlessly integrated our 5 different systems into one unified platform. Order processing time reduced from 2 hours to 15 minutes, and our team can now focus on strategic work instead of manual data entry.`,
-      results: [
-        { metric: '87%', label: 'Time Reduction' },
-        { metric: '5 systems', label: 'Successfully Integrated' },
-        { metric: '15 min', label: 'Order Processing' }
-      ],
-      industry: 'Logistics'
-    },
-    {
-      id: 5,
-      name: 'Neha Gupta',
-      position: 'CFO',
-      company: 'FinanceFirst Ltd',
-      service: 'AI Automation',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      rating: 5,
-      content: `The automated invoice processing system has been a game-changer. We process 10x more invoices with 99.8% accuracy, and our month-end closing time reduced from 5 days to 1 day. Incredible value for investment.`,
-      results: [
-        { metric: '10x', label: 'Processing Capacity' },
-        { metric: '99.8%', label: 'Accuracy Rate' },
-        { metric: '80%', label: 'Time Savings' }
-      ],
-      industry: 'Financial Services'
-    }
+      // {
+      //   id: 3,
+      //   name: 'Dr. Amit Patel',
+      //   position: 'Hospital Administrator',
+      //   company: 'HealthCare Plus',
+      //   service: 'Custom Development',
+      //   avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face',
+      //   rating: 5,
+      //   content: `The custom patient management system has revolutionized our operations. Patient wait times reduced by 60%, staff productivity increased by 40%, and we can now serve 200+ more patients daily. Outstanding technical expertise.`,
+      //   results: [
+      //     { metric: '60%', label: 'Reduced Wait Time' },
+      //     { metric: '40%', label: 'Staff Productivity' },
+      //     { metric: '200+', label: 'More Patients Daily' }
+      //   ],
+      //   industry: 'Healthcare'
+      // },
+      // {
+      //   id: 4,
+      //   name: 'Vikash Singh',
+      //   position: 'Founder',
+      //   company: 'LogiTech Enterprises',
+      //   service: 'System Integration',
+      //   avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+      //   rating: 5,
+      //   content: `thinkAIQ seamlessly integrated our 5 different systems into one unified platform. Order processing time reduced from 2 hours to 15 minutes, and our team can now focus on strategic work instead of manual data entry.`,
+      //   results: [
+      //     { metric: '87%', label: 'Time Reduction' },
+      //     { metric: '5 systems', label: 'Successfully Integrated' },
+      //     { metric: '15 min', label: 'Order Processing' }
+      //   ],
+      //   industry: 'Logistics'
+      // },
+      // {
+      //   id: 5,
+      //   name: 'Neha Gupta',
+      //   position: 'CFO',
+      //   company: 'FinanceFirst Ltd',
+      //   service: 'AI Automation',
+      //   avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+      //   rating: 5,
+      //   content: `The automated invoice processing system has been a game-changer. We process 10x more invoices with 99.8% accuracy, and our month-end closing time reduced from 5 days to 1 day. Incredible value for investment.`,
+      //   results: [
+      //     { metric: '10x', label: 'Processing Capacity' },
+      //     { metric: '99.8%', label: 'Accuracy Rate' },
+      //     { metric: '80%', label: 'Time Savings' }
+      //   ],
+      //   industry: 'Financial Services'
+      // }
   ];
 
   useEffect(() => {

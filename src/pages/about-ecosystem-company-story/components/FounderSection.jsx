@@ -14,7 +14,7 @@ const FounderSection = () => {
       email: "akashkumar.webdev@gmail.com",
       image: "./../public/assets/images/akashbgremove1.png",
       expertise: ["AI Agents", "Automation", "Full Stack Development", "Web & Graphics Design"],
-      experience: "2+ Years",
+      experience: "3+ Years",
       bio: `Akash Kumar is the driving force behind thinkAIQ's vision of making intelligent automation accessible to every business. 
 He specializes in AI agent systems and process automation, helping organizations reduce manual workloads and scale efficiently.
 
@@ -39,20 +39,19 @@ feels human-centered and visually engaging.`,
     {
       id: 2,
       name: "Aditya Raj",
-      role: "Management and business development",
+      role: "Co-Founder & Head of Business Growth – thinkAIQ",
       email: "aditya@authera.com",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      expertise: ["Management and business development"],
+      image: "./../public/assets/teamMembers/aditya1.jpg",
+      expertise: ["Sales & Business Development"],
       experience: "2+ Years",
-      bio: `Aditya Raj is the management and business development visionary behind thinkAIQ's cutting-edge automation solutions. With a deep background in management and business development, he ensures that every solution we deliver is not just functional, but future-ready.
-
-His approach to management and business development is rooted in understanding business needs first, then crafting elegant technical solutions that scale. Aditya's leadership in management and business development has been instrumental in thinkAIQ's reputation for delivering robust, scalable automation systems.`,
+      bio: `Aditya Raj is the founder of ThinkAIQ, a forward-thinking startup that specializes in AI-driven business automation. With a knack for sales and a passion for innovation, Aditya and his team develop cutting-edge solutions like voice agents and comprehensive automation systems that transform businesses from day one. His expertise ensures seamless integration and enhanced productivity for clients.`,
       achievements: [
-        "Managed 50+ scalable automation systems",
-        "Expert in 10+ programming languages",
-        "Holds 3 technology patents",
-        "Mentored 20+ junior developers"
+        "Closed key AI automation deals",
+        "Built voice & WhatsApp automation flows",
+        "Improved client operations with AI solutions",
+        
       ],
+       quote: "AI automation doesn’t just speed up tasks — it builds a smarter, scalable version of your business that works 24/7.",
       socialLinks: {
         linkedin: "https://linkedin.com/in/adityaraj",
         twitter: "https://twitter.com/adityaraj",

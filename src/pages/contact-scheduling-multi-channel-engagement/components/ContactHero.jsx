@@ -48,17 +48,18 @@ const ContactHero = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {/* Consultation Button */}
-              <Button 
-                variant="default" 
-                size="lg"
-                iconName="Calendar"
-                iconPosition="left"
-                iconSize={20}
-                className="premium-button"
-                onClick={openModal}
-              >
-                Book Free Consultation
-              </Button>
+             <Button 
+  variant="default" 
+  size="lg"
+  iconName="Calendar"
+  iconPosition="left"
+  iconSize={20}
+  className="premium-button"
+  onClick={() => window.open('https://your-consultation-url.com', '_blank')}
+>
+  Book Free Consultation
+</Button>
+
               
               {/* Call Now Dropdown */}
              {/* Call Now Dropdown */}
@@ -75,7 +76,7 @@ const ContactHero = () => {
   </Button>
 
   {callDropdownOpen && (
-    <div className="absolute right-0 mt-3 w-60 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl shadow-xl border border-primary/30 p-4 z-50 animate-fadeIn">
+    <div className="absolute right-0 mt-3 w-60 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl shadow-xl border border-primary/30 p-6 z-10 animate-fadeIn">
       <div className="flex justify-between items-center mb-3">
         <span className="font-semibold text-foreground">Choose a number</span>
         <button
@@ -90,7 +91,7 @@ const ContactHero = () => {
         className="w-full text-left px-4 py-3 mb-2 rounded-lg bg-white hover:bg-primary/20 transition flex items-center space-x-2"
       >
         <Icon name="Phone" size={16} />
-        <span className="text-foreground font-medium">+91 98765 43210</span>
+        <span className="text-foreground font-medium">+91 8252472186</span>
       </button>
       <button
         onClick={() => handleCallClick('+918252472186')}
@@ -107,10 +108,10 @@ const ContactHero = () => {
           </div>
           
           {/* Quick Stats */}
-          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8 ">
             {[
               { icon: "Clock", value: "< 2 Hours", label: "Response Time" },
-              { icon: "Users", value: "500+", label: "Happy Clients" },
+              { icon: "Users", value: "12+", label: "Happy Clients" },
               { icon: "Award", value: "98%", label: "Satisfaction Rate" },
               { icon: "Globe", value: "24/7", label: "Support Available" }
             ]?.map((stat, index) => (

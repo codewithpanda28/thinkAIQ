@@ -124,7 +124,7 @@ const TestimonialCarousel = () => {
     if (isAutoPlaying && !isVideoPlaying) {
       const interval = setInterval(() => {
         setCurrentTestimonial((prev) => (prev + 1) % testimonials?.length);
-      }, 5000);
+      }, 10000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, isVideoPlaying, testimonials?.length]);

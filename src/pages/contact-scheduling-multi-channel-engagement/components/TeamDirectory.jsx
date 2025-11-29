@@ -27,42 +27,69 @@ const TeamDirectory = () => {
   ];
 
   const teamMembers = [
-    {
-      id: 1,
-      name: 'Akash Kumar',
-      title: 'CEO & Founder',
-      department: 'CEO & Founder',
-      expertise: ['AI Automation', 'LLMs & LangChain', 'n8n Workflows', 'MERN Stack Development'],
-      location: 'Jharkhand, India',
-      experience: '2+ years',
-      email: 'akashkumar.webdev@gmail.com',
-      phone: '+91 8252472186',
-      linkedin: 'https://www.linkedin.com/in/codewithpanda28',
-      avatar: '/assets/images/akash.jpg',
-      bio: 'CEO & Founder of AI Automation Hub. Self-taught AI & automation expert specializing in LLMs, LangChain, n8n workflows, and MERN stack development. Builds plug-and-play AI tools that simplify business processes and drive results.',
-      specialties: ['AI Automation', 'LLMs & LangChain', 'n8n Workflow Development', 'MERN Stack Development', 'AI Project Deployment'],
-      languages: ['English', 'Hindi'],
-      availability: 'Available for AI automation consultations',
-      certifications: ['GroqCloud API Certified', 'OpenAI API Experience']
-    },
-     {
-       id: 2,
-      name: 'Aditya Raj',
-      title: 'Management and business development',
-      department: 'Management and business development',
-      expertise: ['Management and business development'],
-      location: 'Jharkhand, India',
-      experience: '2+ years',
-      email: 'adityaraj03042005@gmail.com',
-      phone: '+91 9508949406',
-      linkedin: 'https://www.linkedin.com/in/adityaraj',
-      avatar: '/assets/images/aditya.jpg',
-      bio: 'Management and business development visionary behind thinkAIQ\'s cutting-edge automation solutions. With a deep background in management and business development, he ensures that every solution we deliver is not just functional, but future-ready.',
-      specialties: ['Management Development', 'Business Development', 'Business Strategy', ],
-      languages: ['English', 'Hindi'],
-      availability: 'Available for management and business development consultations',
-      certifications: ['Management and business development Certified']
-    },
+   {
+  id: 1,
+  name: 'Akash Kumar',
+  title: 'CEO & Founder',
+  department: 'Leadership',
+  expertise: ['strategy', 'automation'],
+  location: 'Jharkhand, India',
+  experience: '3+ years',
+  email: 'akashkumar.webdev@gmail.com',
+  phone: '+91 8252472186',
+  linkedin: 'https://www.linkedin.com/in/codewithpanda28',
+  avatar: '/assets/images/akashbgremove1.png',
+  bio: 'Founder and CEO of AI Automation Hub. Self-taught AI and automation specialist with deep expertise in LLMs, LangChain, n8n workflows, and MERN stack. Develops ready-to-use AI tools that optimize business processes and deliver measurable results.',
+  specialties: [
+    'AI Automation Solutions',
+    'LLM & LangChain Integration',
+    'n8n Workflow Development',
+    'Full-Stack Web Development (MERN)',
+    'AI Project Deployment & Optimization'
+  ],
+  languages: ['English', 'Hindi'],
+  availability: 'Available for AI automation and web development consultations',
+  certifications: [
+    'GroqCloud API Certified',
+    'OpenAI API Practical Experience',
+    'Front-End Development - HTML & CSS',
+    'Udemy: 70+ Hour Front-End Web Development Course'
+  ]
+}
+,
+   {
+  id: 2,
+  name: 'Aditya Raj',
+  title: 'Co-Founder & Head of Management',
+  department: 'Business & Operations',
+  expertise: [
+    'Business Management',
+    'Business Development',
+    'Strategic Planning',
+    'Operations Optimization'
+  ],
+  location: 'Patna, India',
+  experience: '2+ years',
+  email: 'adityaraj03042005@gmail.com',
+  phone: '+91 9508949406',
+  linkedin: 'https://www.linkedin.com/in/adityaraj',
+  avatar: '/assets/teamMembers/aditya1.jpg',
+ bio: 'Co-Founder at thinkAIQ, responsible for business strategy, operations, and growth. Works closely with the founding team to ensure our AI automation solutions are efficiently delivered and scalable for clients. Passionate about building high-performing teams.',
+  description: 'Partnering with Akash Kumar to drive thinkAIQ’s vision and scale innovative AI automation solutions.',
+  specialties: [
+    'Business Strategy & Planning',
+    'Operational Management',
+    'Business Growth & Expansion',
+    'Team Coordination & Leadership'
+  ],
+  languages: ['English', 'Hindi'],
+  availability: 'Available for business strategy and operational consultations',
+  certifications: [
+    'Certified Business Development Professional',
+    'Management & Strategy Training'
+  ]
+}
+
     //   id: 2,
     //   name: 'Priya Sharma',
     //   title: 'Head of AI Development',
@@ -207,31 +234,7 @@ const TeamDirectory = () => {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Select
-            label="Filter by Department"
-            options={departments}
-            value={selectedDepartment}
-            onChange={setSelectedDepartment}
-            className="mb-0"
-          />
-          
-          <Select
-            label="Filter by Expertise"
-            options={expertiseAreas}
-            value={selectedExpertise}
-            onChange={setSelectedExpertise}
-            className="mb-0"
-          />
-        </div>
-
-        {/* Results Count */}
-        <div className="mb-8">
-          <p className="text-text-secondary">
-            Showing {filteredMembers?.length} of {teamMembers?.length} team members
-          </p>
-        </div>
+      
 
         {/* Team Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

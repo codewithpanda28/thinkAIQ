@@ -103,7 +103,11 @@ const SaaSProjectShowcase = () => {
         },
         {
           name: "Salon, Spa, Beauty Clinics",
-          coreAutomations: ["Appointment booking bot", "Reminder & re-engagement", "Service catalog"],
+          coreAutomations: [
+            "Appointment booking bot",
+            "Reminder & re-engagement",
+            "Service catalog",
+          ],
           advancedAutomations: [
             "Membership expiry alerts",
             "Service recommendation bot (hair/skin type)",
@@ -113,7 +117,12 @@ const SaaSProjectShowcase = () => {
         },
         {
           name: "Restaurants, Cloud Kitchens, Cafes",
-          coreAutomations: ["Menu bot", "Order taking automation", "Delivery partner tracking", "Feedback collection"],
+          coreAutomations: [
+            "Menu bot",
+            "Order taking automation",
+            "Delivery partner tracking",
+            "Feedback collection",
+          ],
           advancedAutomations: [
             "Loyalty points bot",
             "AI dish recommendation",
@@ -124,7 +133,11 @@ const SaaSProjectShowcase = () => {
         },
         {
           name: "Finance, Insurance, Loans",
-          coreAutomations: ["Loan eligibility bot", "Document collection bot", "EMI reminder automation"],
+          coreAutomations: [
+            "Loan eligibility bot",
+            "Document collection bot",
+            "EMI reminder automation",
+          ],
           advancedAutomations: [
             "AI investment advisor bot",
             "Insurance renewal bot",
@@ -135,7 +148,12 @@ const SaaSProjectShowcase = () => {
         },
         {
           name: "Agencies, SaaS, Service Providers",
-          coreAutomations: ["Lead capture & routing", "Proposal sending", "Invoicing", "Support ticket creation"],
+          coreAutomations: [
+            "Lead capture & routing",
+            "Proposal sending",
+            "Invoicing",
+            "Support ticket creation",
+          ],
           advancedAutomations: [
             "Client onboarding workflow",
             "Contract renewal reminders",
@@ -156,7 +174,11 @@ const SaaSProjectShowcase = () => {
         },
         {
           name: "Automobile, Car/Bike Showrooms",
-          coreAutomations: ["Vehicle inquiry bot", "Test drive booking", "Service reminders"],
+          coreAutomations: [
+            "Vehicle inquiry bot",
+            "Test drive booking",
+            "Service reminders",
+          ],
           advancedAutomations: [
             "Finance options wizard",
             "Exchange value estimation bot",
@@ -255,6 +277,86 @@ const SaaSProjectShowcase = () => {
       pricing: "Custom Pricing Based on Automations",
       category: "WhatsApp Automation",
     },
+  {
+  id: 2,
+  name: "AI HR — Automated Hiring System",
+  tagline: "End-to-end automated hiring with AI screening & WhatsApp assistant",
+  description:
+    "AI-powered hiring platform that automates job posting, resume screening, candidate scoring, scheduling, and onboarding with WhatsApp-based engagement. " +
+    "It includes a resume upload form and a dashboard built with HTML, CSS, and JavaScript. " +
+    "Automations are powered by n8n workflows and AI scoring is done via OpenAI integrations, streamlining recruitment for startups, enterprises, and campus hiring.",
+  icon: "UserCheck",
+  color: "from-purple-500 to-pink-600",
+  image:
+    "https://www.cflowapps.com/wp-content/uploads/2018/11/HR-Automation-Process.png",
+  category: "AI Hiring Automation",
+ metrics: {
+  AI: "99%+ Accuracy",
+  Speed: "5k resumes / 10 min",
+  Cost: "90% Saved",
+  WhatsApp: "Auto Onboarding",
+},
+
+  features: [
+    "Smart resume screening (NLP)",
+    "AI candidate scoring (0–100)",
+    "Bulk hiring automation",
+    "WhatsApp job assistant",
+    "Auto interview scheduling",
+    "Real-time hiring analytics",
+    "Bias-free evaluation",
+    "ATS/HRMS integrations",
+  ],
+  industries: [
+    {
+      name: "Startups & SMEs",
+      coreAutomations: [
+        "Auto job posting",
+        "Resume parsing & filtering",
+        "AI shortlisting",
+        "Interview reminders",
+      ],
+      advancedAutomations: [
+        "AI match-score ranking",
+        "WhatsApp-based JD delivery",
+        "Auto skill test assignment",
+        "HR workload reduction workflow",
+      ],
+    },
+    {
+      name: "Enterprises / Mass Hiring",
+      coreAutomations: [
+        "10k+ resume batch screening",
+        "Bulk candidate scoring",
+        "Mass interview scheduling",
+      ],
+      advancedAutomations: [
+        "Predictive hiring analytics",
+        "AI-based talent segmentation",
+        "WhatsApp engagement flows",
+      ],
+    },
+    {
+      name: "Campus Hiring",
+      coreAutomations: [
+        "Student data collection bot",
+        "Auto test link sharing",
+        "Shortlisting automation",
+      ],
+      advancedAutomations: [
+        "AI interview evaluator",
+        "Auto-onboarding workflow",
+      ],
+    },
+  ],
+  techStack: [ "Node.js", "OpenAI", "WhatsApp API", "PostgreSQL", "HTML", "CSS", "JavaScript", "n8n"],
+  liveDemo: "",
+  caseStudy: "/project-details/2",
+  pricing: "Starts at ₹8,000/month",
+}
+
+
+    
   ];
 
   const handleProjectClick = (project) => setSelectedProject(project);
@@ -283,7 +385,8 @@ const SaaSProjectShowcase = () => {
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Try our live SaaS products, see real-time demos, and discover how we've helped businesses automate and scale.
+            Try our live SaaS products, see real-time demos, and discover how
+            we've helped businesses automate and scale.
           </p>
         </motion.div>
 
@@ -312,12 +415,20 @@ const SaaSProjectShowcase = () => {
                   <div
                     className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center shadow-lg backdrop-blur-sm`}
                   >
-                    <Icon name={project.icon} size={24} className="text-white" />
+                    <Icon
+                      name={project.icon}
+                      size={24}
+                      className="text-white"
+                    />
                   </div>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 z-10">
-                  <h3 className="text-xl font-bold text-white mb-1 drop-shadow-lg">{project.name}</h3>
-                  <p className="text-sm text-white/90 drop-shadow-md">{project.tagline}</p>
+                  <h3 className="text-xl font-bold text-white mb-1 drop-shadow-lg">
+                    {project.name}
+                  </h3>
+                  <p className="text-sm text-white/90 drop-shadow-md">
+                    {project.tagline}
+                  </p>
                 </div>
               </div>
 
@@ -328,13 +439,22 @@ const SaaSProjectShowcase = () => {
                     {project.category}
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  {project.description}
+                </p>
 
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   {Object.entries(project.metrics).map(([key, value], idx) => (
-                    <div key={idx} className="text-center p-2 bg-muted/30 dark:bg-muted rounded-lg">
-                      <div className="text-sm font-bold text-foreground">{value}</div>
-                      <div className="text-xs text-muted-foreground capitalize">{key}</div>
+                    <div
+                      key={idx}
+                      className="text-center p-2 bg-muted/30 dark:bg-muted rounded-lg"
+                    >
+                      <div className="text-sm font-bold text-foreground">
+                        {value}
+                      </div>
+                      <div className="text-xs text-muted-foreground capitalize">
+                        {key}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -346,7 +466,9 @@ const SaaSProjectShowcase = () => {
                   className="text-xs bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
                   onClick={(e) => {
                     e.stopPropagation();
-                    navigate(`/services-universe-interactive-solutions?project=${project.id}`);
+                    navigate(
+                      `/services-universe-interactive-solutions?project=${project.id}`
+                    );
                   }}
                 >
                   <Icon name="ArrowRight" size={14} className="mr-1" />
@@ -381,11 +503,19 @@ const SaaSProjectShowcase = () => {
                       <div
                         className={`w-12 h-12 bg-gradient-to-br ${selectedProject.color} rounded-xl flex items-center justify-center`}
                       >
-                        <Icon name={selectedProject.icon} size={24} className="text-white" />
+                        <Icon
+                          name={selectedProject.icon}
+                          size={24}
+                          className="text-white"
+                        />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-foreground">{selectedProject.name}</h3>
-                        <p className="text-muted-foreground">{selectedProject.tagline}</p>
+                        <h3 className="text-2xl font-bold text-foreground">
+                          {selectedProject.name}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {selectedProject.tagline}
+                        </p>
                       </div>
                     </div>
                     <button
@@ -399,18 +529,28 @@ const SaaSProjectShowcase = () => {
                   {/* Description & Features */}
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Description</h4>
-                      <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
+                      <h4 className="font-semibold text-foreground mb-2">
+                        Description
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {selectedProject.description}
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Key Features</h4>
+                      <h4 className="font-semibold text-foreground mb-2">
+                        Key Features
+                      </h4>
                       <ul className="space-y-1">
                         {selectedProject.features.map((f, idx) => (
                           <li
                             key={idx}
                             className="flex items-center space-x-2 text-sm text-muted-foreground"
                           >
-                            <Icon name="Check" size={14} className="text-success flex-shrink-0" />
+                            <Icon
+                              name="Check"
+                              size={14}
+                              className="text-success flex-shrink-0"
+                            />
                             <span>{f}</span>
                           </li>
                         ))}
@@ -420,13 +560,22 @@ const SaaSProjectShowcase = () => {
 
                   {/* Industries */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-2">Industries & Automations</h4>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Industries & Automations
+                    </h4>
                     {selectedProject.industries.map((ind, idx) => (
-                      <div key={idx} className="mb-4 p-4 bg-muted/20 rounded-lg">
-                        <h5 className="font-semibold text-foreground mb-2">{ind.name}</h5>
+                      <div
+                        key={idx}
+                        className="mb-4 p-4 bg-muted/20 rounded-lg"
+                      >
+                        <h5 className="font-semibold text-foreground mb-2">
+                          {ind.name}
+                        </h5>
                         <div className="grid md:grid-cols-2 gap-3">
                           <div>
-                            <h6 className="text-sm font-medium text-foreground mb-1">Core Automations:</h6>
+                            <h6 className="text-sm font-medium text-foreground mb-1">
+                              Core Automations:
+                            </h6>
                             <ul className="list-disc list-inside text-sm text-muted-foreground">
                               {ind.coreAutomations.map((c, i) => (
                                 <li key={i}>{c}</li>
@@ -434,7 +583,9 @@ const SaaSProjectShowcase = () => {
                             </ul>
                           </div>
                           <div>
-                            <h6 className="text-sm font-medium text-foreground mb-1">Advanced Automations:</h6>
+                            <h6 className="text-sm font-medium text-foreground mb-1">
+                              Advanced Automations:
+                            </h6>
                             <ul className="list-disc list-inside text-sm text-muted-foreground">
                               {ind.advancedAutomations.map((a, i) => (
                                 <li key={i}>{a}</li>
@@ -448,7 +599,9 @@ const SaaSProjectShowcase = () => {
 
                   {/* Tech Stack */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-2">Tech Stack</h4>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Tech Stack
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.techStack.map((tech, idx) => (
                         <span
@@ -461,64 +614,63 @@ const SaaSProjectShowcase = () => {
                     </div>
                   </div>
 
-                {/* Contact Section */}
-<div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4">
-  <h4 className="font-medium text-gray-900 dark:text-white mb-3">
-    Contact Me
-  </h4>
-  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-    {/* Phone */}
-    <a
-      href="tel:+918252472186"
-      className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path d="M2.003 5.884l2-3A1 1 0 015 3h3a1 1 0 011 1v3a1 1 0 01-.293.707l-2 2a11.037 11.037 0 005.586 5.586l2-2A1 1 0 0114 12h3a1 1 0 011 1v3a1 1 0 01-1.116.993l-3-.5a16 16 0 01-14.881-14.881z" />
-      </svg>
-      +91 82524 72186
-    </a>
+                  {/* Contact Section */}
+                  <div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">
+                      Contact Me
+                    </h4>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                      {/* Phone */}
+                      <a
+                        href="tel:+918252472186"
+                        className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M2.003 5.884l2-3A1 1 0 015 3h3a1 1 0 011 1v3a1 1 0 01-.293.707l-2 2a11.037 11.037 0 005.586 5.586l2-2A1 1 0 0114 12h3a1 1 0 011 1v3a1 1 0 01-1.116.993l-3-.5a16 16 0 01-14.881-14.881z" />
+                        </svg>
+                        +91 82524 72186
+                      </a>
 
-    {/* Email */}
-    <a
-      href="mailto:akashkumar.webdev@gmail.com"
-      className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path d="M2.94 5.94A1 1 0 013 5h14a1 1 0 01.993.883L18 6v8a1 1 0 01-.883.993L17 15H3a1 1 0 01-.993-.883L2 14V6a1 1 0 01.94-.94zM3 6v.511l7 4.5 7-4.5V6H3z" />
-      </svg>
-      akashkumar.webdev@gmail.com
-    </a>
+                      {/* Email */}
+                      <a
+                        href="mailto:akashkumar.webdev@gmail.com"
+                        className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M2.94 5.94A1 1 0 013 5h14a1 1 0 01.993.883L18 6v8a1 1 0 01-.883.993L17 15H3a1 1 0 01-.993-.883L2 14V6a1 1 0 01.94-.94zM3 6v.511l7 4.5 7-4.5V6H3z" />
+                        </svg>
+                        akashkumar.webdev@gmail.com
+                      </a>
 
-    {/* Calendar / Booking */}
-    <a
-      href="https://cal.com/akash-kumar-x8dx1t/thinkaiq"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H8V3a1 1 0 00-1-1zM2 11v5a2 2 0 002 2h12a2 2 0 002-2v-5H2z" />
-      </svg>
-      Book a Meeting
-    </a>
-  </div>
-</div>
-
+                      {/* Calendar / Booking */}
+                      <a
+                        href="https://cal.com/akash-kumar-x8dx1t/thinkaiq"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H8V3a1 1 0 00-1-1zM2 11v5a2 2 0 002 2h12a2 2 0 002-2v-5H2z" />
+                        </svg>
+                        Book a Meeting
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -530,4 +682,3 @@ const SaaSProjectShowcase = () => {
 };
 
 export default SaaSProjectShowcase;
-

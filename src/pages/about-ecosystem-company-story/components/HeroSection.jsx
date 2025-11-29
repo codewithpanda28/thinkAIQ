@@ -1,14 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
+import React from "react";
+import { motion } from "framer-motion";
+import Icon from "../../../components/AppIcon";
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
 
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 dark:from-primary/10 dark:via-background dark:to-secondary/10 pt-24 pb-16 overflow-hidden">
-       {/* Animated Background Elements */}
-       
+      {/* Animated Background Elements */}
+
       {/* Background Pattern */}
       <div className="absolute inset-0 geometric-pattern opacity-30"></div>
 
@@ -31,35 +31,46 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground dark:text-foreground mb-6 text-balance">
-              Meet <span className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent dark:from-accent dark:via-secondary dark:to-primary bg-clip-text">Akash</span> &{' '}
-              <span className="text-transparent bg-gradient-to-r from-secondary via-primary to-accent dark:from-secondary dark:via-accent dark:to-primary bg-clip-text">Aditya</span>
+              Meet{" "}
+              <span className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent dark:from-accent dark:via-secondary dark:to-primary bg-clip-text">
+                Akash
+              </span>{" "}
+              &{" "}
+              <span className="text-transparent bg-gradient-to-r from-secondary via-primary to-accent dark:from-secondary dark:via-accent dark:to-primary bg-clip-text">
+                Aditya
+              </span>
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground dark:text-muted-foreground mb-8 text-balance leading-relaxed">
-              We're two passionate developers who believe in building impactful digital experiences.
-              From frontend innovation to automation systems — we create solutions that make a difference.
-              Every project we take is built with dedication, creativity, and real purpose.
+              We're two passionate developers who believe in building impactful
+              digital experiences. From frontend innovation to automation
+              systems — we create solutions that make a difference. Every
+              project we take is built with dedication, creativity, and real
+              purpose.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              {/* <a
                 href="mailto:akashkumar.webdev@gmail.com?subject=About thinkAIQ"
-                className="inline-block"
-              >
+                className="inline-block" */}
+              
                 <Button
                   variant="default"
                   size="lg"
                   iconName="Users"
                   iconPosition="left"
                   className="premium-button w-full sm:w-auto"
+                  onClick={() => {
+                    const element = document.getElementById("team-section");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
                   Meet Our Team
                 </Button>
-              </a>
-              <a
-                href="/homepage-ai-automation-hub"
-                className="inline-block"
-              >
+              {/* </a> */}
+              <a href="/homepage-ai-automation-hub" className="inline-block">
                 <Button
                   variant="outline"
                   size="lg"
@@ -75,16 +86,28 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 mt-8 pt-8 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">300+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">Businesses Served</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">
+                  300+
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">
+                  Businesses Served
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">85%</div>
-                <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">Cost Reduction</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">
+                  85%
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">
+                  Cost Reduction
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">98%</div>
-                <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">Client Satisfaction</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">
+                  98%
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">
+                  Client Satisfaction
+                </div>
               </div>
             </div>
           </motion.div>
@@ -98,7 +121,7 @@ const HeroSection = () => {
           >
             <div className="relative z-10">
               <Image
-                src="https://images.unsplash.com/photo-1629904853716-f91e66f6b532?w=700&h=500&fit=crop"
+                src="./../../public/assets/images/bothadityaakash/both.png"
                 alt="Akash and Aditya working on frontend project"
                 className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-brand-lg"
               />
@@ -107,11 +130,19 @@ const HeroSection = () => {
               <div className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-card dark:bg-card border border-border rounded-xl p-3 sm:p-4 shadow-brand-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-success/10 dark:bg-success/20 rounded-lg flex items-center justify-center">
-                    <Icon name="TrendingUp" size={20} className="text-success" />
+                    <Icon
+                      name="TrendingUp"
+                      size={20}
+                      className="text-success"
+                    />
                   </div>
                   <div>
-                    <div className="text-xs sm:text-sm font-medium text-foreground dark:text-foreground">Client Success Rate</div>
-                    <div className="text-xl sm:text-2xl font-bold text-success">98%</div>
+                    <div className="text-xs sm:text-sm font-medium text-foreground dark:text-foreground">
+                      Client Success Rate
+                    </div>
+                    <div className="text-xl sm:text-2xl font-bold text-success">
+                      98%
+                    </div>
                   </div>
                 </div>
               </div>

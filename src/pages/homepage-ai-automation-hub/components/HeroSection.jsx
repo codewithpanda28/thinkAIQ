@@ -20,14 +20,24 @@ const HeroSection = () => {
   color: "from-green-500 to-emerald-600"
 }
 ,
-    {
-      id: 2,
-      name: "Invoice Processing System",
-      description: "Automated invoice processing with 99.7% accuracy",
-      icon: "FileText",
-      metrics: { clients: "75+", accuracy: "99.7%", time: "30min" },
-      color: "from-purple-500 to-pink-600"
-    },
+{
+  id: 2,
+  name: "AI HR Hiring System",
+
+  description: "AI tool for smart resume screening.",
+
+  icon: "UserCheck",
+
+  metrics: {
+    clients: "For any business",
+    accuracy: "Accurate filtering",
+    time: "Quick results"
+  },
+
+  color: "from-purple-500 to-pink-600"
+}
+
+,
     {
       id: 3,
       name: "Lead Generation Bot",
@@ -89,7 +99,7 @@ const HeroSection = () => {
               className="text-lg md:text-xl text-muted-foreground dark:text-muted-foreground leading-relaxed max-w-2xl mb-8"
             >
               We build AI-powered automation solutions that streamline operations, reduce costs by up to 85%, and scale with your business. 
-              Trusted by <span className="font-semibold text-primary dark:text-accent">300+ businesses</span> worldwide.
+              Trusted by <span className="font-semibold text-primary dark:text-accent">10+ businesses</span> worldwide.
             </motion.p>
 
             <motion.div
@@ -140,7 +150,7 @@ const HeroSection = () => {
               className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12"
             >
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-primary dark:text-accent mb-1">300+</div>
+                <div className="text-3xl font-bold text-primary dark:text-accent mb-1">10+</div>
                 <div className="text-sm text-muted-foreground dark:text-muted-foreground">Businesses</div>
               </div>
               <div className="text-center lg:text-left">
@@ -207,7 +217,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="absolute lg:-bottom-16 lg:-right-12 -right-0 -bottom-20 bg-gradient-to-r from-primary to-secondary dark:from-accent dark:to-primary text-white rounded-2xl p-6 shadow-2xl border-4 border-background dark:border-background"
+              className="absolute lg:-bottom-22 lg:-right-12 -right-0 -bottom-20 bg-gradient-to-r from-primary to-secondary dark:from-accent dark:to-primary text-white rounded-2xl p-6 shadow-2xl border-4 border-background dark:border-background "
             >
               <div className="flex items-center space-x-3 ">
                 <div className="w-8 h-8x bg-white/20 rounded-xl flex items-center justify-center">

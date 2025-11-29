@@ -9,8 +9,8 @@ import QuoteModal from "./QuoteModal";
 
 const ServiceCategories = () => {
   const [searchParams] = useSearchParams();
-  const projectId = searchParams.get('project');
-  
+  const projectId = searchParams.get("project");
+
   const [activeCategory, setActiveCategory] = useState("automation");
   const [selectedServiceKey, setSelectedServiceKey] = useState(null);
   const [quoteServiceKey, setQuoteServiceKey] = useState(null);
@@ -21,14 +21,14 @@ const ServiceCategories = () => {
     if (projectId) {
       // Map project IDs to service keys
       const projectMap = {
-        '1': 'whatsapp-automation-catalog',
-        '2': 'document-processing',
-        '3': 'workflow-automation',
-        '4': 'workflow-automation',
-        '5': 'workflow-automation',
-        '6': 'document-processing'
+        1: "whatsapp-automation-catalog",
+        2: "ai-hr-automated-hiring-system",
+        3: "workflow-automation",
+        4: "workflow-automation",
+        5: "workflow-automation",
+        6: "document-processing",
       };
-      
+
       const serviceKey = projectMap[projectId];
       if (serviceKey) {
         setHighlightedProject(serviceKey);
@@ -38,7 +38,7 @@ const ServiceCategories = () => {
           // Scroll to the service
           const element = document.getElementById(`service-${serviceKey}`);
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
           }
         }, 500);
       }
@@ -46,67 +46,93 @@ const ServiceCategories = () => {
   }, [projectId]);
 
   const categories = [
-    { 
-      id: "automation", 
-      name: "AI Automation", 
-      icon: "Bot", 
+    {
+      id: "automation",
+      name: "AI Automation",
+      icon: "Bot",
       description: "Intelligent process automation that learns and adapts",
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
     },
-    { 
-      id: "development", 
-      name: "Custom Development", 
-      icon: "Code", 
+    {
+      id: "development",
+      name: "Custom Development",
+      icon: "Code",
       description: "Tailored software solutions for unique business needs",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
     },
-    { 
-      id: "consulting", 
-      name: "AI Consulting", 
-      icon: "Brain", 
+    {
+      id: "consulting",
+      name: "AI Consulting",
+      icon: "Brain",
       description: "Strategic guidance for AI adoption and implementation",
-      color: "from-green-500 to-emerald-600"
+      color: "from-green-500 to-emerald-600",
     },
-    { 
-      id: "integration", 
-      name: "System Integration", 
-      icon: "Zap", 
+    {
+      id: "integration",
+      name: "System Integration",
+      icon: "Zap",
       description: "Seamless integration of AI into existing systems",
-      color: "from-orange-500 to-red-600"
-    }
+      color: "from-orange-500 to-red-600",
+    },
   ];
 
-const services = {
-  automation: [
-    {
-      key: "whatsapp-automation-catalog",
-      image: "https://cdn.botpenguin.com/assets/website/whatsapp_bot_improves_customer_support_and_service_01_df56e82e62.webp",
-      name: "WhatsApp Automation Catalog – Industry‑Wise",
-      description: "Expanded WhatsApp automation catalog with industry-specific core & advanced automations for multiple industries including E-commerce, Healthcare, Real Estate, Education, and more.",
-      features: [
-        "E-commerce & D2C",
-        "Healthcare, Clinics, Hospitals",
-        "Real Estate",
-        "Education, Coaching, EdTech",
-        "Salon, Spa, Beauty Clinics",
-        "Restaurants, Cloud Kitchens, Cafes",
-      ],
-      
-     
-      benefits: [
-        "Saves time with automation",
-        "Improves customer engagement",
-        "Boosts conversion & ROI",
-        "Supports multiple industries",
-        "Easy integration with existing workflows"
-      ]
-    }
-  ]
-};
+  const services = {
+    automation: [
+      {
+        key: "whatsapp-automation-catalog",
+        image:
+          "https://cdn.botpenguin.com/assets/website/whatsapp_bot_improves_customer_support_and_service_01_df56e82e62.webp",
+        name: "WhatsApp Automation Catalog – Industry‑Wise",
+        description:
+          "Expanded WhatsApp automation catalog with industry-specific core & advanced automations for multiple industries including E-commerce, Healthcare, Real Estate, Education, and more.",
+        features: [
+          "E-commerce & D2C",
+          "Healthcare, Clinics, Hospitals",
+          "Real Estate",
+          "Education, Coaching, EdTech",
+          "Salon, Spa, Beauty Clinics",
+          "Restaurants, Cloud Kitchens, Cafes",
+        ],
 
+        benefits: [
+          "Saves time with automation",
+          "Improves customer engagement",
+          "Boosts conversion & ROI",
+          "Supports multiple industries",
+          "Easy integration with existing workflows",
+        ],
+      },
+      {
+        key: "ai-hr-automated-hiring-system",
+        image: "https://www.cflowapps.com/wp-content/uploads/2018/11/HR-Automation-Process.png", // Add your own image if needed
+        name: "AI HR — Automated Hiring System",
+        description:
+          "AI HR is an end-to-end automated hiring system: one dashboard for posting, screening, scoring, scheduling, and onboarding — fast, scalable, bias-free and cost-efficient. It automates the full hiring lifecycle with WhatsApp candidate self-service, smart screening, AI scoring, and enterprise-grade compliance.",
+
+        features: [
+          "Bulk hiring support for 10,000+ resumes per batch",
+          "AI-driven candidate scoring (0–100) with bias mitigation",
+          "Automated hiring workflows: shortlist, reject",
+          "Multi-channel notifications: Email, WhatsApp",
+        ],
+
+        benefits: [
+          "Reduces hiring time from weeks to hours",
+          "Cuts HR operational cost by 90–95%",
+          "100% bias-free hiring with protected attribute removal",
+          "Improved candidate experience via WhatsApp self-service",
+          "90%+ adoption rate (India & Asia markets)",
+        ],
+      },
+    ],
+  };
 
   const formatPrice = (price) =>
-    new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 0 }).format(price);
+    new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      minimumFractionDigits: 0,
+    }).format(price);
 
   return (
     <section className="py-20 bg-background dark:bg-background relative overflow-hidden">
@@ -123,7 +149,8 @@ const services = {
             Our Intelligent Service Ecosystem
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground dark:text-muted-foreground max-w-3xl mx-auto">
-            Experience next-gen AI automation and intelligent systems built for your business growth.
+            Experience next-gen AI automation and intelligent systems built for
+            your business growth.
           </p>
         </motion.div>
 
@@ -163,105 +190,115 @@ const services = {
             {services[activeCategory]?.map((service, index) => {
               const isHighlighted = highlightedProject === service.key;
               return (
-    <motion.div
-      key={service.key}
-                id={`service-${service.key}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: isHighlighted ? 1.05 : 1 }}
-                transition={{ duration: 0.2, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className={`relative bg-card dark:bg-card border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group ${
-                  isHighlighted 
-                    ? 'border-primary dark:border-accent shadow-2xl ring-4 ring-primary/20 dark:ring-accent/20' 
-                    : 'border-border'
-                }`}
-              >
-                {/* Image */}
-                <div className="relative w-full h-40 sm:h-48 rounded-xl overflow-hidden mb-4 sm:mb-6">
-      <img
-        src={service.image}
-        alt={service.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-      />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-      {/* Service Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground dark:text-foreground mb-2 sm:mb-3">
-  {service.name}
-</h3>
-
-                {/* Description */}
-                <p className="text-muted-foreground dark:text-muted-foreground text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-2">
-        {service.description}
-      </p>
-
-      {/* Features List */}
-                <ul className="space-y-2 mb-4 sm:mb-6">
-                  {service.features.slice(0, 6).map((f, idx) => (
-          <li
-            key={idx}
-                      className="flex items-center gap-2 text-muted-foreground dark:text-muted-foreground font-medium text-xs sm:text-sm"
-          >
-                      <Icon name="Check" size={14} className="text-success flex-shrink-0" />
-            {f}
-          </li>
-        ))}
-      </ul>
-
-                {/* Benefits */}
-                {service.benefits && (
-                  <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-muted/30 dark:bg-muted rounded-lg">
-                    <div className="grid grid-cols-2 gap-2">
-                      {service.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-center space-x-1 text-xs text-muted-foreground dark:text-muted-foreground">
-                          <Icon name="TrendingUp" size={12} className="text-success" />
-                          <span className="truncate">{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
+                <motion.div
+                  key={service.key}
+                  id={`service-${service.key}`}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: isHighlighted ? 1.05 : 1 }}
+                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className={`relative bg-card dark:bg-card border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group ${
+                    isHighlighted
+                      ? "border-primary dark:border-accent shadow-2xl ring-4 ring-primary/20 dark:ring-accent/20"
+                      : "border-border"
+                  }`}
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-40 sm:h-48 rounded-xl overflow-hidden mb-4 sm:mb-6">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   </div>
-                )}
 
-                {/* Pricing */}
-               
+                  {/* Service Title */}
+                  <h3 className="text-xl sm:text-xl font-bold text-foreground dark:text-foreground mb-2 sm:mb-3">
+                    {service.name}
+                  </h3>
 
-      {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-        <Button
-          variant="outline"
-          onClick={() => setSelectedServiceKey(service.key)}
-                    className="flex-1  bg-accent hover:from-primary/90 hover:to-secondary/90 text-white transition-all duration-300 text-xs sm:text-sm"
-        >
-          Learn More
-        </Button>
-        <Button
-          onClick={() => setQuoteServiceKey(service.key)}
-                    className="flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white transition-all duration-300 text-xs sm:text-sm"
-        >
-          Get Quote
-        </Button>
-      </div>
-    </motion.div>
+                  {/* Description */}
+                  {/* <p className="text-muted-foreground dark:text-muted-foreground text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-2">
+                    {service.description}
+                  </p> */}
+
+                  {/* Features List */}
+                  <ul className="space-y-2 mb-4 sm:mb-6">
+                    {service.features.slice(0, 6).map((f, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-muted-foreground dark:text-muted-foreground font-medium text-xs sm:text-sm"
+                      >
+                        <Icon
+                          name="Check"
+                          size={14}
+                          className="text-success flex-shrink-0"
+                        />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Benefits */}
+                  {service.benefits && (
+                    <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-muted/30 dark:bg-muted rounded-lg">
+                      <div className="grid grid-cols-2 gap-2">
+                        {service.benefits.map((benefit, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-center space-x-1 text-xs text-muted-foreground dark:text-muted-foreground"
+                          >
+                            <Icon
+                              name="TrendingUp"
+                              size={12}
+                              className="text-success"
+                            />
+                            <span className="truncate">{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Pricing */}
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <Button
+                      variant="outline"
+                      onClick={() => setSelectedServiceKey(service.key)}
+                      className="flex-1  bg-accent hover:from-primary/90 hover:to-secondary/90 text-white transition-all duration-300  text-xs sm:text-sm"
+                    >
+                      Learn More
+                    </Button>
+                    <Button
+                      onClick={() => setQuoteServiceKey(service.key)}
+                      className="flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white transition-all duration-300 text-xs sm:text-sm"
+                    >
+                      Get Quote
+                    </Button>
+                  </div>
+                </motion.div>
               );
             })}
-            </motion.div>
-          </AnimatePresence>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Modals */}
         <AnimatePresence>
           {selectedServiceKey && (
-            <ServiceModal 
-              serviceKey={selectedServiceKey} 
-              services={services[activeCategory]} 
-              onClose={() => setSelectedServiceKey(null)} 
+            <ServiceModal
+              serviceKey={selectedServiceKey}
+              services={services[activeCategory]}
+              onClose={() => setSelectedServiceKey(null)}
             />
           )}
           {quoteServiceKey && (
-            <QuoteModal 
-              serviceKey={quoteServiceKey} 
-              services={services[activeCategory]} 
-              onClose={() => setQuoteServiceKey(null)} 
+            <QuoteModal
+              serviceKey={quoteServiceKey}
+              services={services[activeCategory]}
+              onClose={() => setQuoteServiceKey(null)}
             />
           )}
         </AnimatePresence>
