@@ -114,7 +114,7 @@ const TeamExpertiseSection = () => {
           "Hi Aditya, I am interested in your business development & AI automation services.",
       },
       {
-  id: 4,
+  id: 5,
   name: "Md Kaif",
   role: "AI & Video Content Specialist",
   image: "/assets/teamMembers/Md Kaif(ai content).jpg",

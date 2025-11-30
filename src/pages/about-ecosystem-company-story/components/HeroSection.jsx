@@ -121,7 +121,7 @@ const HeroSection = () => {
           >
             <div className="relative z-10">
               <Image
-                src="./../../public/assets/images/bothadityaakash/both.png"
+                src="/assets/images/bothadityaakash/both.png"
                 alt="Akash and Aditya working on frontend project"
                 className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-brand-lg"
               />
