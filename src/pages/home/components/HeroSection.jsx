@@ -61,7 +61,7 @@ const HeroSection = () => {
       {/* Animated Background Elements */}
       
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-18 pt-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
