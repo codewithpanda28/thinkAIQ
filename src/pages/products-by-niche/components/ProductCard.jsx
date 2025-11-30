@@ -137,7 +137,7 @@ const ProductCard = ({ product }) => {
             size="sm"
             iconName="FileText"
             iconPosition="left"
-            className="flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+            className="p-3 flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
             onClick={handleGetDetails}
           >
             Get Details

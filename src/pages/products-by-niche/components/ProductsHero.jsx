@@ -29,7 +29,7 @@ const ProductsHero = () => {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-background via-primary/5 to-background dark:via-primary/10">
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-2 bg-gradient-to-b from-background via-primary/5 to-background dark:via-primary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           
@@ -129,20 +129,6 @@ const ProductsHero = () => {
           </motion.div>
 
           {/* Scroll Indicator */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isVisible ? 1 : 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col items-center mt-12"
-          >
-            <p className="text-sm text-text-secondary mb-2">Scroll to explore solutions</p>
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <Icon name="ChevronDown" size={24} className="text-primary dark:text-accent" />
-            </motion.div>
-          </motion.div> */}
 
         </div>
       </div>
