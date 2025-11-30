@@ -70,7 +70,7 @@ const HeroSection = () => {
                   Meet Our Team
                 </Button>
               {/* </a> */}
-              <a href="/homepage-ai-automation-hub" className="inline-block">
+              <a href="/services-universe-interactive-solutions#services-section" className="inline-block">
                 <Button
                   variant="outline"
                   size="lg"
@@ -87,7 +87,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-3 gap-4 sm:gap-6 mt-8 pt-8 border-t border-border">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-primary dark:text-accent">
-                  300+
+                  10+
                 </div>
                 <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground">
                   Businesses Served

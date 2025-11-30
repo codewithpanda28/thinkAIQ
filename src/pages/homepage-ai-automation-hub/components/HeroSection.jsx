@@ -61,7 +61,7 @@ const HeroSection = () => {
       {/* Animated Background Elements */}
       
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-14">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -74,7 +74,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-primary/10 dark:bg-accent/20 text-primary dark:text-accent px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center space-x-2 bg-primary/10 dark:bg-accent/20 text-primary dark:text-accent px-4 py-0 rounded-full text-sm font-medium mb-6"
             >
               <Icon name="Sparkles" size={16} />
               <span>AI-First Automation Solutions</span>
@@ -84,11 +84,11 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground dark:text-foreground leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-extrabold text-foreground dark:text-foreground leading-tight mb-4"
             >
-              Transform Your Business with{' '}
+              Automate Smarter,   {' '}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent dark:from-accent dark:via-secondary dark:to-primary animate-gradient">
-                Intelligent AI Automation
+              Operate Better, Grow Faster.
               </span>
             </motion.h1>
             
@@ -96,10 +96,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground dark:text-muted-foreground leading-relaxed max-w-2xl mb-8"
+              className="text-lg md:text-xl text-muted-foreground dark:text-muted-foreground leading-relaxed max-w-2xl mb-6"
             >
-              We build AI-powered automation solutions that streamline operations, reduce costs by up to 85%, and scale with your business. 
-              Trusted by <span className="font-semibold text-primary dark:text-accent">10+ businesses</span> worldwide.
+             We build AI-powered automation solutions that streamline operations, cut costs by up to 85%, and scale effortlessly with your business — trusted by <span className="font-semibold text-primary dark:text-accent">10+ companies </span> worldwide.
             </motion.p>
 
             <motion.div
@@ -147,7 +146,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-6 -mt-6"
             >
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold text-primary dark:text-accent mb-1">10+</div>

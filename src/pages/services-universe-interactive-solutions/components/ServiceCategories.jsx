@@ -135,7 +135,7 @@ const ServiceCategories = () => {
     }).format(price);
 
   return (
-    <section className="py-20 bg-background dark:bg-background relative overflow-hidden">
+    <section  className="py-20 bg-background dark:bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Title */}
         <motion.div
@@ -155,7 +155,7 @@ const ServiceCategories = () => {
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div id="services-section" className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((cat) => (
             <motion.button
               key={cat.id}
@@ -186,6 +186,7 @@ const ServiceCategories = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+           
           >
             {services[activeCategory]?.map((service, index) => {
               const isHighlighted = highlightedProject === service.key;

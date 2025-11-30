@@ -7,24 +7,7 @@ const TeamDirectory = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedExpertise, setSelectedExpertise] = useState('all');
 
-  const departments = [
-    { value: 'all', label: 'All Departments' },
-    { value: 'leadership', label: 'Leadership Team' },
-    { value: 'ai-development', label: 'AI Development' },
-    { value: 'consulting', label: 'Business Consulting' },
-    { value: 'support', label: 'Customer Support' },
-    { value: 'sales', label: 'Sales & Partnerships' }
-  ];
-
-  const expertiseAreas = [
-    { value: 'all', label: 'All Expertise' },
-    { value: 'machine-learning', label: 'Machine Learning' },
-    { value: 'nlp', label: 'Natural Language Processing' },
-    { value: 'automation', label: 'Process Automation' },
-    { value: 'data-analytics', label: 'Data Analytics' },
-    { value: 'chatbots', label: 'Chatbot Development' },
-    { value: 'strategy', label: 'AI Strategy' }
-  ];
+ 
 
   const teamMembers = [
    {
