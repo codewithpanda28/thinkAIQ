@@ -467,7 +467,7 @@ const SaaSProjectShowcase = () => {
                   onClick={(e) => {
                     e.stopPropagation();
                     navigate(
-                      `/services-universe-interactive-solutions?project=${project.id}`
+                      `/services?project=${project.id}`
                     );
                   }}
                 >

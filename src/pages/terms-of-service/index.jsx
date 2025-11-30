@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Header from '../../components/ui/Header';
-import Footer from '../homepage-ai-automation-hub/components/Footer';
+import Footer from '../home/components/Footer';
 import Icon from '../../components/AppIcon';
 
 const TermsOfService = () => {

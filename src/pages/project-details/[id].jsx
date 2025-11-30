@@ -18,7 +18,7 @@ const ProjectDetails = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-foreground mb-4">Project Not Found</h2>
-          <Button onClick={() => navigate('/homepage-ai-automation-hub')}>
+          <Button onClick={() => navigate('/home')}>
             Go Back Home
           </Button>
         </div>
@@ -257,7 +257,7 @@ const ProjectDetails = () => {
                   size="lg"
                   iconName="ArrowLeft"
                   iconPosition="left"
-                  onClick={() => navigate('/homepage-ai-automation-hub')}
+                  onClick={() => navigate('/home')}
                 >
                   Back to Home
                 </Button>

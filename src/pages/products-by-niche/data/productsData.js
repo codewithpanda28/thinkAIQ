@@ -26,7 +26,8 @@ export const productsData = [
       "WhatsApp affiliate tracking automation"
     ],
     icon: "ShoppingCart",
-    color: "from-blue-500 to-indigo-600"
+    color: "from-blue-500 to-indigo-600",
+    docsLink: "https://docs.google.com/document/d/1SjLjk8zSpIA9XZgKbY7yXJ8hDfgBfGNv2nY0ustLRtU/edit?tab=t.0" // Add your Google Docs link here
   },
   {
     id: 2,
@@ -50,7 +51,8 @@ export const productsData = [
       "Automated discharge instruction delivery"
     ],
     icon: "Heart",
-    color: "from-red-500 to-pink-600"
+    color: "from-red-500 to-pink-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 3,
@@ -72,7 +74,8 @@ export const productsData = [
       "Payment plan reminders for booked buyers"
     ],
     icon: "Home",
-    color: "from-green-500 to-emerald-600"
+    color: "from-green-500 to-emerald-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 4,
@@ -96,7 +99,8 @@ export const productsData = [
       "Auto-certified completion bot"
     ],
     icon: "GraduationCap",
-    color: "from-purple-500 to-violet-600"
+    color: "from-purple-500 to-violet-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 5,
@@ -116,7 +120,8 @@ export const productsData = [
       "Prepaid voucher selling automation"
     ],
     icon: "Sparkles",
-    color: "from-pink-500 to-rose-600"
+    color: "from-pink-500 to-rose-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 6,
@@ -138,7 +143,8 @@ export const productsData = [
       "Festival combo broadcast bot"
     ],
     icon: "Utensils",
-    color: "from-orange-500 to-red-600"
+    color: "from-orange-500 to-red-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 7,
@@ -159,7 +165,8 @@ export const productsData = [
       "Policy comparison automation"
     ],
     icon: "Building2",
-    color: "from-yellow-500 to-amber-600"
+    color: "from-yellow-500 to-amber-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 8,
@@ -181,7 +188,8 @@ export const productsData = [
       "Failed payment recovery bot"
     ],
     icon: "Briefcase",
-    color: "from-indigo-500 to-blue-600"
+    color: "from-indigo-500 to-blue-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 9,
@@ -200,7 +208,8 @@ export const productsData = [
       "Warranty registration bot"
     ],
     icon: "Store",
-    color: "from-cyan-500 to-teal-600"
+    color: "from-cyan-500 to-teal-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 10,
@@ -220,7 +229,8 @@ export const productsData = [
       "Post-service feedback & upsell automation"
     ],
     icon: "Car",
-    color: "from-gray-500 to-slate-600"
+    color: "from-gray-500 to-slate-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 11,
@@ -240,7 +250,8 @@ export const productsData = [
       "Guest feedback improvement bot"
     ],
     icon: "Building",
-    color: "from-teal-500 to-cyan-600"
+    color: "from-teal-500 to-cyan-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 12,
@@ -260,7 +271,8 @@ export const productsData = [
       "Reorder reminder automation"
     ],
     icon: "Warehouse",
-    color: "from-slate-500 to-gray-600"
+    color: "from-slate-500 to-gray-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 13,
@@ -277,7 +289,8 @@ export const productsData = [
       "Annual maintenance renewal reminders"
     ],
     icon: "Wrench",
-    color: "from-blue-500 to-cyan-600"
+    color: "from-blue-500 to-cyan-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 14,
@@ -295,7 +308,8 @@ export const productsData = [
       "Compliance reminder automation"
     ],
     icon: "FileText",
-    color: "from-purple-500 to-indigo-600"
+    color: "from-purple-500 to-indigo-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 15,
@@ -313,7 +327,8 @@ export const productsData = [
       "Missed-class reactivation bot"
     ],
     icon: "Activity",
-    color: "from-red-500 to-orange-600"
+    color: "from-red-500 to-orange-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 16,
@@ -331,7 +346,8 @@ export const productsData = [
       "Payment milestone reminders"
     ],
     icon: "Wrench",
-    color: "from-amber-500 to-yellow-600"
+    color: "from-amber-500 to-yellow-600",
+    docsLink: "" // Add your Google Docs link here
   },
   {
     id: 17,
@@ -349,7 +365,8 @@ export const productsData = [
       "Employee onboarding bot"
     ],
     icon: "Users",
-    color: "from-green-500 to-emerald-600"
+    color: "from-green-500 to-emerald-600",
+    docsLink: "" // Add your Google Docs link here
   }
 ];
 

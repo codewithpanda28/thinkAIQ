@@ -15,12 +15,12 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   const navigationItems = [
-    { name: 'Home', path: '/homepage-ai-automation-hub', icon: 'Home' },
-    { name: 'Services', path: '/services-universe-interactive-solutions', icon: 'Zap' },
+    { name: 'Home', path: '/home', icon: 'Home' },
+    { name: 'Services', path: '/services', icon: 'Zap' },
     { name: 'Products', path: '/products-by-niche', icon: 'Grid3x3' },
     // { name: 'Portfolio', path: '/portfolio-showcase-success-stories', icon: 'Trophy' },
-    { name: 'About', path: '/about-ecosystem-company-story', icon: 'Users' },
-    { name: 'Contact', path: '/contact-scheduling-multi-channel-engagement', icon: 'MessageSquare' },
+    { name: 'About', path: '/about', icon: 'Users' },
+    { name: 'Contact', path: '/contact', icon: 'MessageSquare' },
   ];
 
   const moreItems = [
@@ -84,7 +84,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 px-6 lg:px-8">
           {/* Logo */}
           <Link 
-            to="/homepage-ai-automation-hub" 
+            to="/home" 
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
             onClick={closeMenu}
           >
@@ -172,7 +172,7 @@ const Header = () => {
               variant="default"
               size="sm"
               className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 cta-morph"
-              onClick={() => navigate('/contact-scheduling-multi-channel-engagement')}
+              onClick={() => navigate('/contact')}
             >
               Book Strategy Call
             </Button>
@@ -237,7 +237,7 @@ const Header = () => {
                 variant="default"
                 fullWidth
                 className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-                onClick={() => { closeMenu(); navigate('/contact-scheduling-multi-channel-engagement'); }}
+                onClick={() => { closeMenu(); navigate('/contact'); }}
               >
                 Book Strategy Call
               </Button>

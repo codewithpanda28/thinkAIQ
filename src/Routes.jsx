@@ -3,13 +3,13 @@ import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
 import NotFound from "./pages/NotFound";
-import AboutEcosystemCompanyStory from './pages/about-ecosystem-company-story';
+import AboutEcosystemCompanyStory from './pages/about';
 // import PortfolioShowcase from './pages/portfolio-showcase-success-stories';
 // import ClientDashboard from './pages/client-dashboard-project-command-center';
 
-import ContactSchedulingMultiChannelEngagement from './pages/contact-scheduling-multi-channel-engagement';
-import Homepage from './pages/homepage-ai-automation-hub';
-import ServicesUniversePage from './pages/services-universe-interactive-solutions';
+import ContactSchedulingMultiChannelEngagement from './pages/contact';
+import Homepage from './pages/home';
+import ServicesUniversePage from './pages/services';
 import ArticlesPage from './pages/articles';
 import ArticleDetail from './pages/articles/[id]';
 // import ServiceDetailPage from './pages/services/[slug]';
@@ -31,11 +31,15 @@ const Routes = () => {
       <RouterRoutes>
         {/* Define your route here */}
         <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutEcosystemCompanyStory />} />
         <Route path="/about-ecosystem-company-story" element={<AboutEcosystemCompanyStory />} />
         <Route path="/trust-center" element={<TrustCenter/>} />
         <Route path="/blog" element={<BlogPage/>} />
+        <Route path="/contact" element={<ContactSchedulingMultiChannelEngagement />} />
         <Route path="/contact-scheduling-multi-channel-engagement" element={<ContactSchedulingMultiChannelEngagement />} />
+        <Route path="/home" element={<Homepage />} />
         <Route path="/homepage-ai-automation-hub" element={<Homepage />} />
+        <Route path="/services" element={<ServicesUniversePage />} />
         <Route path="/services-universe-interactive-solutions" element={<ServicesUniversePage />} />
         {/* <Route path="/services/:slug" element={<ServiceDetailPage />} /> */}
         <Route path="/articles" element={<Blog />} />

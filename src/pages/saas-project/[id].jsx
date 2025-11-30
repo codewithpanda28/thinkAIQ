@@ -6,7 +6,7 @@ import Header from '../../components/ui/Header';
 import Icon from '../../components/AppIcon';
 import Image from '../../components/AppImage';
 import Button from '../../components/ui/Button';
-import Footer from '../homepage-ai-automation-hub/components/Footer';
+import Footer from '../home/components/Footer';
 
 const SaaSProjectDetails = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const SaaSProjectDetails = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-foreground mb-4">Project Not Found</h2>
-          <Button onClick={() => navigate('/homepage-ai-automation-hub')}>
+          <Button onClick={() => navigate('/home')}>
             Go Back Home
           </Button>
         </div>
@@ -92,7 +92,7 @@ const SaaSProjectDetails = () => {
                       </a>
                       <Button
                         variant="outline"
-                        onClick={() => navigate('/contact-scheduling-multi-channel-engagement')}
+                        onClick={() => navigate('/contact')}
                       >
                         <Icon name="Mail" size={18} className="mr-2" />
                         Contact Us
@@ -168,7 +168,7 @@ const SaaSProjectDetails = () => {
                 </a>
                 <Button
                   variant="outline"
-                  onClick={() => navigate('/homepage-ai-automation-hub')}
+                  onClick={() => navigate('/home')}
                 >
                   <Icon name="ArrowLeft" size={18} className="mr-2" />
                   Back to Home

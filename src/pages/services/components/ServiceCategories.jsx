@@ -91,7 +91,7 @@ const ServiceCategories = () => {
           "Real Estate",
           "Education, Coaching, EdTech",
           "Salon, Spa, Beauty Clinics",
-          "Restaurants, Cloud Kitchens, Cafes",
+      
         ],
 
         benefits: [

@@ -13,6 +13,21 @@ const ProductCard = ({ product }) => {
     window.open('https://wa.me/918252472186?text=Hi%2C%20I%27m%20interested%20in%20' + encodeURIComponent(product.title) + '.%20Please%20share%20more%20details.', '_blank');
   };
 
+  const handleGetDetails = () => {
+    // Get the docsLink and trim any whitespace
+    const docsLink = product.docsLink ? product.docsLink.trim() : '';
+    
+    // Check if docsLink exists and is a valid URL
+    if (docsLink && docsLink.length > 0 && (docsLink.startsWith('http://') || docsLink.startsWith('https://'))) {
+      // Open Google Docs link in new tab
+      window.open(docsLink, '_blank', 'noopener,noreferrer');
+    } else {
+      // Fallback to WhatsApp contact if no valid docs link is available
+      console.warn(`No valid docs link available for: ${product.title}. Opening WhatsApp instead.`);
+      handleContact();
+    }
+  };
+
   return (
     <article className="group relative bg-card rounded-xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-300 border border-border">
       {/* Featured Badge */}
@@ -123,7 +138,7 @@ const ProductCard = ({ product }) => {
             iconName="FileText"
             iconPosition="left"
             className="flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-            onClick={handleContact}
+            onClick={handleGetDetails}
           >
             Get Details
           </Button>

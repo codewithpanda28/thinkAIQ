@@ -75,7 +75,7 @@ const ContactSchedulingMultiChannelEngagement = () => {
         <meta property="og:title" content="Contact & Scheduling - Multi-Channel Engagement | AI Automation Hub" />
         <meta property="og:description" content="Multiple ways to connect with our AI automation experts. Book consultations, get instant support, or visit our offices." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="/contact-scheduling-multi-channel-engagement" />
+        <link rel="canonical" href="/contact" />
       </Helmet>
       <div className="min-h-screen bg-background dark:bg-background">
         <Header />

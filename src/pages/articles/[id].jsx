@@ -221,7 +221,7 @@ const ArticleDetail = () => {
                     variant="outline"
                     size="lg"
                     className="border-white/30 text-white hover:bg-white/10"
-                    onClick={() => navigate('/contact-scheduling-multi-channel-engagement')}
+                    onClick={() => navigate('/contact')}
                   >
                     Book Free Consultation
                   </Button>
@@ -229,7 +229,7 @@ const ArticleDetail = () => {
                     variant="default"
                     size="lg"
                     className="bg-accent text-primary hover:bg-accent/90"
-                    onClick={() => navigate('/services-universe-interactive-solutions')}
+                    onClick={() => navigate('/services')}
                   >
                     Explore Our Services
                   </Button>

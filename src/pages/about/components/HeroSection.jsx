@@ -70,7 +70,7 @@ const HeroSection = () => {
                   Meet Our Team
                 </Button>
               {/* </a> */}
-              <a href="/services-universe-interactive-solutions#services-section" className="inline-block">
+              <a href="/services#services-section" className="inline-block">
                 <Button
                   variant="outline"
                   size="lg"
